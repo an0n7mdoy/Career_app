@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @State private var isButtonPressed1 = false
+    @State private var isButtonPressed2 = false
     var body: some View {
        
         VStack {
@@ -110,21 +112,26 @@ struct SettingsView: View {
                                 
                                 VStack{
                                     
-                                    Button {
-                                        
-                                    } label: {
-                                        Image(systemName:"speaker.wave.3.fill")
-                                    }.foregroundColor(.black)
+                                    Button(action: {
+                                        isButtonPressed1.toggle() // Toggle the button state
+                                    }) {
+                                        Image(systemName: isButtonPressed1 ? "speaker.slash" : "speaker.wave.3")
+                                            .foregroundColor(.black)
+                                    }
                                     
                                     Rectangle()
                                         .frame(width: 10, height: 1)
                                         .foregroundColor(.clear)
                                     
-                                    Button {
-                                        
-                                    } label: {
-                                        Image(systemName:"iphone.gen2.radiowaves.left.and.right")
-                                    }.foregroundColor(.black)
+                                    Button(action: {
+                                        isButtonPressed2.toggle() // Toggle the button state
+                                    }) {
+                                        Image(systemName: isButtonPressed2 ? "speaker.slash" : "speaker.wave.3")
+                                            .foregroundColor(.black)
+                                    }
+                                    
+                                   
+                                    
                                     
                                 }
                                
@@ -141,6 +148,7 @@ struct SettingsView: View {
             
         }
     }
+
 
 
 
