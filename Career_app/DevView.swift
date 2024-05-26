@@ -11,10 +11,12 @@ struct DevView: View {
     var body: some View {
        
         VStack {
- //Rectangle()
-  //          .frame(width: 350.0, height: 240.0)
-    //        .cornerRadius(15)
-      //      .foregroundColor(.init(red: 0.831, green: 0.839, blue: 0.843))
+/*
+ Rectangle()
+    .frame(width: 350.0, height: 240.0)
+    .cornerRadius(15)
+    .foregroundColor(.init(red: 0.831, green: 0.839, blue: 0.843))
+*/
             Spacer()
             Spacer()
             Spacer()
