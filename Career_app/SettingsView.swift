@@ -89,10 +89,6 @@ struct SettingsView: View {
                     HStack{
                         
                         VStack{
-                            Image(systemName:"platter.filled.top.iphone")
-                        }
-                        
-                        VStack{
                             
                             ZStack{
                                 Rectangle()
@@ -113,8 +109,23 @@ struct SettingsView: View {
                                 }
                                 
                                 VStack{
-                                    Image(systemName:"speaker.wave.3.fill")
-                                    Image(systemName:"iphone.gen2.radiowaves.left.and.right")
+                                    
+                                    Button {
+                                        
+                                    } label: {
+                                        Image(systemName:"speaker.wave.3.fill")
+                                    }.foregroundColor(.black)
+                                    
+                                    Rectangle()
+                                        .frame(width: 10, height: 1)
+                                        .foregroundColor(.clear)
+                                    
+                                    Button {
+                                        
+                                    } label: {
+                                        Image(systemName:"iphone.gen2.radiowaves.left.and.right")
+                                    }.foregroundColor(.black)
+                                    
                                 }
                                
                             }
