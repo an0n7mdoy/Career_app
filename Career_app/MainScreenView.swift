@@ -9,8 +9,8 @@ import SwiftUI
 
 struct MainScreenView: View {
     var body: some View {
-       
-        VStack {
+        NavigationView{
+            VStack {
            
             Spacer()
             Spacer()
@@ -40,6 +40,7 @@ struct MainScreenView: View {
                 Text("Career Guidance Test")
                     .font(.title)
                     .fontWeight(.semibold)
+                    .foregroundColor(.black)
             }
             
             Spacer()
@@ -60,9 +61,14 @@ struct MainScreenView: View {
                         .cornerRadius(15)
                         .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
                     
-                    Text("Personal account")
-                        .font(.title2)
-                        .fontWeight(.semibold)
+                        NavigationLink(destination: PersonalView()){
+                            Text("Personal Account")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+                                .foregroundColor(.black)
+                        
+                    }
+                    
                     
                 }
             }
@@ -85,10 +91,12 @@ struct MainScreenView: View {
                         .cornerRadius(15)
                         .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
                     
-                    Text("Settings")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                    
+                    NavigationLink(destination: SettingsView()){
+                        Text("Settings")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.black)
+                    }
                 }
             }
             
@@ -110,10 +118,13 @@ struct MainScreenView: View {
                         .cornerRadius(15)
                         .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
                     
-                    Text("About developers")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                    
+                    NavigationLink(destination: DevView()){
+                        Text("About Developers")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.black)
+                    }
+                    }
                 }
             }
         }
