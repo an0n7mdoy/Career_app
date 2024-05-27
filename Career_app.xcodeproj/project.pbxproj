@@ -59,9 +59,9 @@
 			children = (
 				423FC32F2C0392F7008E3EBD /* Career_appApp.swift */,
 				42CD0D432C0394470004B48A /* MainScreenView.swift */,
+				42CD0D452C0394510004B48A /* PersonalView.swift */,
 				42CD0D472C0394570004B48A /* SettingsView.swift */,
 				42CD0D412C03939C0004B48A /* DevView.swift */,
-				42CD0D452C0394510004B48A /* PersonalView.swift */,
 				423FC3332C0392F9008E3EBD /* Assets.xcassets */,
 				423FC3352C0392F9008E3EBD /* Preview Content */,
 			);

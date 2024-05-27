@@ -59,49 +59,35 @@ struct PersonalView: View {
             
             Spacer()
 //unis
-            HStack{
-                ZStack {
-                    
-                    Rectangle()
-                        .frame(width: 70.0, height: 45.0)
-                        .cornerRadius(15)
-                        .foregroundColor(.init(red: 0.831, green: 0.839, blue: 0.843))
-                    
-                    Image(systemName:"arrow.backward")
-                        .resizable()
-                        .frame(width: 45.0, height: 30.0)
-                    
-                }
+            ZStack {
+                Rectangle()
+                    .frame(width: 300.0, height:45.0)
+                    .cornerRadius(15)
+                    .foregroundColor(.init(red: 0.831, green: 0.839, blue: 0.843))
                 
-                ZStack {
-                    Rectangle()
-                        .frame(width: 220.0, height:45.0)
-                        .cornerRadius(15)
-                        .foregroundColor(.init(red: 0.831, green: 0.839, blue: 0.843))
-                    
-                    HStack{
-                        ZStack{
-                            Rectangle()
-                                .frame(width: 40.0, height: 30.0)
-                                .cornerRadius(15)
-                                .foregroundColor(.init(red: 0.702, green: 0.718, blue: 0.725))
-                            
-                            Image("")
-                        }
-                        ZStack{
-                            Rectangle()
-                                .frame(width: 150.0, height: 30.0)
-                                .cornerRadius(15)
-                                .foregroundColor(.init(red: 0.702, green: 0.718, blue: 0.725))
-                            
-                            Text("Target universities")
-                                .font(.subheadline)
-                                .fontWeight(.semibold)
-                        }
+                HStack{
+                    ZStack{
+                        Rectangle()
+                            .frame(width: 40.0, height: 30.0)
+                            .cornerRadius(15)
+                            .foregroundColor(.init(red: 0.702, green: 0.718, blue: 0.725))
                         
+                        Image("")
+                    }
+                    ZStack{
+                        Rectangle()
+                            .frame(width: 230.0, height: 30.0)
+                            .cornerRadius(15)
+                            .foregroundColor(.init(red: 0.702, green: 0.718, blue: 0.725))
+                        
+                        Text("Desired universities")
+                            .font(.title3)
+                            .fontWeight(.semibold)
                     }
                     
                 }
+                
+            }
                 
             }
             Spacer()
@@ -178,7 +164,7 @@ struct PersonalView: View {
             }
         }
     }
-}
+
 
 #Preview {
     PersonalView()
