@@ -8,6 +8,30 @@
 import SwiftUI
 
 struct PersonalView: View {
+    
+    @State private var items: [String] = []
+    @State private var newItem = ""
+    
+    
+    func addItem() {
+            if !newItem.isEmpty {
+                items.append(newItem)
+                newItem = ""
+            }
+        }
+    func toggleItem(at index: Int) {
+            if items[index].contains("[DONE]") {
+                items[index] = items[index].replacingOccurrences(of: "[DONE]", with: "")
+            } else {
+                items[index] = "[DONE] " + items[index]
+            }
+        }
+
+        // Function to Delete an Item
+    func deleteItem(at offsets: IndexSet) {
+            items.remove(atOffsets: offsets)
+        }
+    
     var body: some View {
         
         VStack {
@@ -92,36 +116,34 @@ struct PersonalView: View {
             }
             Spacer()
 //goals
-            HStack{
+            
                 
-                VStack{
-                   
-                    HStack{
+            VStack{
+                HStack{
                         //"goals"
-                        ZStack{
-                            Rectangle()
-                                .frame(width: 100.0, height: 45.0)
-                                .cornerRadius(15)
-                                .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
+                    ZStack{
+                        Rectangle()
+                            .frame(width: 100.0, height: 45.0)
+                            .cornerRadius(15)
+                            .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
                             
-                            Text("Goals")
-                                .font(.title2)
-                                .fontWeight(.semibold)
-                        }
+                        Text("Goals")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                    }
                         //prog
-                        ZStack{
-                            Rectangle()
-                                
-                                .frame(width: 190.0, height: 45.0)
-                                .cornerRadius(15)
-                                .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
+                    ZStack{
+                        Rectangle()
+                            .frame(width: 190.0, height: 45.0)
+                            .cornerRadius(15)
+                            .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
                             
-                            HStack{
-                                Rectangle()
-                                    .padding(.trailing, 65.0)
-                                    .frame(width: 180.0, height: 35.0)
-                                    .cornerRadius(13)
-                                    .foregroundColor(.init(red: 0.831, green: 0.839, blue: 0.843))
+                        HStack{
+                            Rectangle()
+                                .padding(.trailing, 65.0)
+                                .frame(width: 180.0, height: 35.0)
+                                .cornerRadius(13)
+                                .foregroundColor(.init(red: 0.831, green: 0.839, blue: 0.843))
                                 
                             }
                         }
@@ -130,41 +152,51 @@ struct PersonalView: View {
                     }
                     
                     //list
-                    ZStack{
-                        Rectangle()
-                            .frame(width: 300.0, height: 240.0)
-                            .cornerRadius(15)
+                    
+                       
+            VStack {
+                                   // Input Field for Adding New Items
+                HStack {
+                    TextField("", text: $newItem)
+                        .padding()
+                        .frame(width: 250, height: 40)
+                        .background(Color(.init(red: 0.831, green: 0.839, blue: 0.843)))
+                        .cornerRadius(15)
+                    Button(action: {
+                        addItem()
+                    }) {
+                        Image(systemName: "plus.circle.fill")
                             .foregroundColor(.init(red: 0.831, green: 0.839, blue: 0.843))
-                        
-                        HStack{
-                            
-                            VStack{
-                                
-                                HStack{
-                                    Rectangle()
-                                        .frame(width: 30.0, height: 30.0)
-                                        .cornerRadius(30)
-                                        .foregroundColor(.init(red: 0.671, green: 0.721, blue: 0.765))
-                                }
-                                
+                            .font(.largeTitle)
                             }
-                    
                         }
-
-                    }
                         
-                    Spacer()
-                }
-                
-                VStack{
-                    
-                }
-                
-               
-            }
-        }
-    }
 
+// List of Checklist Items
+                List {
+                    ForEach(items.indices, id: \.self) { index in
+                        HStack {
+                            Image(systemName: items[index].contains("[DONE]") ? "checkmark.circle.fill" : "circle")
+                                .onTapGesture {
+                                    toggleItem(at: index)
+                                }
+                            Text(items[index])
+                        }.ignoresSafeArea()
+                    }
+                    .onDelete(perform: deleteItem)
+                    .scrollContentBackground(.hidden)
+                    .ignoresSafeArea()
+                }
+                .frame(width: 360)
+                .ignoresSafeArea()
+                .cornerRadius(15)
+                .ignoresSafeArea()
+                .scrollContentBackground(.hidden)
+                
+            }
+            }
+            }
+    }
 
 #Preview {
     PersonalView()
