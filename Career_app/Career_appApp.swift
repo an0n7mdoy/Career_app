@@ -15,3 +15,9 @@ struct Career_appApp: App {
         }
     }
 }
+
+struct ChecklistItem: Identifiable {
+    let id = UUID()
+    var text: String
+    var isChecked: Bool = false
+}

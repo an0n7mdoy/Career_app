@@ -194,9 +194,9 @@ struct PersonalView: View {
                 .scrollContentBackground(.hidden)
                 
             }
-            }
-            }
+        }
     }
+}
 
 #Preview {
     PersonalView()
