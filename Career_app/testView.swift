@@ -27,9 +27,16 @@ struct testView: View {
                     
                     
                     Text("Career Guidance Test")
-                        .font(Font.custom("Mina-Bold", size: 28))
-                        .foregroundColor(.black)
+                        .font(Font.custom("Livvic-Regular", size: 29))
+                        .lineLimit(0)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Color(red: 0.54, green: 0.57, blue: 0.58))
+                  
+
             }
+             
+               
+                
                 ZStack {
                     Rectangle()
                         
@@ -37,25 +44,33 @@ struct testView: View {
                         .frame(width: 364, height: 120)
                         .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
                         .cornerRadius(8)
-                        .padding(.bottom, 10.0)
+                        .padding(.bottom, 7.0)
                     
                     Text("You need to answer following questions carefully. Think about your answers. For this test you need about 10-20 minutes.")
-                        .font(Font.custom("Mina-Regular", size: 18))
+                        .font(Font.custom("Livvic-Regular", size: 20))
                         .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                         .frame(width: 352, height: 100, alignment: .topLeading)
                 }
+                
+              
                 ZStack {
+                    
                     Rectangle()
                         .foregroundColor(.clear)
                         .frame(width: 191, height: 31)
                         .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
                         .cornerRadius(8)
+                        .padding(.bottom,7.0)
                     
-                    Text("Start")
-                        .font(Font.custom("Mina", size: 20))
-                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                        .frame(width: 55, height: 31, alignment: .topLeading)
-                }
+                    NavigationLink(destination: testquestionView())
+                            {
+                        Text("Start")
+                            .font(Font.custom("Livvic-Regular", size: 20))
+                            .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                            .frame(width: 55, height: 31, alignment: .topLeading)
+                            }
+                        }
+                
                 Rectangle()
                 .foregroundColor(.clear)
                 .frame(width: 450, height: 305)
@@ -66,7 +81,7 @@ struct testView: View {
                 .frame(width: 450, height: 305)
                 .clipped()
                 )
-                Spacer()
+    
 
             }
         }

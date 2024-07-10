@@ -39,8 +39,10 @@ struct MainScreenView: View {
                 
                 NavigationLink(destination: testView()){
                     Text("Career Guidance Test")
-                        .font(Font.custom("Mina-bold", size: 28))
-                        .foregroundColor(.black)
+                        .font(Font.custom("Livvic-Regular", size: 29))
+                        .lineLimit(0)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Color(red: 0.54, green: 0.57, blue: 0.58))
                 }
             }
             
@@ -64,9 +66,9 @@ struct MainScreenView: View {
                     
                         NavigationLink(destination: PersonalView()){
                             Text("Personal Account")
-                                .font(Font.custom("Mina-Regular", size: 22))
-                                .foregroundColor(.black)
-                        
+                                .font(Font.custom("Livvic-Regular", size: 25))
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(Color(red: 0.15, green: 0.2, blue: 0.22).opacity(0.9))
                     }
                     
                     
@@ -93,8 +95,9 @@ struct MainScreenView: View {
                     
                     NavigationLink(destination: SettingsView()){
                         Text("Settings")
-                            .font(Font.custom("Mina-Regular", size: 22))
-                            .foregroundColor(.black)
+                            .font(Font.custom("Livvic-Regular", size: 25))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(Color(red: 0.15, green: 0.2, blue: 0.22).opacity(0.9))
                     }
                 }
             }
@@ -119,8 +122,9 @@ struct MainScreenView: View {
                     
                     NavigationLink(destination: DevView()){
                         Text("About Developers")
-                            .font(Font.custom("Mina-Regular", size: 22))
-                            .foregroundColor(.black)
+                            .font(Font.custom("Livvic-Regular", size: 25))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(Color(red: 0.15, green: 0.2, blue: 0.22).opacity(0.9))
                     }
                     }
                 }
