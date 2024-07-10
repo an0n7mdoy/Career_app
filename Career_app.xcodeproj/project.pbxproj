@@ -14,6 +14,8 @@
 		42CD0D442C0394470004B48A /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0D432C0394470004B48A /* MainScreenView.swift */; };
 		42CD0D462C0394510004B48A /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0D452C0394510004B48A /* PersonalView.swift */; };
 		42CD0D482C0394570004B48A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0D472C0394570004B48A /* SettingsView.swift */; };
+		42EAE7D12C3F08FB00BD3424 /* Mina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D257B8EE2C3EC145001C5F14 /* Mina-Regular.ttf */; };
+		42EAE7D22C3F08FF00BD3424 /* Mina-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D257B8ED2C3EC143001C5F14 /* Mina-Bold.ttf */; };
 		D257B8E72C3EBB92001C5F14 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D257B8E62C3EBB92001C5F14 /* testView.swift */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +153,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42EAE7D22C3F08FF00BD3424 /* Mina-Bold.ttf in Resources */,
+				42EAE7D12C3F08FB00BD3424 /* Mina-Regular.ttf in Resources */,
 				423FC3372C0392F9008E3EBD /* Preview Assets.xcassets in Resources */,
 				423FC3342C0392F9008E3EBD /* Assets.xcassets in Resources */,
 			);

@@ -54,8 +54,7 @@ struct DevView: View {
                             .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
                         
                         Text("About developers")
-                            .font(.title2)
-                            .fontWeight(.semibold)
+                            .font(Font.custom("Mina-Regular", size: 22))
                         
                     }
                 }
@@ -71,6 +70,7 @@ struct DevView: View {
                     
                     Text("Hello! \nWe, developers of this application that we really hope you like, are 10th grade students of an International Baccalaureate Diploma Program. Our names are Anastasia and Simon, and both of us want to major in computer science. This application was our first serious project and it will help you learn about different professions, assesses your skills and interests, find the right education and career path.  We have collected information for you about the most popular and in-demand specialties, and also provide an opportunity to take the test to determine your professional destination. We have tried to make our application as convenient and accessible as possible for everyone who is facing the choice of profession. We hope that our app will help you find your way to a successful and satisfying career. Thank you for choosing us! \nFeel free to contact us: appforstudents@mail.ru")
                         .frame(width: 310)
+                        .font(Font.custom("Mina-Regular", size: 17))
                           
                     
                 }
