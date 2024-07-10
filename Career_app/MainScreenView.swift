@@ -37,10 +37,11 @@ struct MainScreenView: View {
                     .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
                 
                 
-                Text("Career Guidance Test")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.black)
+                NavigationLink(destination: testView()){
+                    Text("Career Guidance Test")
+                        .font(Font.custom("Mina-bold", size: 28))
+                        .foregroundColor(.black)
+                }
             }
             
             Spacer()
@@ -63,8 +64,7 @@ struct MainScreenView: View {
                     
                         NavigationLink(destination: PersonalView()){
                             Text("Personal Account")
-                                .font(.title2)
-                                .fontWeight(.semibold)
+                                .font(Font.custom("Mina-Regular", size: 22))
                                 .foregroundColor(.black)
                         
                     }
@@ -93,8 +93,7 @@ struct MainScreenView: View {
                     
                     NavigationLink(destination: SettingsView()){
                         Text("Settings")
-                            .font(.title2)
-                            .fontWeight(.semibold)
+                            .font(Font.custom("Mina-Regular", size: 22))
                             .foregroundColor(.black)
                     }
                 }
@@ -120,8 +119,7 @@ struct MainScreenView: View {
                     
                     NavigationLink(destination: DevView()){
                         Text("About Developers")
-                            .font(.title2)
-                            .fontWeight(.semibold)
+                            .font(Font.custom("Mina-Regular", size: 22))
                             .foregroundColor(.black)
                     }
                     }

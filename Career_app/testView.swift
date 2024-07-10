@@ -27,8 +27,7 @@ struct testView: View {
                     
                     
                     Text("Career Guidance Test")
-                        .font(.title)
-                        .fontWeight(.semibold)
+                        .font(Font.custom("Mina-Bold", size: 28))
                         .foregroundColor(.black)
             }
                 ZStack {
