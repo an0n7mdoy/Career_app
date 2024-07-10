@@ -15,7 +15,7 @@ struct testView: View {
                 Spacer()
                 Spacer()
                 Spacer()
-                Spacer()
+              
             
         
 //NAME
