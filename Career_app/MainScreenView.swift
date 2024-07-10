@@ -34,7 +34,7 @@ struct MainScreenView: View {
                 Rectangle()
                     .frame(width: 300.0, height: 70.0)
                     .cornerRadius(15)
-                    .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
+                    .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
                 
                 
                 Text("Career Guidance Test")
