@@ -4,6 +4,9 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Livvic-SemiBold.ttf</string>
+		<string>Livvic-Bold.ttf</string>
+		<string>Livvic-Regular.ttf</string>
 		<string>Mina-Bold.ttf</string>
 		<string>Mina-Regular.ttf</string>
 	</array>

@@ -61,15 +61,16 @@ struct testView: View {
                         .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
                         .cornerRadius(8)
                         .padding(.bottom,7.0)
-                    
-                    NavigationLink(destination: testquestionView())
-                            {
+                     
+                    NavigationLink(destination: testquestionView()){
                         Text("Start")
                             .font(Font.custom("Livvic-Regular", size: 20))
                             .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                             .frame(width: 55, height: 31, alignment: .topLeading)
-                            }
                         }
+                    
+                   
+                    }
                 
                 Rectangle()
                 .foregroundColor(.clear)
