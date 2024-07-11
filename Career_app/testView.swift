@@ -47,7 +47,7 @@ struct testView: View {
                         .padding(.bottom, 7.0)
                     
                     Text("You need to answer following questions carefully. Think about your answers. For this test you need about 10-20 minutes.")
-                        .font(Font.custom("Livvic-Regular", size: 20))
+                        .font(Font.custom("Livvic-Regular", size: 19))
                         .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                         .frame(width: 352, height: 100, alignment: .topLeading)
                 }
