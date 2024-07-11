@@ -53,11 +53,15 @@ struct testquestionView: View {
                                 .cornerRadius(15)
                                 .rotationEffect(Angle(degrees: -90))
                                 .padding(.leading, 270.0)
-
+                            
+                                 Image(systemName: "arrow.right")
+                                     .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
+                                     .padding(.leading, 266.754)
+                                     .font(.system(size: 30))
+                                     
                         }
-                       
-                                
-                        }
+      
+                    }
                 }
             }
         }
