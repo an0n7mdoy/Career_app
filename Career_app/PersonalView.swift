@@ -75,7 +75,7 @@ struct PersonalView: View {
                         .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
                     
                     Text("Personal account")
-                        .font(Font.custom("Mina-Regular", size: 22))
+                        .font(Font.custom("Livvic-Regular", size: 25))
                     
                 }
             }
@@ -104,7 +104,7 @@ struct PersonalView: View {
                             .foregroundColor(.init(red: 0.702, green: 0.718, blue: 0.725))
                         
                         Text("Desired universities")
-                            .font(Font.custom("Mina-Regular", size: 18))
+                            .font(Font.custom("Livvic-Regular", size: 20))
                     }
                     
                 }
@@ -126,7 +126,7 @@ struct PersonalView: View {
                             .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
                             
                         Text("Goals")
-                            .font(Font.custom("Mina-Regular", size: 22))
+                            .font(Font.custom("Livvic-Regular", size: 25))
                     }
                         //prog
                     ZStack{

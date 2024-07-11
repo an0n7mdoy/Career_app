@@ -55,7 +55,7 @@ struct SettingsView: View {
                         .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
                     
                     Text("Settings")
-                        .font(Font.custom("Mina-Regular", size: 22))
+                        .font(Font.custom("Livvic-Regular", size: 25))
                     
                 }
             }
@@ -78,16 +78,16 @@ struct SettingsView: View {
                                 .foregroundColor(.init(red: 0.702, green: 0.718, blue: 0.725))
                                 
                             Text("Sound options")
-                                .font(Font.custom("Mina-Regular", size: 18))
+                                .font(Font.custom("Livvic-Regular", size: 20))
                                     
                         }
                             
                         HStack{
                             VStack{
                                 Text("Music")
-                                    .font(Font.custom("Mina-Regular", size: 15))
+                                    .font(Font.custom("Livvic-Regular", size: 17))
                                 Text("Sounds")
-                                    .font(Font.custom("Mina-Regular", size: 15))
+                                    .font(Font.custom("Livvic-Regular", size: 17))
                             }
                             
                             VStack{

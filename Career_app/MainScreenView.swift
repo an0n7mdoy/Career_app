@@ -40,7 +40,6 @@ struct MainScreenView: View {
                 NavigationLink(destination: testView()){
                     Text("Career Guidance Test")
                         .font(Font.custom("Livvic-Regular", size: 29))
-                        .lineLimit(0)
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color(red: 0.54, green: 0.57, blue: 0.58))
                 }
