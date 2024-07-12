@@ -134,7 +134,13 @@ struct testquestionView: View {
                       .padding(.top, 272)
                       .padding(.leading, 67.0)
                     
-                    
+                    /*
+                     Это пизда конкретная, я хуею
+                     это все надо будет удалять, каждый yes/no даже если пока чисто для вида должен быть отдельным элементом.
+                     пожалуйста, никогда больше не делай все одним текстом
+                     извини, но мне хочется плакать от каждого квадрата с да и нет. ты сделала высоту 46 и ширину 27 и ПОВЕРНУЛА НА 90 ГРАДУСОВ!!! можно было просто поменять местами значения высоты и ширины.
+                     и не нужно позиционировать элеметы паддингом, когда каждый будет кнопкой, это будет не очень хорошо работать если будет работать вовсе, так что это все надо переделать.
+                     */
                     VStack  {
                         Spacer ()
                         Text("Do you enjoy working with tools and machinery?\n                     Yes                    No\nDo you like outdoor activities and working with your hands?\n                     Yes                    No\nAre you interested in fixing or repairing things?\n                     Yes                    No\nDo you enjoy physical activities and sports?\n                     Yes                    No\nDo you prefer practical tasks over theoretical ones?\n                     Yes                    No")
