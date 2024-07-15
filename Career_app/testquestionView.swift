@@ -41,146 +41,235 @@ struct testquestionView: View {
                 ZStack {
                     Rectangle()
                       .foregroundColor(.clear)
-                      .frame(width: 364, height: 416)
+                      .frame(width: 364, height: 450)
                       .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
                       .cornerRadius(8)
                     
-                    
-                    
-                    Rectangle()
-                      .foregroundColor(.clear)
-                      .frame(width: 27, height: 46)
-                      .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                      .cornerRadius(15)
-                      .rotationEffect(Angle(degrees: -90))
-                      .padding(.bottom, 272)
-                      .padding(.trailing, 146.0)
-                    Rectangle()
-                      .foregroundColor(.clear)
-                      .frame(width: 27, height: 46)
-                      .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                      .cornerRadius(15)
-                      .rotationEffect(Angle(degrees: -90))
-                      .padding(.bottom, 272)
-                      .padding(.leading, 67.0)
-                    
-                    
-                    Rectangle()
-                      .foregroundColor(.clear)
-                      .frame(width: 27, height: 46)
-                      .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                      .cornerRadius(15)
-                      .rotationEffect(Angle(degrees: -90))
-                      .padding(.bottom, 136)
-                      .padding(.trailing, 146.0)
-                    Rectangle()
-                      .foregroundColor(.clear)
-                      .frame(width: 27, height: 46)
-                      .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                      .cornerRadius(15)
-                      .rotationEffect(Angle(degrees: -90))
-                      .padding(.bottom, 136)
-                      .padding(.leading, 67.0)
-                    
-                    
-                    Rectangle()
-                      .foregroundColor(.clear)
-                      .frame(width: 27, height: 46)
-                      .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                      .cornerRadius(15)
-                      .rotationEffect(Angle(degrees: -90))
-                      .padding(.trailing, 146.0)
-                    Rectangle()
-                      .foregroundColor(.clear)
-                      .frame(width: 27, height: 46)
-                      .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                      .cornerRadius(15)
-                      .rotationEffect(Angle(degrees: -90))
-                      .padding(.leading, 67.0)
-                   
-                   
-                    Rectangle()
-                      .foregroundColor(.clear)
-                      .frame(width: 27, height: 46)
-                      .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                      .cornerRadius(15)
-                      .rotationEffect(Angle(degrees: -90))
-                      .padding(.top, 136)
-                      .padding(.trailing, 146.0)
-                    Rectangle()
-                      .foregroundColor(.clear)
-                      .frame(width: 27, height: 46)
-                      .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                      .cornerRadius(15)
-                      .rotationEffect(Angle(degrees: -90))
-                      .padding(.top, 136)
-                      .padding(.leading, 67.0)
-                    
-                    
-                    Rectangle()
-                      .foregroundColor(.clear)
-                      .frame(width: 27, height: 46)
-                      .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                      .cornerRadius(15)
-                      .rotationEffect(Angle(degrees: -90))
-                      .padding(.top, 272)
-                      .padding(.trailing, 146.0)
-                    Rectangle()
-                      .foregroundColor(.clear)
-                      .frame(width: 27, height: 46)
-                      .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                      .cornerRadius(15)
-                      .rotationEffect(Angle(degrees: -90))
-                      .padding(.top, 272)
-                      .padding(.leading, 67.0)
-                    
-                    /*
-                     Это пизда конкретная, я хуею
-                     это все надо будет удалять, каждый yes/no даже если пока чисто для вида должен быть отдельным элементом.
-                     пожалуйста, никогда больше не делай все одним текстом
-                     извини, но мне хочется плакать от каждого квадрата с да и нет. ты сделала высоту 46 и ширину 27 и ПОВЕРНУЛА НА 90 ГРАДУСОВ!!! можно было просто поменять местами значения высоты и ширины.
-                     и не нужно позиционировать элеметы паддингом, когда каждый будет кнопкой, это будет не очень хорошо работать если будет работать вовсе, так что это все надо переделать.
-                     */
                     VStack  {
-                        Spacer ()
-                        Text("Do you enjoy working with tools and machinery?\n                     Yes                    No\nDo you like outdoor activities and working with your hands?\n                     Yes                    No\nAre you interested in fixing or repairing things?\n                     Yes                    No\nDo you enjoy physical activities and sports?\n                     Yes                    No\nDo you prefer practical tasks over theoretical ones?\n                     Yes                    No")
+                        Text("Do you enjoy working with \n     tools and machinery?")
                             .font(Font.custom("Livvic", size: 18))
                             .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                            .frame(width: 343, height: 401, alignment: .topLeading)
+                        
+                        HStack{
+                            
+                            Spacer()
+                            Spacer()
+                            
+                            ZStack{
+                                Rectangle()
+                                    .frame(width: 46, height: 27)
+                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                    .cornerRadius(15)
+                                Text("Yes")
+                                    .font(Font.custom("Livvic", size: 18))
+                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
+                            }
+                            
+                            Spacer()
+                            
+                            ZStack{
+                                Rectangle()
+                                    .frame(width: 46, height: 27)
+                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                    .cornerRadius(15)
+                                Text("No")
+                                    .font(Font.custom("Livvic", size: 18))
+                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
+                            }
+                            
+                            Spacer()
+                            Spacer()
+                            
+                        }
+                        
+                        Text("Do you like outdoor activities and \nworking with your hands?")
+                            .font(Font.custom("Livvic", size: 18))
+                            .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                        
+                        HStack{
+                            
+                            Spacer()
+                            Spacer()
+                            
+                            ZStack{
+                                Rectangle()
+                                    .frame(width: 46, height: 27)
+                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                    .cornerRadius(15)
+                                Text("Yes")
+                                    .font(Font.custom("Livvic", size: 18))
+                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
+                            }
+                            
+                            Spacer()
+                            
+                            ZStack{
+                                Rectangle()
+                                    .frame(width: 46, height: 27)
+                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                    .cornerRadius(15)
+                                Text("No")
+                                    .font(Font.custom("Livvic", size: 18))
+                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
+                            }
+                            
+                            Spacer()
+                            Spacer()
+                            
+                        }
+                        
+                        Text("Are you interested in fixing or \nrepairing things?")
+                            .font(Font.custom("Livvic", size: 18))
+                            .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                        
+                        HStack{
+                            
+                            Spacer()
+                            Spacer()
+                            
+                            ZStack{
+                                Rectangle()
+                                    .frame(width: 46, height: 27)
+                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                    .cornerRadius(15)
+                                Text("Yes")
+                                    .font(Font.custom("Livvic", size: 18))
+                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
+                            }
+                            
+                            Spacer()
+                            
+                            ZStack{
+                                Rectangle()
+                                    .frame(width: 46, height: 27)
+                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                    .cornerRadius(15)
+                                Text("No")
+                                    .font(Font.custom("Livvic", size: 18))
+                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
+                            }
+                            
+                            Spacer()
+                            Spacer()
+                            
+                        }
+                        
+                        Text("Do you enjoy physical activities and sports?")
+                            .font(Font.custom("Livvic", size: 18))
+                            .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                        
+                        HStack{
+                            
+                            Spacer()
+                            Spacer()
+                            
+                            ZStack{
+                                Rectangle()
+                                    .frame(width: 46, height: 27)
+                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                    .cornerRadius(15)
+                                Text("Yes")
+                                    .font(Font.custom("Livvic", size: 18))
+                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
+                            }
+                            
+                            Spacer()
+                            
+                            ZStack{
+                                Rectangle()
+                                    .frame(width: 46, height: 27)
+                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                    .cornerRadius(15)
+                                Text("No")
+                                    .font(Font.custom("Livvic", size: 18))
+                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
+                            }
+                            
+                            Spacer()
+                            Spacer()
+                            
+                        }
+                        
+                        Text("Do you prefer practical tasks \nover theoretical ones?")
+                            .font(Font.custom("Livvic", size: 18))
+                            .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                        
+                        HStack{
+                            
+                            Spacer()
+                            Spacer()
+                            
+                            ZStack{
+                                Rectangle()
+                                    .frame(width: 46, height: 27)
+                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                    .cornerRadius(15)
+                                Text("Yes")
+                                    .font(Font.custom("Livvic", size: 18))
+                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
+                            }
+                            
+                            Spacer()
+                            
+                            ZStack{
+                                Rectangle()
+                                    .frame(width: 46, height: 27)
+                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                    .cornerRadius(15)
+                                Text("No")
+                                    .font(Font.custom("Livvic", size: 18))
+                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
+                            }
+                            
+                            Spacer()
+                            Spacer()
+                            
+                        }
                     }
                 }
-                    VStack {
-                       
-                        ZStack {
+                    
+                HStack {
+
+                        Spacer()
+                        
+                        ZStack{
+                            
                             Rectangle()
-                              .foregroundColor(.clear)
-                              .frame(width: 37.67037, height: 64)
-                              .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                              .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                              .frame(width: 64, height: 37)
                               .cornerRadius(15)
-                              .rotationEffect(Angle(degrees: -90))
-                              .padding(.leading, 140.0)
                             
                             Text("1/8")
                               .font(Font.custom("Livvic", size: 18))
-                              .padding(.leading, 140.0)
                               .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                            
+                        }
+                        
+                        ZStack{
+                           
                             Rectangle()
-                                .foregroundColor(.clear)
-                                .frame(width: 37.67037, height: 64)
-                                .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                .frame(width: 64, height: 37)
                                 .cornerRadius(15)
-                                .rotationEffect(Angle(degrees: -90))
-                                .padding(.leading, 300.0)
                             
-                                 Image(systemName: "arrow.right")
-                                     .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
-                                     .padding(.leading, 300.0)
-                                     .font(.system(size: 30))
+                            Image(systemName: "arrow.right")
+                                .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
+                                .font(.system(size: 30))
                                      
                         
                     }
                 }
+                .frame(width: 364)
+                
             }
         }
     }
