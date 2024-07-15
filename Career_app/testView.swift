@@ -9,7 +9,7 @@ import SwiftUI
 
 struct testView: View {
     var body: some View {
-        NavigationView{
+        NavigationStack{
             VStack {
            
                 Spacer()
@@ -32,8 +32,8 @@ struct testView: View {
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color(red: 0.54, green: 0.57, blue: 0.58))
                   
-
-            }
+                    
+                }
              
                
                 

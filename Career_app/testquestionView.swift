@@ -9,267 +9,269 @@ import SwiftUI
 
 struct testquestionView: View {
     var body: some View {
-        ScrollView {
-            VStack {
-                Rectangle()
-                    .foregroundColor(.clear)
-                    .frame(width: 450, height: 305)
-                    .background(
-                        Image("1 экран")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 450, height: 305)
-                            .clipped()
-                                )
-                ZStack {
+        NavigationStack{
+            ScrollView {
+                VStack {
                     Rectangle()
-                        .frame(width: 300.0, height: 70.0)
-                        .cornerRadius(15)
-                        .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
-                    
-                    
-                    Text("Career Guidance Test")
-                        .font(Font.custom("Livvic-Regular", size: 29))
-                        .lineLimit(0)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color(red: 0.54, green: 0.57, blue: 0.58))
-                }
+                        .foregroundColor(.clear)
+                        .frame(width: 450, height: 305)
+                        .background(
+                            Image("1 экран")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 450, height: 305)
+                                .clipped()
+                                    )
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 300.0, height: 70.0)
+                            .cornerRadius(15)
+                            .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
+                        
+                        
+                        Text("Career Guidance Test")
+                            .font(Font.custom("Livvic-Regular", size: 29))
+                            .lineLimit(0)
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(Color(red: 0.54, green: 0.57, blue: 0.58))
+                    }
 
-    
-               
-         
-                ZStack {
-                    Rectangle()
-                      .foregroundColor(.clear)
-                      .frame(width: 364, height: 450)
-                      .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                      .cornerRadius(8)
-                    
-                    VStack  {
-                        Text("Do you enjoy working with \n     tools and machinery?")
-                            .font(Font.custom("Livvic", size: 18))
-                            .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+        
+                   
+             
+                    ZStack {
+                        Rectangle()
+                          .foregroundColor(.clear)
+                          .frame(width: 364, height: 450)
+                          .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                          .cornerRadius(8)
                         
-                        HStack{
+                        VStack  {
+                            Text("Do you enjoy working with \n     tools and machinery?")
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                             
-                            Spacer()
-                            Spacer()
-                            
-                            ZStack{
-                                Rectangle()
-                                    .frame(width: 46, height: 27)
-                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                    .cornerRadius(15)
-                                Text("Yes")
-                                    .font(Font.custom("Livvic", size: 18))
-                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                            HStack{
+                                
+                                Spacer()
+                                Spacer()
+                                
+                                ZStack{
+                                    Rectangle()
+                                        .frame(width: 46, height: 27)
+                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                        .cornerRadius(15)
+                                    Text("Yes")
+                                        .font(Font.custom("Livvic", size: 18))
+                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                    
+                                }
+                                
+                                Spacer()
+                                
+                                ZStack{
+                                    Rectangle()
+                                        .frame(width: 46, height: 27)
+                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                        .cornerRadius(15)
+                                    Text("No")
+                                        .font(Font.custom("Livvic", size: 18))
+                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                    
+                                }
+                                
+                                Spacer()
+                                Spacer()
                                 
                             }
                             
-                            Spacer()
+                            Text("Do you like outdoor activities and \nworking with your hands?")
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                             
-                            ZStack{
-                                Rectangle()
-                                    .frame(width: 46, height: 27)
-                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                    .cornerRadius(15)
-                                Text("No")
-                                    .font(Font.custom("Livvic", size: 18))
-                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                            HStack{
+                                
+                                Spacer()
+                                Spacer()
+                                
+                                ZStack{
+                                    Rectangle()
+                                        .frame(width: 46, height: 27)
+                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                        .cornerRadius(15)
+                                    Text("Yes")
+                                        .font(Font.custom("Livvic", size: 18))
+                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                    
+                                }
+                                
+                                Spacer()
+                                
+                                ZStack{
+                                    Rectangle()
+                                        .frame(width: 46, height: 27)
+                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                        .cornerRadius(15)
+                                    Text("No")
+                                        .font(Font.custom("Livvic", size: 18))
+                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                    
+                                }
+                                
+                                Spacer()
+                                Spacer()
                                 
                             }
                             
-                            Spacer()
-                            Spacer()
+                            Text("Are you interested in fixing or \nrepairing things?")
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                             
+                            HStack{
+                                
+                                Spacer()
+                                Spacer()
+                                
+                                ZStack{
+                                    Rectangle()
+                                        .frame(width: 46, height: 27)
+                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                        .cornerRadius(15)
+                                    Text("Yes")
+                                        .font(Font.custom("Livvic", size: 18))
+                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                    
+                                }
+                                
+                                Spacer()
+                                
+                                ZStack{
+                                    Rectangle()
+                                        .frame(width: 46, height: 27)
+                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                        .cornerRadius(15)
+                                    Text("No")
+                                        .font(Font.custom("Livvic", size: 18))
+                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                    
+                                }
+                                
+                                Spacer()
+                                Spacer()
+                                
+                            }
+                            
+                            Text("Do you enjoy physical activities and sports?")
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                            
+                            HStack{
+                                
+                                Spacer()
+                                Spacer()
+                                
+                                ZStack{
+                                    Rectangle()
+                                        .frame(width: 46, height: 27)
+                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                        .cornerRadius(15)
+                                    Text("Yes")
+                                        .font(Font.custom("Livvic", size: 18))
+                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                    
+                                }
+                                
+                                Spacer()
+                                
+                                ZStack{
+                                    Rectangle()
+                                        .frame(width: 46, height: 27)
+                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                        .cornerRadius(15)
+                                    Text("No")
+                                        .font(Font.custom("Livvic", size: 18))
+                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                    
+                                }
+                                
+                                Spacer()
+                                Spacer()
+                                
+                            }
+                            
+                            Text("Do you prefer practical tasks \nover theoretical ones?")
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                            
+                            HStack{
+                                
+                                Spacer()
+                                Spacer()
+                                
+                                ZStack{
+                                    Rectangle()
+                                        .frame(width: 46, height: 27)
+                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                        .cornerRadius(15)
+                                    Text("Yes")
+                                        .font(Font.custom("Livvic", size: 18))
+                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                    
+                                }
+                                
+                                Spacer()
+                                
+                                ZStack{
+                                    Rectangle()
+                                        .frame(width: 46, height: 27)
+                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                        .cornerRadius(15)
+                                    Text("No")
+                                        .font(Font.custom("Livvic", size: 18))
+                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                    
+                                }
+                                
+                                Spacer()
+                                Spacer()
+                                
+                            }
                         }
+                    }
                         
-                        Text("Do you like outdoor activities and \nworking with your hands?")
-                            .font(Font.custom("Livvic", size: 18))
-                            .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                        
-                        HStack{
-                            
-                            Spacer()
+                    HStack {
+
                             Spacer()
                             
                             ZStack{
-                                Rectangle()
-                                    .frame(width: 46, height: 27)
-                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                    .cornerRadius(15)
-                                Text("Yes")
-                                    .font(Font.custom("Livvic", size: 18))
-                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
+                                Rectangle()
+                                  .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                  .frame(width: 64, height: 37)
+                                  .cornerRadius(15)
+                                
+                                Text("1/8")
+                                  .font(Font.custom("Livvic", size: 18))
+                                  .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                             }
-                            
-                            Spacer()
                             
                             ZStack{
+                               
                                 Rectangle()
-                                    .frame(width: 46, height: 27)
                                     .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                    .frame(width: 64, height: 37)
                                     .cornerRadius(15)
-                                Text("No")
-                                    .font(Font.custom("Livvic", size: 18))
-                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
-                            }
-                            
-                            Spacer()
-                            Spacer()
-                            
-                        }
-                        
-                        Text("Are you interested in fixing or \nrepairing things?")
-                            .font(Font.custom("Livvic", size: 18))
-                            .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                        
-                        HStack{
-                            
-                            Spacer()
-                            Spacer()
-                            
-                            ZStack{
-                                Rectangle()
-                                    .frame(width: 46, height: 27)
-                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                    .cornerRadius(15)
-                                Text("Yes")
-                                    .font(Font.custom("Livvic", size: 18))
-                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                
-                            }
-                            
-                            Spacer()
-                            
-                            ZStack{
-                                Rectangle()
-                                    .frame(width: 46, height: 27)
-                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                    .cornerRadius(15)
-                                Text("No")
-                                    .font(Font.custom("Livvic", size: 18))
-                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                
-                            }
-                            
-                            Spacer()
-                            Spacer()
-                            
-                        }
-                        
-                        Text("Do you enjoy physical activities and sports?")
-                            .font(Font.custom("Livvic", size: 18))
-                            .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                        
-                        HStack{
-                            
-                            Spacer()
-                            Spacer()
-                            
-                            ZStack{
-                                Rectangle()
-                                    .frame(width: 46, height: 27)
-                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                    .cornerRadius(15)
-                                Text("Yes")
-                                    .font(Font.custom("Livvic", size: 18))
-                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                
-                            }
-                            
-                            Spacer()
-                            
-                            ZStack{
-                                Rectangle()
-                                    .frame(width: 46, height: 27)
-                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                    .cornerRadius(15)
-                                Text("No")
-                                    .font(Font.custom("Livvic", size: 18))
-                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                
-                            }
-                            
-                            Spacer()
-                            Spacer()
-                            
-                        }
-                        
-                        Text("Do you prefer practical tasks \nover theoretical ones?")
-                            .font(Font.custom("Livvic", size: 18))
-                            .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                        
-                        HStack{
-                            
-                            Spacer()
-                            Spacer()
-                            
-                            ZStack{
-                                Rectangle()
-                                    .frame(width: 46, height: 27)
-                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                    .cornerRadius(15)
-                                Text("Yes")
-                                    .font(Font.custom("Livvic", size: 18))
-                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                
-                            }
-                            
-                            Spacer()
-                            
-                            ZStack{
-                                Rectangle()
-                                    .frame(width: 46, height: 27)
-                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                    .cornerRadius(15)
-                                Text("No")
-                                    .font(Font.custom("Livvic", size: 18))
-                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                
-                            }
-                            
-                            Spacer()
-                            Spacer()
+                                Image(systemName: "arrow.right")
+                                    .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
+                                    .font(.system(size: 30))
+                                         
                             
                         }
                     }
-                }
+                    .frame(width: 364)
                     
-                HStack {
-
-                        Spacer()
-                        
-                        ZStack{
-                            
-                            Rectangle()
-                              .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                              .frame(width: 64, height: 37)
-                              .cornerRadius(15)
-                            
-                            Text("1/8")
-                              .font(Font.custom("Livvic", size: 18))
-                              .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                        }
-                        
-                        ZStack{
-                           
-                            Rectangle()
-                                .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                .frame(width: 64, height: 37)
-                                .cornerRadius(15)
-                            
-                            Image(systemName: "arrow.right")
-                                .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
-                                .font(.system(size: 30))
-                                     
-                        
-                    }
                 }
-                .frame(width: 364)
-                
             }
         }
     }
