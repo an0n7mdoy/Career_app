@@ -17,7 +17,7 @@ struct testView: View {
                 Spacer()
               
             
-        
+                
 //NAME
                 ZStack {
                     Rectangle()
@@ -55,13 +55,16 @@ struct testView: View {
               
                 ZStack {
                     
+                    
                     Rectangle()
                         .foregroundColor(.clear)
                         .frame(width: 191, height: 31)
                         .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
                         .cornerRadius(8)
                         .padding(.bottom,7.0)
-                     
+                    
+                    
+                    
                     NavigationLink(destination: testquestionView()){
                         Text("Start")
                             .font(Font.custom("Livvic-Regular", size: 20))
@@ -71,6 +74,7 @@ struct testView: View {
                     
                    
                     }
+                Spacer()
                 
                 Rectangle()
                 .foregroundColor(.clear)
