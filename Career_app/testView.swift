@@ -65,7 +65,7 @@ struct testView: View {
                     
                     
                     
-                    NavigationLink(destination: testquestionView()){
+                    NavigationLink(destination: R_testView()){
                         Text("Start")
                             .font(Font.custom("Livvic-Regular", size: 20))
                             .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))

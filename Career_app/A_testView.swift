@@ -47,7 +47,7 @@ struct A_testView: View {
                           .cornerRadius(8)
                         
                         VStack  {
-                            Text("Are you interested in solving scientific problems?")
+                            Text("Do you like creating art, music, or writing?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .multilineTextAlignment(.leading)
@@ -99,7 +99,7 @@ struct A_testView: View {
                                 
                             }
                             
-                            Text("Do you enjoy conducting experiments or research?")
+                            Text("Do you enjoy expressing yourself through creative activities?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .multilineTextAlignment(.leading)
@@ -150,7 +150,7 @@ struct A_testView: View {
                                 
                             }
                             
-                            Text("Are you curious about how things work and enjoy analyzing data?")
+                            Text("Are you interested in attending cultural events such as art exhibits, concerts, or theater performances?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .frame(width: 354.0, alignment: .topLeading)
@@ -199,7 +199,7 @@ struct A_testView: View {
                                 
                             }
                             
-                            Text("Do you prefer working on complex problems rather than routine tasks?")
+                            Text("Do you prefer unstructured and innovative work environments?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .frame(width: 354.0, alignment: .topLeading)
@@ -248,7 +248,7 @@ struct A_testView: View {
                                 
                             }
                             
-                            Text("Are you interested in studying biology, chemistry, or physics?")
+                            Text("Do you enjoy experimenting with new ideas and creative projects?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .frame(width: 354.0, alignment: .topLeading)
@@ -300,6 +300,19 @@ struct A_testView: View {
                     }
                         
                     HStack {
+                        ZStack{
+                           
+                            Rectangle()
+                                .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                .frame(width: 64, height: 37)
+                                .cornerRadius(15)
+                            
+                            Image(systemName: "arrow.left")
+                                .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
+                                .font(.system(size: 30))
+                                     
+                        
+                    }
 
                             Spacer()
                             
@@ -310,7 +323,7 @@ struct A_testView: View {
                                   .frame(width: 64, height: 37)
                                   .cornerRadius(15)
                                 
-                                Text("1/8")
+                                Text("3/8")
                                   .font(Font.custom("Livvic", size: 18))
                                   .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                             }

@@ -1,5 +1,5 @@
 //
-//  I_testView.swift
+//  E_testView.swift
 //  Career_app
 //
 //  Created by настя п. on 24/07/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct I_testView: View {
+struct E_testView: View {
     var body: some View {
         NavigationStack{
             ScrollView {
@@ -47,7 +47,7 @@ struct I_testView: View {
                           .cornerRadius(8)
                         
                         VStack  {
-                            Text("Are you interested in solving scientific problems?")
+                            Text("Are you interested in leading projects and making decisions?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .multilineTextAlignment(.leading)
@@ -99,7 +99,7 @@ struct I_testView: View {
                                 
                             }
                             
-                            Text("Do you enjoy conducting experiments or research?")
+                            Text("Do you enjoy taking on leadership roles and motivating others?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .multilineTextAlignment(.leading)
@@ -150,7 +150,7 @@ struct I_testView: View {
                                 
                             }
                             
-                            Text("Are you curious about how things work and enjoy analyzing data?")
+                            Text("Are you comfortable taking risks and making strategic decisions?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .frame(width: 354.0, alignment: .topLeading)
@@ -199,7 +199,7 @@ struct I_testView: View {
                                 
                             }
                             
-                            Text("Do you prefer working on complex problems rather than routine tasks?")
+                            Text("Do you prefer competitive and dynamic work environments?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .frame(width: 354.0, alignment: .topLeading)
@@ -248,7 +248,7 @@ struct I_testView: View {
                                 
                             }
                             
-                            Text("Are you interested in studying biology, chemistry, or physics?")
+                            Text("Are you interested in business, marketing, or sales?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .frame(width: 354.0, alignment: .topLeading)
@@ -322,7 +322,7 @@ struct I_testView: View {
                                   .frame(width: 64, height: 37)
                                   .cornerRadius(15)
                                 
-                                Text("2/8")
+                                Text("5/8")
                                   .font(Font.custom("Livvic", size: 18))
                                   .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                             }
@@ -349,5 +349,5 @@ struct I_testView: View {
     }
 }
 #Preview {
-    I_testView()
+    E_testView()
 }

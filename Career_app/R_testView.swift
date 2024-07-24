@@ -1,13 +1,13 @@
 //
-//  I_testView.swift
+//  testquestionView.swift
 //  Career_app
 //
-//  Created by настя п. on 24/07/2024.
+//  Created by настя п. on 11/07/2024.
 //
 
 import SwiftUI
 
-struct I_testView: View {
+struct R_testView: View {
     var body: some View {
         NavigationStack{
             ScrollView {
@@ -47,11 +47,12 @@ struct I_testView: View {
                           .cornerRadius(8)
                         
                         VStack  {
-                            Text("Are you interested in solving scientific problems?")
+                            Text("Do you enjoy working with tools and machinery?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .multilineTextAlignment(.leading)
-                                .frame(width: 354.0, alignment: .topLeading)
+                                .padding(.trailing, 80.0)
+                                .frame(width: 394)
                             
                             HStack{
                                 
@@ -99,11 +100,12 @@ struct I_testView: View {
                                 
                             }
                             
-                            Text("Do you enjoy conducting experiments or research?")
+                            Text("Do you like outdoor activities and working with your hands?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .multilineTextAlignment(.leading)
-                                .frame(width: 354.0, alignment: .topLeading)
+                                .padding(.trailing, 74.0)
+                                .frame(width: 394.0)
                             
                             HStack{
                                 
@@ -150,59 +152,11 @@ struct I_testView: View {
                                 
                             }
                             
-                            Text("Are you curious about how things work and enjoy analyzing data?")
+                            Text("Are you interested in fixing or repairing things?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                .frame(width: 354.0, alignment: .topLeading)
-                               
-                            HStack{
-                                
-                                Spacer()
-                                Spacer()
-                                
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 46, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    Text("Yes")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                    
-                                }
-                                Spacer()
-                                
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 76, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    Text("Maybe")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                }
-                                Spacer()
-                                
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 46, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    Text("No")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                    
-                                }
-                                
-                                Spacer()
-                                Spacer()
-                                
-                            }
-                            
-                            Text("Do you prefer working on complex problems rather than routine tasks?")
-                                .font(Font.custom("Livvic", size: 18))
-                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                .frame(width: 354.0, alignment: .topLeading)
+                                .padding(.trailing, 105.0)
+                                .frame(width: 394.0)
                             
                             HStack{
                                 
@@ -248,10 +202,61 @@ struct I_testView: View {
                                 
                             }
                             
-                            Text("Are you interested in studying biology, chemistry, or physics?")
+                            Text("Do you enjoy physical activities and \nsports?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                .frame(width: 354.0, alignment: .topLeading)
+                                .padding(.trailing, 50.0)
+                                .frame(width: 394.0)
+                            
+                            HStack{
+                                
+                                Spacer()
+                                Spacer()
+                                
+                                ZStack{
+                                    Rectangle()
+                                        .frame(width: 46, height: 27)
+                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                        .cornerRadius(15)
+                                    Text("Yes")
+                                        .font(Font.custom("Livvic", size: 18))
+                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                    
+                                }
+                                Spacer()
+                                
+                                ZStack{
+                                    Rectangle()
+                                        .frame(width: 76, height: 27)
+                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                        .cornerRadius(15)
+                                    Text("Maybe")
+                                        .font(Font.custom("Livvic", size: 18))
+                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                }
+                                Spacer()
+                                
+                                ZStack{
+                                    Rectangle()
+                                        .frame(width: 46, height: 27)
+                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                        .cornerRadius(15)
+                                    Text("No")
+                                        .font(Font.custom("Livvic", size: 18))
+                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                    
+                                }
+                                
+                                Spacer()
+                                Spacer()
+                                
+                            }
+                            
+                            Text("Do you prefer practical tasks over theoretical ones?")
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                .padding(.trailing, 67.0)
+                                .frame(width: 394)
                             
                             HStack{
                                 
@@ -300,19 +305,7 @@ struct I_testView: View {
                     }
                         
                     HStack {
-                        ZStack{
-                           
-                            Rectangle()
-                                .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                .frame(width: 64, height: 37)
-                                .cornerRadius(15)
-                            
-                            Image(systemName: "arrow.left")
-                                .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
-                                .font(.system(size: 30))
-                                     
-                        
-                    }
+
                             Spacer()
                             
                             ZStack{
@@ -322,7 +315,7 @@ struct I_testView: View {
                                   .frame(width: 64, height: 37)
                                   .cornerRadius(15)
                                 
-                                Text("2/8")
+                                Text("1/8")
                                   .font(Font.custom("Livvic", size: 18))
                                   .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                             }
@@ -348,6 +341,7 @@ struct I_testView: View {
         }
     }
 }
+
 #Preview {
-    I_testView()
+    R_testView()
 }
