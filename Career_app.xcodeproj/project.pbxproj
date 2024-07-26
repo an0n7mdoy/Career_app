@@ -90,6 +90,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4209F5D32C53C7780095646E /* testview */ = {
+			isa = PBXGroup;
+			children = (
+				D2D582852C3F4486008D12DA /* R_testView.swift */,
+				D2D582872C51157D008D12DA /* I_testView.swift */,
+				D2D582892C512478008D12DA /* A_testView.swift */,
+				D2D5828B2C514E5A008D12DA /* S_testView.swift */,
+				D2D5828D2C515017008D12DA /* E_testView.swift */,
+				D2D5828F2C515041008D12DA /* C_testView.swift */,
+			);
+			path = testview;
+			sourceTree = "<group>";
+		};
 		423FC3232C0392F7008E3EBD = {
 			isa = PBXGroup;
 			children = (
@@ -113,12 +126,7 @@
 				423FC32F2C0392F7008E3EBD /* Career_appApp.swift */,
 				42CD0D432C0394470004B48A /* MainScreenView.swift */,
 				D257B8E62C3EBB92001C5F14 /* testView.swift */,
-				D2D582852C3F4486008D12DA /* R_testView.swift */,
-				D2D582872C51157D008D12DA /* I_testView.swift */,
-				D2D582892C512478008D12DA /* A_testView.swift */,
-				D2D5828B2C514E5A008D12DA /* S_testView.swift */,
-				D2D5828D2C515017008D12DA /* E_testView.swift */,
-				D2D5828F2C515041008D12DA /* C_testView.swift */,
+				4209F5D32C53C7780095646E /* testview */,
 				42CD0D452C0394510004B48A /* PersonalView.swift */,
 				42CD0D472C0394570004B48A /* SettingsView.swift */,
 				42CD0D412C03939C0004B48A /* DevView.swift */,

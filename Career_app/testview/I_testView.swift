@@ -307,9 +307,11 @@ struct I_testView: View {
                                 .frame(width: 64, height: 37)
                                 .cornerRadius(15)
                             
-                            Image(systemName: "arrow.left")
-                                .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
-                                .font(.system(size: 30))
+                            NavigationLink(destination: R_testView()){
+                                Image(systemName: "arrow.left")
+                                    .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
+                                    .font(.system(size: 30))
+                            }
                                      
                         
                     }
@@ -334,9 +336,11 @@ struct I_testView: View {
                                     .frame(width: 64, height: 37)
                                     .cornerRadius(15)
                                 
-                                Image(systemName: "arrow.right")
-                                    .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
-                                    .font(.system(size: 30))
+                                NavigationLink(destination: A_testView()){
+                                    Image(systemName: "arrow.right")
+                                        .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
+                                        .font(.system(size: 30))
+                                }
                                          
                             
                         }

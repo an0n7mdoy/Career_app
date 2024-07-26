@@ -1,5 +1,5 @@
 //
-//  C_testView.swift
+//  A_testView.swift
 //  Career_app
 //
 //  Created by настя п. on 24/07/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct C_testView: View {
+struct A_testView: View {
     var body: some View {
         NavigationStack{
             ScrollView {
@@ -47,7 +47,7 @@ struct C_testView: View {
                           .cornerRadius(8)
                         
                         VStack  {
-                            Text("Do you like organizing data and managing information?")
+                            Text("Do you like creating art, music, or writing?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .multilineTextAlignment(.leading)
@@ -99,7 +99,7 @@ struct C_testView: View {
                                 
                             }
                             
-                            Text("Are you interested in working with numbers, records, or documents?")
+                            Text("Do you enjoy expressing yourself through creative activities?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .multilineTextAlignment(.leading)
@@ -150,7 +150,7 @@ struct C_testView: View {
                                 
                             }
                             
-                            Text("Do you prefer structured tasks and clear instructions?")
+                            Text("Are you interested in attending cultural events such as art exhibits, concerts, or theater performances?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .frame(width: 354.0, alignment: .topLeading)
@@ -199,7 +199,7 @@ struct C_testView: View {
                                 
                             }
                             
-                            Text("Do you enjoy tasks that involve attention to detail and accuracy?")
+                            Text("Do you prefer unstructured and innovative work environments?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .frame(width: 354.0, alignment: .topLeading)
@@ -248,7 +248,7 @@ struct C_testView: View {
                                 
                             }
                             
-                            Text("Are you interested in administrative or clerical work?")
+                            Text("Do you enjoy experimenting with new ideas and creative projects?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .frame(width: 354.0, alignment: .topLeading)
@@ -307,12 +307,15 @@ struct C_testView: View {
                                 .frame(width: 64, height: 37)
                                 .cornerRadius(15)
                             
-                            Image(systemName: "arrow.left")
-                                .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
-                                .font(.system(size: 30))
+                            NavigationLink(destination: I_testView()){
+                                Image(systemName: "arrow.left")
+                                    .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
+                                    .font(.system(size: 30))
+                            }
                                      
                         
                     }
+
                             Spacer()
                             
                             ZStack{
@@ -322,7 +325,7 @@ struct C_testView: View {
                                   .frame(width: 64, height: 37)
                                   .cornerRadius(15)
                                 
-                                Text("6/8")
+                                Text("3/8")
                                   .font(Font.custom("Livvic", size: 18))
                                   .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                             }
@@ -334,9 +337,11 @@ struct C_testView: View {
                                     .frame(width: 64, height: 37)
                                     .cornerRadius(15)
                                 
-                                Image(systemName: "arrow.right")
-                                    .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
-                                    .font(.system(size: 30))
+                                NavigationLink(destination: S_testView()){
+                                    Image(systemName: "arrow.right")
+                                        .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
+                                        .font(.system(size: 30))
+                                }
                                          
                             
                         }
@@ -348,6 +353,7 @@ struct C_testView: View {
         }
     }
 }
+
 #Preview {
-    C_testView()
+    A_testView()
 }
