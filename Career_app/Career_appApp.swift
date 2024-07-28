@@ -4,6 +4,12 @@
 //
 //  Created by Simonchik on 26.05.2024.
 //
+/*
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+||| НАДО УБРАТЬ ПОВОРОТ И ИЗМЕНЕНИЕ РАЗМЕРА ТЕКСТА ||||
+//////////////////////////////////////////////////////
+*/
+
 
 import SwiftUI
 
@@ -11,9 +17,22 @@ import SwiftUI
 struct Career_appApp: App {
     var body: some Scene {
         WindowGroup {
-            MainScreenView()
+            MainScreenView()      
         }
     }
+}
+
+class GlobalSettings: ObservableObject{
+    static let shared = GlobalSettings()
+    
+    @Published var R: Int = 0
+    @Published var I: Int = 0
+    @Published var A: Int = 0
+    @Published var S: Int = 0
+    @Published var E: Int = 0
+    @Published var C: Int = 0
+    
+    private init() {}
 }
 
 struct ChecklistItem: Identifiable {

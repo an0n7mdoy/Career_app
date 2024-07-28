@@ -75,7 +75,8 @@ struct testView: View {
                    
                     }
                 Spacer()
-                
+                Spacer()
+                Spacer()
                 Rectangle()
                 .foregroundColor(.clear)
                 .frame(width: 450, height: 305)

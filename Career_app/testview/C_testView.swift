@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct C_testView: View {
+    
+    
+    
+    @ObservedObject var settings = GlobalSettings.shared
     var body: some View {
         NavigationStack{
             ScrollView {
@@ -57,16 +61,20 @@ struct C_testView: View {
                                 
                                 Spacer()
                                 Spacer()
+                                Text("\(settings.C)")
                                 
                                 ZStack{
                                     Rectangle()
                                         .frame(width: 46, height: 27)
                                         .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
                                         .cornerRadius(15)
-                                    Text("Yes")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                     
+                                    Button("Yes"){
+                                        settings.C += 2
+                                        
+                                    }
+                                    .font(Font.custom("Livvic", size: 18))
+                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 }
                                 
                                 Spacer()
@@ -336,9 +344,11 @@ struct C_testView: View {
                                     .frame(width: 64, height: 37)
                                     .cornerRadius(15)
                                 
-                                Image(systemName: "arrow.right")
-                                    .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
-                                    .font(.system(size: 30))
+                                NavigationLink(destination: resultView()){
+                                    Image(systemName: "arrow.right")
+                                        .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
+                                        .font(.system(size: 30))
+                                }
                                          
                             
                         }

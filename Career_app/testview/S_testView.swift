@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct S_testView: View {
+    
+   
+    
+    @ObservedObject var settings = GlobalSettings.shared
     var body: some View {
         NavigationStack{
             ScrollView {
@@ -57,16 +61,20 @@ struct S_testView: View {
                                 
                                 Spacer()
                                 Spacer()
+                                Text("\(settings.S)")
                                 
                                 ZStack{
                                     Rectangle()
                                         .frame(width: 46, height: 27)
                                         .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
                                         .cornerRadius(15)
-                                    Text("Yes")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                     
+                                    Button("Yes"){
+                                        settings.S += 2
+                                        
+                                    }
+                                    .font(Font.custom("Livvic", size: 18))
+                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 }
                                 
                                 Spacer()
