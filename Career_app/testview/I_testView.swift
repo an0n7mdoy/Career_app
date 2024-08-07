@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct I_testView: View {
-    
+    //responsible for back button
     @Environment(\.presentationMode) var presentationMode
-    
+    //take data from file with varaibles
     @ObservedObject var settings = GlobalSettings.shared
     var body: some View {
         
@@ -319,7 +319,7 @@ struct I_testView: View {
                                 .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
                                 .frame(width: 64, height: 37)
                                 .cornerRadius(15)
-                            
+                            // button back
                             Button {
                                 presentationMode.wrappedValue.dismiss()
                             } label: {
@@ -365,6 +365,7 @@ struct I_testView: View {
             }
         }
         .navigationBarHidden(true)
+        // hides back button
     }
 }
 #Preview {
