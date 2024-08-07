@@ -9,7 +9,7 @@ import SwiftUI
 
 struct C_testView: View {
     
-    
+    @Environment(\.presentationMode) var presentationMode
     
     @ObservedObject var settings = GlobalSettings.shared
     var body: some View {
@@ -315,11 +315,13 @@ struct C_testView: View {
                                 .frame(width: 64, height: 37)
                                 .cornerRadius(15)
                             
-                            NavigationLink(destination: E_testView()){
+                            Button {
+                                presentationMode.wrappedValue.dismiss()
+                            } label: {
                                 Image(systemName: "arrow.left")
-                                    .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
-                                    .font(.system(size: 30))
                             }
+                            .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
+                            .font(.system(size: 30))
                                      
                         
                     }
@@ -358,6 +360,7 @@ struct C_testView: View {
                 }
             }
         }
+        .navigationBarHidden(true)
     }
 }
 #Preview {

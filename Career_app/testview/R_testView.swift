@@ -8,28 +8,7 @@
 import SwiftUI
 
 struct R_testView: View {
-    
-    @State private var r1 = false
-    @State private var r2 = false
-    @State private var r3 = false
-    @State private var r4 = false
-    @State private var r5 = false
-    
-    @State private var r1y = false
-    @State private var r1m = false
-    @State private var r1n = false
-    @State private var r2y = false
-    @State private var r2m = false
-    @State private var r2n = false
-    @State private var r3y = false
-    @State private var r3m = false
-    @State private var r3n = false
-    @State private var r4y = false
-    @State private var r4m = false
-    @State private var r4n = false
-    @State private var r5y = false
-    @State private var r5m = false
-    @State private var r5n = false
+ 
 
     @ObservedObject var settings = GlobalSettings.shared
     var body: some View {
@@ -86,12 +65,12 @@ struct R_testView: View {
                                 
                                 Button("Yes"){
                                     settings.R += 2
-                                    r1.toggle()
-                                    r1y.toggle()
+                                    settings.r1.toggle()
+                                    settings.r1y.toggle()
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(r1y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(r1)
+                                .background(settings.r1y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.r1)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -99,12 +78,12 @@ struct R_testView: View {
                                 
                                 Button("Maybe"){
                                     settings.R += 1
-                                    r1.toggle()
-                                    r1m.toggle()
+                                    settings.r1.toggle()
+                                    settings.r1m.toggle()
                                 }
                                 .frame(width: 76, height: 27)
-                                .background(r1m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(r1)
+                                .background(settings.r1m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.r1)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -112,12 +91,12 @@ struct R_testView: View {
                                 
                                 
                                 Button("No"){
-                                    r1.toggle()
-                                    r1n.toggle()
+                                    settings.r1.toggle()
+                                    settings.r1n.toggle()
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(r1n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(r1)
+                                .background(settings.r1n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.r1)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                     
@@ -142,12 +121,12 @@ struct R_testView: View {
                                 
                                 Button("Yes"){
                                     settings.R += 2
-                                    r2.toggle()
-                                    r2y.toggle()
+                                    settings.r2.toggle()
+                                    settings.r2y.toggle()
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(r2y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(r2)
+                                .background(settings.r2y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.r2)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -155,12 +134,12 @@ struct R_testView: View {
                                 
                                 Button("Maybe"){
                                     settings.R += 1
-                                    r2.toggle()
-                                    r2m.toggle()
+                                    settings.r2.toggle()
+                                    settings.r2m.toggle()
                                 }
                                 .frame(width: 76, height: 27)
-                                .background(r2m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(r2)
+                                .background(settings.r2m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.r2)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -168,12 +147,12 @@ struct R_testView: View {
                                 
                                 
                                 Button("No"){
-                                    r2.toggle()
-                                    r2n.toggle()
+                                    settings.r2.toggle()
+                                    settings.r2n.toggle()
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(r2n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(r2)
+                                .background(settings.r2n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.r2)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -195,12 +174,12 @@ struct R_testView: View {
                                 
                                 Button("Yes"){
                                     settings.R += 2
-                                    r3.toggle()
-                                    r3y.toggle()
+                                    settings.r3.toggle()
+                                    settings.r3y.toggle()
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(r3y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(r3)
+                                .background(settings.r3y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.r3)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -208,12 +187,12 @@ struct R_testView: View {
                                 
                                 Button("Maybe"){
                                     settings.R += 1
-                                    r3.toggle()
-                                    r3m.toggle()
+                                    settings.r3.toggle()
+                                    settings.r3m.toggle()
                                 }
                                 .frame(width: 76, height: 27)
-                                .background(r3m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(r3)
+                                .background(settings.r3m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.r3)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -221,12 +200,12 @@ struct R_testView: View {
                                 
                                 
                                 Button("No"){
-                                    r3.toggle()
-                                    r3n.toggle()
+                                    settings.r3.toggle()
+                                    settings.r3n.toggle()
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(r3n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(r3)
+                                .background(settings.r3n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.r3)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -248,12 +227,12 @@ struct R_testView: View {
                                 
                                 Button("Yes"){
                                     settings.R += 2
-                                    r4.toggle()
-                                    r4y.toggle()
+                                    settings.r4.toggle()
+                                    settings.r4y.toggle()
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(r4y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(r4)
+                                .background(settings.r4y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.r4)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -261,12 +240,12 @@ struct R_testView: View {
                                 
                                 Button("Maybe"){
                                     settings.R += 1
-                                    r4.toggle()
-                                    r4m.toggle()
+                                    settings.r4.toggle()
+                                    settings.r4m.toggle()
                                 }
                                 .frame(width: 76, height: 27)
-                                .background(r4m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(r4)
+                                .background(settings.r4m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.r4)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -274,12 +253,12 @@ struct R_testView: View {
                                 
                                 
                                 Button("No"){
-                                    r4.toggle()
-                                    r4n.toggle()
+                                    settings.r4.toggle()
+                                    settings.r4n.toggle()
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(r4n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(r4)
+                                .background(settings.r4n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.r4)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -301,12 +280,12 @@ struct R_testView: View {
                                 
                                 Button("Yes"){
                                     settings.R += 2
-                                    r5.toggle()
-                                    r5y.toggle()
+                                    settings.r5.toggle()
+                                    settings.r5y.toggle()
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(r5y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(r5)
+                                .background(settings.r5y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.r5)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -314,12 +293,12 @@ struct R_testView: View {
                                 
                                 Button("Maybe"){
                                     settings.R += 1
-                                    r5.toggle()
-                                    r5m.toggle()
+                                    settings.r5.toggle()
+                                    settings.r5m.toggle()
                                 }
                                 .frame(width: 76, height: 27)
-                                .background(r5m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(r5)
+                                .background(settings.r5m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.r5)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -327,12 +306,12 @@ struct R_testView: View {
                                 
                                 
                                 Button("No"){
-                                    r5.toggle()
-                                    r5n.toggle()
+                                    settings.r5.toggle()
+                                    settings.r5n.toggle()
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(r5n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(r5)
+                                .background(settings.r5n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.r5)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -380,6 +359,7 @@ struct R_testView: View {
                 }
             }
         }
+        
     }
 }
 

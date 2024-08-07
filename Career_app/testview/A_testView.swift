@@ -9,7 +9,7 @@ import SwiftUI
 
 struct A_testView: View {
     
-   
+    @Environment(\.presentationMode) var presentationMode
     
     @ObservedObject var settings = GlobalSettings.shared
     var body: some View {
@@ -63,44 +63,41 @@ struct A_testView: View {
                                 Spacer()
                                 Text("\(settings.A)")
                                 
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 46, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    
-                                    Button("Yes"){
-                                        settings.A += 2
-                                        
-                                    }
-                                    .font(Font.custom("Livvic", size: 18))
-                                    .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                Button("Yes"){
+                                    settings.A += 2
+                                    settings.a1.toggle()
+                                    settings.a1y.toggle()
                                 }
+                                .frame(width: 46, height: 27)
+                                .background(settings.a1y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.a1)
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 76, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    Text("Maybe")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                    
+                                Button("Maybe"){
+                                    settings.A += 1
+                                    settings.a1.toggle()
+                                    settings.a1m.toggle()
                                 }
+                                .frame(width: 76, height: 27)
+                                .background(settings.a1m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.a1)
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
                                 Spacer()
                                 
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 46, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    Text("No")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                    
+                                Button("No"){
+                                    settings.a1.toggle()
+                                    settings.a1n.toggle()
                                 }
+                                .frame(width: 46, height: 27)
+                                .background(settings.a1n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .disabled(settings.a1)
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 Spacer()
@@ -315,11 +312,13 @@ struct A_testView: View {
                                 .frame(width: 64, height: 37)
                                 .cornerRadius(15)
                             
-                            NavigationLink(destination: I_testView()){
+                            Button {
+                                presentationMode.wrappedValue.dismiss()
+                            } label: {
                                 Image(systemName: "arrow.left")
-                                    .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
-                                    .font(.system(size: 30))
                             }
+                            .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
+                            .font(.system(size: 30))
                                      
                         
                     }
@@ -359,6 +358,7 @@ struct A_testView: View {
                 }
             }
         }
+        .navigationBarHidden(true)
     }
 }
 
