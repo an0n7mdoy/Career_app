@@ -21,7 +21,11 @@ struct resultView: View {
                 Text("e   \(settings.E)")
                 Text("c   \(settings.C)")
                 
-
+                //R + I + A
+                if settings.R > settings.S && settings.R > settings.E && settings.R > settings.C && settings.I > settings.S && settings.I > settings.E && settings.I > settings.C && settings.A > settings.S && settings.A > settings.E && settings.A > settings.C{
+                    Text("хуй")
+                }
+                
             }
             
         }
