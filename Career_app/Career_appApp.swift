@@ -32,7 +32,7 @@ class GlobalSettings: ObservableObject{
     @Published var E: Int = 0
     @Published var C: Int = 0
     
-    //------------------------
+    //one buttton is on abd other are off
     
     @Published var r1 = false
     @Published var r2 = false
@@ -40,6 +40,7 @@ class GlobalSettings: ObservableObject{
     @Published var r4 = false
     @Published var r5 = false
     
+    // yes/maybe/no a button become different
     @Published var r1y = false
     @Published var r1m = false
     @Published var r1n = false
@@ -56,7 +57,7 @@ class GlobalSettings: ObservableObject{
     @Published var r5m = false
     @Published var r5n = false
     
-    //------------------------
+    //-yes/maybe/no a button become different
     
     @Published var i1 = false
     @Published var i2 = false
@@ -80,7 +81,7 @@ class GlobalSettings: ObservableObject{
     @Published var i5m = false
     @Published var i5n = false
     
-    //------------------------
+    //yes/maybe/no a button become different
     
     @Published var a1 = false
     @Published var a2 = false
@@ -104,7 +105,7 @@ class GlobalSettings: ObservableObject{
     @Published var a5m = false
     @Published var a5n = false
     
-    //------------------------
+    //yes/maybe/no a button become different
     
     @Published var s1 = false
     @Published var s2 = false
@@ -128,7 +129,7 @@ class GlobalSettings: ObservableObject{
     @Published var s5m = false
     @Published var s5n = false
     
-    //------------------------
+    //yes/maybe/no a button become different
     
     @Published var e1 = false
     @Published var e2 = false
@@ -152,7 +153,7 @@ class GlobalSettings: ObservableObject{
     @Published var e5m = false
     @Published var e5n = false
     
-    //------------------------
+    //yes/maybe/no a button become different 
     
     @Published var c1 = false
     @Published var c2 = false
