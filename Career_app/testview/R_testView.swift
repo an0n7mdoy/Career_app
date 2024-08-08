@@ -9,8 +9,8 @@ import SwiftUI
 
 struct R_testView: View {
  
-
     @ObservedObject var settings = GlobalSettings.shared
+    
     var body: some View {
         NavigationStack{
             ScrollView {
@@ -64,26 +64,26 @@ struct R_testView: View {
                                 Text("\(settings.R)")
                                 
                                 Button("Yes"){
-                                    settings.R += 2
-                                    settings.r1.toggle()
-                                    settings.r1y.toggle()
+                                    settings.r1y = true
+                                    settings.r1m = false
+                                    settings.r1n = false
+                                    settings.r1 = 2
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.r1y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.r1)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("Maybe"){
-                                    settings.R += 1
-                                    settings.r1.toggle()
-                                    settings.r1m.toggle()
+                                    settings.r1y = false
+                                    settings.r1m = true
+                                    settings.r1n = false
+                                    settings.r1 = 1
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.r1m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.r1)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -91,12 +91,13 @@ struct R_testView: View {
                                 
                                 
                                 Button("No"){
-                                    settings.r1.toggle()
-                                    settings.r1n.toggle()
+                                    settings.r1y = false
+                                    settings.r1m = false
+                                    settings.r1n = true
+                                    settings.r1 = 0
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.r1n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.r1)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                     
@@ -120,26 +121,26 @@ struct R_testView: View {
                                 Spacer()
                                 
                                 Button("Yes"){
-                                    settings.R += 2
-                                    settings.r2.toggle()
-                                    settings.r2y.toggle()
+                                    settings.r2y = true
+                                    settings.r2m = false
+                                    settings.r2n = false
+                                    settings.r2 = 2
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.r2y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.r2)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("Maybe"){
-                                    settings.R += 1
-                                    settings.r2.toggle()
-                                    settings.r2m.toggle()
+                                    settings.r2y = false
+                                    settings.r2m = true
+                                    settings.r2n = false
+                                    settings.r2 = 1
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.r2m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.r2)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -147,12 +148,13 @@ struct R_testView: View {
                                 
                                 
                                 Button("No"){
-                                    settings.r2.toggle()
-                                    settings.r2n.toggle()
+                                    settings.r2y = false
+                                    settings.r2m = false
+                                    settings.r2n = true
+                                    settings.r2 = 0
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.r2n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.r2)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -173,26 +175,26 @@ struct R_testView: View {
                                 Spacer()
                                 
                                 Button("Yes"){
-                                    settings.R += 2
-                                    settings.r3.toggle()
-                                    settings.r3y.toggle()
+                                    settings.r3y = true
+                                    settings.r3m = false
+                                    settings.r3n = false
+                                    settings.r3 = 2
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.r3y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.r3)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("Maybe"){
-                                    settings.R += 1
-                                    settings.r3.toggle()
-                                    settings.r3m.toggle()
+                                    settings.r3y = false
+                                    settings.r3m = true
+                                    settings.r3n = false
+                                    settings.r3 = 1
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.r3m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.r3)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -200,12 +202,13 @@ struct R_testView: View {
                                 
                                 
                                 Button("No"){
-                                    settings.r3.toggle()
-                                    settings.r3n.toggle()
+                                    settings.r3y = false
+                                    settings.r3m = false
+                                    settings.r3n = true
+                                    settings.r3 = 0
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.r3n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.r3)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -226,26 +229,26 @@ struct R_testView: View {
                                 Spacer()
                                 
                                 Button("Yes"){
-                                    settings.R += 2
-                                    settings.r4.toggle()
-                                    settings.r4y.toggle()
+                                    settings.r4y = true
+                                    settings.r4m = false
+                                    settings.r4n = false
+                                    settings.r4 = 2
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.r4y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.r4)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("Maybe"){
-                                    settings.R += 1
-                                    settings.r4.toggle()
-                                    settings.r4m.toggle()
+                                    settings.r4y = false
+                                    settings.r4m = true
+                                    settings.r4n = false
+                                    settings.r4 = 1
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.r4m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.r4)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -253,12 +256,13 @@ struct R_testView: View {
                                 
                                 
                                 Button("No"){
-                                    settings.r4.toggle()
-                                    settings.r4n.toggle()
+                                    settings.r4y = false
+                                    settings.r4m = false
+                                    settings.r4n = true
+                                    settings.r4 = 0
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.r4n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.r4)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -279,26 +283,26 @@ struct R_testView: View {
                                 Spacer()
                                 
                                 Button("Yes"){
-                                    settings.R += 2
-                                    settings.r5.toggle()
-                                    settings.r5y.toggle()
+                                    settings.r5y = true
+                                    settings.r5m = false
+                                    settings.r5n = false
+                                    settings.r5 = 2
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.r5y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.r5)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("Maybe"){
-                                    settings.R += 1
-                                    settings.r5.toggle()
-                                    settings.r5m.toggle()
+                                    settings.r5y = false
+                                    settings.r5m = true
+                                    settings.r5n = false
+                                    settings.r5 = 1
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.r5m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.r5)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -306,12 +310,13 @@ struct R_testView: View {
                                 
                                 
                                 Button("No"){
-                                    settings.r5.toggle()
-                                    settings.r5n.toggle()
+                                    settings.r5y = false
+                                    settings.r5m = false
+                                    settings.r5n = true
+                                    settings.r5 = 0
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.r5n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.r5)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 

@@ -65,40 +65,44 @@ struct I_testView: View {
                                 Text("\(settings.I)")
                                 
                                 Button("Yes"){
-                                    settings.I += 2
-                                    settings.i1.toggle()
-                                    settings.i1y.toggle()
+                                    settings.i1y = true
+                                    settings.i1m = false
+                                    settings.i1n = false
+                                    settings.i1 = 2
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i1y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.i1)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("Maybe"){
-                                    settings.I += 1
-                                    settings.i1.toggle()
-                                    settings.i1m.toggle()
+                                    settings.i1y = false
+                                    settings.i1m = true
+                                    settings.i1n = false
+                                    settings.i1 = 1
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.i1m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.i1)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
+                                
                                 Button("No"){
-                                    settings.i1.toggle()
-                                    settings.i1n.toggle()
+                                    settings.i1y = false
+                                    settings.i1m = false
+                                    settings.i1n = true
+                                    settings.i1 = 0
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i1n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.i1)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                    
+                                
                                 
                                 Spacer()
                                 Spacer()
@@ -117,40 +121,44 @@ struct I_testView: View {
                                 Spacer()
                                 
                                 Button("Yes"){
-                                    settings.I += 2
-                                    settings.i2.toggle()
-                                    settings.i2y.toggle()
+                                    settings.i2y = true
+                                    settings.i2m = false
+                                    settings.i2n = false
+                                    settings.i2 = 2
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i2y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.i2)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("Maybe"){
-                                    settings.I += 1
-                                    settings.i2.toggle()
-                                    settings.i2m.toggle()
+                                    settings.i2y = false
+                                    settings.i2m = true
+                                    settings.i2n = false
+                                    settings.i2 = 1
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.i2m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.i2)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
+                                
                                 Button("No"){
-                                    settings.i2.toggle()
-                                    settings.i2n.toggle()
+                                    settings.i2y = false
+                                    settings.i2m = false
+                                    settings.i2n = true
+                                    settings.i2 = 0
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i2n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.i2)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                    
+                                
                                 
                                 Spacer()
                                 Spacer()
@@ -168,40 +176,44 @@ struct I_testView: View {
                                 Spacer()
                                 
                                 Button("Yes"){
-                                    settings.I += 2
-                                    settings.i3.toggle()
-                                    settings.i3y.toggle()
+                                    settings.i3y = true
+                                    settings.i3m = false
+                                    settings.i3n = false
+                                    settings.i3 = 2
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i3y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.i3)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("Maybe"){
-                                    settings.I += 1
-                                    settings.i3.toggle()
-                                    settings.i3m.toggle()
+                                    settings.i3y = false
+                                    settings.i3m = true
+                                    settings.i3n = false
+                                    settings.i3 = 1
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.i3m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.i3)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
+                                
                                 Button("No"){
-                                    settings.i3.toggle()
-                                    settings.i3n.toggle()
+                                    settings.i3y = false
+                                    settings.i3m = false
+                                    settings.i3n = true
+                                    settings.i3 = 0
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i3n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.i3)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                    
+                                
                                 
                                 Spacer()
                                 Spacer()
@@ -219,40 +231,44 @@ struct I_testView: View {
                                 Spacer()
                                 
                                 Button("Yes"){
-                                    settings.I += 2
-                                    settings.i4.toggle()
-                                    settings.i4y.toggle()
+                                    settings.i4y = true
+                                    settings.i4m = false
+                                    settings.i4n = false
+                                    settings.i4 = 2
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i4y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.i4)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("Maybe"){
-                                    settings.I += 1
-                                    settings.i4.toggle()
-                                    settings.i4m.toggle()
+                                    settings.i4y = false
+                                    settings.i4m = true
+                                    settings.i4n = false
+                                    settings.i4 = 1
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.i4m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.i4)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
+                                
                                 Button("No"){
-                                    settings.i4.toggle()
-                                    settings.i4n.toggle()
+                                    settings.i4y = false
+                                    settings.i4m = false
+                                    settings.i4n = true
+                                    settings.i4 = 0
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i4n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.i4)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                    
+                                
                                 
                                 Spacer()
                                 Spacer()
@@ -270,40 +286,44 @@ struct I_testView: View {
                                 Spacer()
                                 
                                 Button("Yes"){
-                                    settings.I += 2
-                                    settings.i5.toggle()
-                                    settings.i5y.toggle()
+                                    settings.i5y = true
+                                    settings.i5m = false
+                                    settings.i5n = false
+                                    settings.i5 = 2
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i5y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.i5)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("Maybe"){
-                                    settings.I += 1
-                                    settings.i5.toggle()
-                                    settings.i5m.toggle()
+                                    settings.i5y = false
+                                    settings.i5m = true
+                                    settings.i5n = false
+                                    settings.i5 = 1
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.i5m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.i5)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
+                                
                                 Button("No"){
-                                    settings.i5.toggle()
-                                    settings.i5n.toggle()
+                                    settings.i5y = false
+                                    settings.i5m = false
+                                    settings.i5n = true
+                                    settings.i5 = 0
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i5n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                .disabled(settings.i5)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                    
+                                
                                 
                                 Spacer()
                                 Spacer()

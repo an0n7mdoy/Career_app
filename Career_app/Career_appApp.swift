@@ -34,11 +34,42 @@ class GlobalSettings: ObservableObject{
     
     //one buttton is on abd other are off
     
-    @Published var r1 = false
-    @Published var r2 = false
-    @Published var r3 = false
-    @Published var r4 = false
-    @Published var r5 = false
+    @Published var r1 = 0 {
+        didSet{
+            SumR()
+        }
+    }
+    @Published var r2 = 0 {
+        didSet{
+            SumR()
+        }
+    }
+    @Published var r3 = 0 {
+        didSet{
+            SumR()
+        }
+    }
+    @Published var r4 = 0 {
+        didSet{
+            SumR()
+        }
+    }
+    @Published var r5 = 0 {
+        didSet{
+            SumR()
+        }
+    }
+    
+    private func SumR() {
+            // Calculate the sum and update the @Published sum variable
+            R = r1 + 
+                r2 +
+                r3 +
+                r4 +
+                r5
+        }
+
+    
     
     // yes/maybe/no a button become different
     @Published var r1y = false
@@ -59,11 +90,40 @@ class GlobalSettings: ObservableObject{
     
     //-yes/maybe/no a button become different
     
-    @Published var i1 = false
-    @Published var i2 = false
-    @Published var i3 = false
-    @Published var i4 = false
-    @Published var i5 = false
+    @Published var i1 = 0 {
+        didSet{
+            SumI()
+        }
+    }
+    @Published var i2 = 0 {
+        didSet{
+            SumI()
+        }
+    }
+    @Published var i3 = 0 {
+        didSet{
+            SumI()
+        }
+    }
+    @Published var i4 = 0 {
+        didSet{
+            SumI()
+        }
+    }
+    @Published var i5 = 0 {
+        didSet{
+            SumI()
+        }
+    }
+    
+    private func SumI() {
+            // Calculate the sum and update the @Published sum variable
+            I = i1 +
+                i2 +
+                i3 +
+                i4 +
+                i5
+        }
     
     @Published var i1y = false
     @Published var i1m = false
@@ -83,11 +143,40 @@ class GlobalSettings: ObservableObject{
     
     //yes/maybe/no a button become different
     
-    @Published var a1 = false
-    @Published var a2 = false
-    @Published var a3 = false
-    @Published var a4 = false
-    @Published var a5 = false
+    @Published var a1 = 0 {
+        didSet{
+            SumA()
+        }
+    }
+    @Published var a2 = 0 {
+        didSet{
+            SumA()
+        }
+    }
+    @Published var a3 = 0 {
+        didSet{
+            SumA()
+        }
+    }
+    @Published var a4 = 0 {
+        didSet{
+            SumA()
+        }
+    }
+    @Published var a5 = 0 {
+        didSet{
+            SumA()
+        }
+    }
+    
+    private func SumA() {
+            // Calculate the sum and update the @Published sum variable
+            A = a1 +
+                a2 +
+                a3 +
+                a4 +
+                a5
+        }
     
     @Published var a1y = false
     @Published var a1m = false
@@ -107,11 +196,40 @@ class GlobalSettings: ObservableObject{
     
     //yes/maybe/no a button become different
     
-    @Published var s1 = false
-    @Published var s2 = false
-    @Published var s3 = false
-    @Published var s4 = false
-    @Published var s5 = false
+    @Published var s1 = 0 {
+        didSet{
+            SumS()
+        }
+    }
+    @Published var s2 = 0 {
+        didSet{
+            SumS()
+        }
+    }
+    @Published var s3 = 0 {
+        didSet{
+            SumS()
+        }
+    }
+    @Published var s4 = 0 {
+        didSet{
+            SumS()
+        }
+    }
+    @Published var s5 = 0 {
+        didSet{
+            SumS()
+        }
+    }
+    
+    private func SumS() {
+            // Calculate the sum and update the @Published sum variable
+            S = s1 +
+                s2 +
+                s3 +
+                s4 +
+                s5
+        }
     
     @Published var s1y = false
     @Published var s1m = false
@@ -131,11 +249,40 @@ class GlobalSettings: ObservableObject{
     
     //yes/maybe/no a button become different
     
-    @Published var e1 = false
-    @Published var e2 = false
-    @Published var e3 = false
-    @Published var e4 = false
-    @Published var e5 = false
+    @Published var e1 = 0 {
+        didSet{
+            SumE()
+        }
+    }
+    @Published var e2 = 0 {
+        didSet{
+            SumE()
+        }
+    }
+    @Published var e3 = 0 {
+        didSet{
+            SumE()
+        }
+    }
+    @Published var e4 = 0 {
+        didSet{
+            SumE()
+        }
+    }
+    @Published var e5 = 0 {
+        didSet{
+            SumE()
+        }
+    }
+    
+    private func SumE() {
+            // Calculate the sum and update the @Published sum variable
+            E = e1 +
+                e2 +
+                e3 +
+                e4 +
+                e5
+        }
     
     @Published var e1y = false
     @Published var e1m = false
@@ -155,11 +302,40 @@ class GlobalSettings: ObservableObject{
     
     //yes/maybe/no a button become different 
     
-    @Published var c1 = false
-    @Published var c2 = false
-    @Published var c3 = false
-    @Published var c4 = false
-    @Published var c5 = false
+    @Published var c1 = 0 {
+        didSet{
+            SumC()
+        }
+    }
+    @Published var c2 = 0 {
+        didSet{
+            SumC()
+        }
+    }
+    @Published var c3 = 0 {
+        didSet{
+            SumC()
+        }
+    }
+    @Published var c4 = 0 {
+        didSet{
+            SumC()
+        }
+    }
+    @Published var c5 = 0 {
+        didSet{
+            SumC()
+        }
+    }
+    
+    private func SumC() {
+            // Calculate the sum and update the @Published sum variable
+            C = c1 +
+                c2 +
+                c3 +
+                c4 +
+                c5
+        }
     
     @Published var c1y = false
     @Published var c1m = false
@@ -178,6 +354,7 @@ class GlobalSettings: ObservableObject{
     @Published var c5n = false
     
     private init() {}
+    
 }
 
 struct ChecklistItem: Identifiable {
