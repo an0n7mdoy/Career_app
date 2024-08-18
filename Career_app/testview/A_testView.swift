@@ -64,38 +64,40 @@ struct A_testView: View {
                                 Text("\(settings.A)")
                                 
                                 Button("Yes"){
-                                    settings.A += 2
-                                    //settings.a1.toggle()
-                                    settings.a1y.toggle()
+                                    settings.a1y = true
+                                    settings.a1m = false
+                                    settings.a1n = false
+                                    settings.a1 = 2
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.a1y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                               // .disabled(settings.a1)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("Maybe"){
-                                    settings.A += 1
-                                   // settings.a1.toggle()
-                                    settings.a1m.toggle()
+                                    settings.a1y = false
+                                    settings.a1m = true
+                                    settings.a1n = false
+                                    settings.a1 = 1
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.a1m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                               // .disabled(settings.a1)
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("No"){
-                                    //settings.a1.toggle()
-                                    settings.a1n.toggle()
+                                    settings.a1y = false
+                                    settings.a1m = false
+                                    settings.a1n = true
+                                    settings.a1 = 0
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.a1n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                                //.disabled(settings.a1)
+                           
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
@@ -114,45 +116,48 @@ struct A_testView: View {
                                 
                                 Spacer()
                                 Spacer()
+                               
                                 
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 46, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    Text("Yes")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                    
+                                Button("Yes") {
+                                    settings.a2y = true
+                                    settings.a2m = false
+                                    settings.a2n = false
+                                    settings.a2 = 2
                                 }
+                                .frame(width: 46, height: 27)
+                                .background(settings.a2y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 76, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    Text("Maybe")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                Button("Maybe"){
+                                    settings.a2y = false
+                                    settings.a2m = true
+                                    settings.a2n = false
+                                    settings.a2 = 1
                                 }
+                                .frame(width: 76, height: 27)
+                                .background(settings.a2m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
                                 Spacer()
                                 
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 46, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    Text("No")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                    
+                                Button("No"){
+                                    settings.a2y = false
+                                    settings.a2m = false
+                                    settings.a2n = true
+                                    settings.a2 = 0
                                 }
+                                .frame(width: 46, height: 27)
+                                .background(settings.a2n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 Spacer()
-                                
                             }
                             
                             Text("Are you interested in attending cultural events such as art exhibits, concerts, or theater performances?")
@@ -164,44 +169,48 @@ struct A_testView: View {
                                 
                                 Spacer()
                                 Spacer()
+                               
                                 
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 46, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    Text("Yes")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                    
+                                Button("Yes") {
+                                    settings.a3y = true
+                                    settings.a3m = false
+                                    settings.a3n = false
+                                    settings.a3 = 2
                                 }
+                                .frame(width: 46, height: 27)
+                                .background(settings.a3y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
                                 Spacer()
                                 
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 76, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    Text("Maybe")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                Button("Maybe"){
+                                    settings.a3y = false
+                                    settings.a3m = true
+                                    settings.a3n = false
+                                    settings.a3 = 1
                                 }
+                                .frame(width: 76, height: 27)
+                                .background(settings.a3m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
                                 Spacer()
                                 
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 46, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    Text("No")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                    
+                                Button("No"){
+                                    settings.a3y = false
+                                    settings.a3m = false
+                                    settings.a3n = true
+                                    settings.a3 = 0
                                 }
+                                .frame(width: 46, height: 27)
+                                .background(settings.a3n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 Spacer()
-                                
                             }
                             
                             Text("Do you prefer unstructured and innovative work environments?")
@@ -210,47 +219,50 @@ struct A_testView: View {
                                 .frame(width: 354.0, alignment: .topLeading)
                             
                             HStack{
-                                
                                 Spacer()
                                 Spacer()
+                               
                                 
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 46, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    Text("Yes")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                    
+                                Button("Yes") {
+                                    settings.a4y = true
+                                    settings.a4m = false
+                                    settings.a4n = false
+                                    settings.a4 = 2
                                 }
+                                .frame(width: 46, height: 27)
+                                .background(settings.a4y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
                                 Spacer()
                                 
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 76, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    Text("Maybe")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                Button("Maybe"){
+                                    settings.a4y = false
+                                    settings.a4m = true
+                                    settings.a4n = false
+                                    settings.a4 = 1
                                 }
+                                .frame(width: 76, height: 27)
+                                .background(settings.a4m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
                                 Spacer()
                                 
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 46, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    Text("No")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                    
+                                Button("No"){
+                                    settings.a4y = false
+                                    settings.a4m = false
+                                    settings.a4n = true
+                                    settings.a4 = 0
                                 }
+                                .frame(width: 46, height: 27)
+                                .background(settings.a4n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 Spacer()
-                                
                             }
                             
                             Text("Do you enjoy experimenting with new ideas and creative projects?")
@@ -262,44 +274,48 @@ struct A_testView: View {
                                 
                                 Spacer()
                                 Spacer()
+                               
                                 
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 46, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    Text("Yes")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                    
+                                Button("Yes") {
+                                    settings.a5y = true
+                                    settings.a5m = false
+                                    settings.a5n = false
+                                    settings.a5 = 2
                                 }
+                                .frame(width: 46, height: 27)
+                                .background(settings.a5y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
                                 Spacer()
                                 
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 76, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    Text("Maybe")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                Button("Maybe"){
+                                    settings.a5y = false
+                                    settings.a5m = true
+                                    settings.a5n = false
+                                    settings.a5 = 1
                                 }
+                                .frame(width: 76, height: 27)
+                                .background(settings.a5m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
                                 Spacer()
                                 
-                                ZStack{
-                                    Rectangle()
-                                        .frame(width: 46, height: 27)
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .cornerRadius(15)
-                                    Text("No")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                    
+                                Button("No"){
+                                    settings.a5y = false
+                                    settings.a5m = false
+                                    settings.a5n = true
+                                    settings.a5 = 0
                                 }
+                                .frame(width: 46, height: 27)
+                                .background(settings.a5n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 Spacer()
-                                
                             }
                         }
                     }
