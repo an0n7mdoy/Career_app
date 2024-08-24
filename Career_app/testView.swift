@@ -11,12 +11,25 @@ struct testView: View {
     var body: some View {
         NavigationStack{
             VStack {
-           
-                Spacer()
-                Spacer()
-                Spacer()
+                
+               
+                 Spacer()
+                 Spacer()
+                 Spacer()
               
+                
+                Rectangle()
+                .foregroundColor(.clear)
+                .frame(width: 450, height: 305)
+                .background(
+                Image("1 экран")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 450, height: 305)
+                .clipped()
+                )
             
+               
                 
 //NAME
                 ZStack {
@@ -77,16 +90,7 @@ struct testView: View {
                 Spacer()
                 Spacer()
                 Spacer()
-                Rectangle()
-                .foregroundColor(.clear)
-                .frame(width: 450, height: 305)
-                .background(
-                Image("1 экран")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 450, height: 305)
-                .clipped()
-                )
+              
     
 
             }

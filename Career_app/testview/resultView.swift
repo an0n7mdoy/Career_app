@@ -38,7 +38,7 @@ struct resultView: View {
         Spacer()
         
         HStack(spacing: 20) {
-           
+            
             
             Text("r \(settings.R)")
             Text("i \(settings.I)")
@@ -46,7 +46,7 @@ struct resultView: View {
             Text("s \(settings.S)")
             Text("e \(settings.E)")
             Text("c \(settings.C)")
-   
+            
             
         }
         
@@ -67,22 +67,112 @@ struct resultView: View {
             
             if sortedNums.allSatisfy({ $0.value >= 7 }) {
                 Text("6 max")
-            } else if Set(fiveLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "a", "s", "e"])) && fiveLrg.allSatisfy({ $0.value >= 7 }) {
-                Text("riase")
-            } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "a", "s"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
-                Text("rias")
-            } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "a"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
-                Text("ria")
-            } else if Set(twoLrg.map({ $0.name })).isSubset(of: Set(["r", "i"])) && twoLrg.allSatisfy({ $0.value >= 7 }) {
-                Text("ri")
-            } else if Set(oneLrg.map({ $0.name })).isSubset(of: Set(["r"])) && oneLrg.allSatisfy({ $0.value >= 7 }) {
-                Text("r")
+                if sortedNums.allSatisfy({ $0.value <= 2 }) {
+                    Text("try again")
+                    // 5 letters
+                } else if Set(fiveLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "a", "s", "e"])) && fiveLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("riase")
+                } else if Set(fiveLrg.map({ $0.name })).isSubset(of: Set(["r", "c", "a", "s", "e"])) && fiveLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("rcase")
+                    
+                    // 4 letters
+                } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "a", "s"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("rias")
+                } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "a", "e"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("riae")
+                    
+                    // 3 letters
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "a"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("ria")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "s"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("ris")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "e"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("rie")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "c"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("ric")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["r", "a", "s"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("ras")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["r", "a", "e"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("rae")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["r", "a", "c"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("rac")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["r", "s", "e"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("rse")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["r", "s", "c"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("rsc")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["r", "e", "c"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("rec")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["i", "a", "s"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("ias")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["i", "a", "e"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("iae")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["i", "a", "c"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("iac")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["i", "s", "e"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("ise")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["i", "s", "c"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("isc")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["a", "s", "e"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("ase")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["a", "s", "c"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("asc")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["a", "e", "c"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("aec")
+                } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["s", "e", "c"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("sec")
+                    
+                    // 2 letters
+                } else if Set(twoLrg.map({ $0.name })).isSubset(of: Set(["r", "i"])) && twoLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("ri")
+                } else if Set(twoLrg.map({ $0.name })).isSubset(of: Set(["r", "a"])) && twoLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("ra")
+                } else if Set(twoLrg.map({ $0.name })).isSubset(of: Set(["r", "s"])) && twoLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("rs")
+                } else if Set(twoLrg.map({ $0.name })).isSubset(of: Set(["r", "e"])) && twoLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("re")
+                } else if Set(twoLrg.map({ $0.name })).isSubset(of: Set(["r", "c"])) && twoLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("rc")
+                } else if Set(twoLrg.map({ $0.name })).isSubset(of: Set(["i", "a"])) && twoLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("ia")
+                } else if Set(twoLrg.map({ $0.name })).isSubset(of: Set(["i", "s"])) && twoLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("is")
+                } else if Set(twoLrg.map({ $0.name })).isSubset(of: Set(["i", "e"])) && twoLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("ie")
+                } else if Set(twoLrg.map({ $0.name })).isSubset(of: Set(["i", "c"])) && twoLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("ic")
+                } else if Set(twoLrg.map({ $0.name })).isSubset(of: Set(["a", "s"])) && twoLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("as")
+                } else if Set(twoLrg.map({ $0.name })).isSubset(of: Set(["a", "e"])) && twoLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("ae")
+                } else if Set(twoLrg.map({ $0.name })).isSubset(of: Set(["a", "c"])) && twoLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("ac")
+                } else if Set(twoLrg.map({ $0.name })).isSubset(of: Set(["s", "e"])) && twoLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("se")
+                } else if Set(twoLrg.map({ $0.name })).isSubset(of: Set(["s", "c"])) && twoLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("sc")
+                } else if Set(twoLrg.map({ $0.name })).isSubset(of: Set(["e", "c"])) && twoLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("ec")
+                    
+                    // 1 letter
+                } else if Set(oneLrg.map({ $0.name })).isSubset(of: Set(["r"])) && oneLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("r")
+                } else if Set(oneLrg.map({ $0.name })).isSubset(of: Set(["i"])) && oneLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("i")
+                } else if Set(oneLrg.map({ $0.name })).isSubset(of: Set(["a"])) && oneLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("a")
+                } else if Set(oneLrg.map({ $0.name })).isSubset(of: Set(["s"])) && oneLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("s")
+                } else if Set(oneLrg.map({ $0.name })).isSubset(of: Set(["e"])) && oneLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("e")
+                } else if Set(oneLrg.map({ $0.name })).isSubset(of: Set(["c"])) && oneLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("c")
+                }
+                
             }
             
+            Spacer()
+            
         }
-        
-        Spacer()
-        
     }
 }
 

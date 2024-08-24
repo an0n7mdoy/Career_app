@@ -317,28 +317,28 @@ struct C_testView: View {
                         }
                     }
                             
-                            HStack {
+                    HStack {
                                
+                
+                            ZStack{
                                 
-                                ZStack{
-                                    
-                                    Rectangle()
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .frame(width: 64, height: 37)
-                                        .cornerRadius(15)
-                                    
-                                    Button {
-                                        presentationMode.wrappedValue.dismiss()
-                                    } label: {
-                                        Image(systemName: "arrow.left")
-                                    }
-                                    .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
-                                    .font(.system(size: 30))
-                                    
-                                    
+                                Rectangle()
+                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                    .frame(width: 64, height: 37)
+                                    .cornerRadius(15)
+                                
+                                Button {
+                                    presentationMode.wrappedValue.dismiss()
+                                } label: {
+                                    Image(systemName: "arrow.left")
                                 }
-                                Spacer()
+                                .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
+                                .font(.system(size: 30))
                                 
+                                
+                            }
+                                
+                             
                                 ZStack{
                                     
                                     Rectangle()
