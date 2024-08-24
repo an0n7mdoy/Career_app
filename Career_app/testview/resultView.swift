@@ -12,8 +12,8 @@ struct resultView: View {
     @ObservedObject var settings = GlobalSettings.shared
     
     /// 􀄩 тестовые переменные чтобы чекать как все работает, потом удалить
-    @State private var r: Int = 10
-    @State private var i: Int = 9
+    @State private var r: Int = 5
+    @State private var i: Int = 6
     @State private var a: Int = 8
     @State private var s: Int = 8
     @State private var e: Int = 0
@@ -65,9 +65,9 @@ struct resultView: View {
             
             /// 􀄩 вот тебе образец всей этой веселухи, каждый иф чекает что в аррее конкретные элементы и что они все больше или равны 7. Удачи)
             
-            if sortedNums.allSatisfy({ $0.value >= 7 }) {
+                if sortedNums.allSatisfy({ $0.value >= 7 }) {
                 Text("6 max")
-                if sortedNums.allSatisfy({ $0.value <= 2 }) {
+                } else if sortedNums.allSatisfy({ $0.value <= 2 }) {
                     Text("try again")
                     // 5 letters
                 } else if Set(fiveLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "a", "s", "e"])) && fiveLrg.allSatisfy({ $0.value >= 7 }) {
@@ -208,7 +208,7 @@ struct resultView: View {
             
         }
     }
-}
+
 
 #Preview {
     resultView()

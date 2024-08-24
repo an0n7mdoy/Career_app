@@ -320,57 +320,52 @@ struct C_testView: View {
                     HStack {
                                
                 
-                            ZStack{
-                                
-                                Rectangle()
-                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                    .frame(width: 64, height: 37)
-                                    .cornerRadius(15)
-                                
-                                Button {
-                                    presentationMode.wrappedValue.dismiss()
-                                } label: {
-                                    Image(systemName: "arrow.left")
-                                }
-                                .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
-                                .font(.system(size: 30))
-                                
-                                
+                        ZStack{
+                            
+                            Rectangle()
+                                .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                .frame(width: 64, height: 37)
+                                .cornerRadius(15)
+                            
+                            Button {
+                                presentationMode.wrappedValue.dismiss()
+                            } label: {
+                                Image(systemName: "arrow.left")
                             }
-                                
-                             
-                                ZStack{
-                                    
-                                    Rectangle()
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .frame(width: 64, height: 37)
-                                        .cornerRadius(15)
-                                    
-                                    Text("6/8")
-                                        .font(Font.custom("Livvic", size: 18))
-                                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                }
-                                
-                                ZStack{
-                                    
-                                    Rectangle()
-                                        .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                        .frame(width: 64, height: 37)
-                                        .cornerRadius(15)
-                                    
-                                    NavigationLink(destination: resultView()){
-                                        Image(systemName: "arrow.right")
-                                            .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
-                                            .font(.system(size: 30))
-                                    }
-                                    
-                                    
-                                
-                            }
-                            .frame(width: 364)
+                            .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
+                            .font(.system(size: 30))
+                            
                             
                         }
-                    
+                                
+                        Spacer()
+                        ZStack{
+                            
+                            Rectangle()
+                                .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                .frame(width: 64, height: 37)
+                                .cornerRadius(15)
+                            
+                            Text("6/8")
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                        }
+                                
+                        ZStack{
+                            
+                            Rectangle()
+                                .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                .frame(width: 64, height: 37)
+                                .cornerRadius(15)
+                            
+                            NavigationLink(destination: resultView()){
+                                Image(systemName: "arrow.right")
+                                    .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
+                                    .font(.system(size: 30))
+                            }
+                        }
+                    }
+                    .frame(width: 364)
                 }
                 .navigationBarHidden(true)
             }
