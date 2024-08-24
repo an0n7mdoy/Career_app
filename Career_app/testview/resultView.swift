@@ -73,13 +73,47 @@ struct resultView: View {
                 } else if Set(fiveLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "a", "s", "e"])) && fiveLrg.allSatisfy({ $0.value >= 7 }) {
                     Text("riase")
                 } else if Set(fiveLrg.map({ $0.name })).isSubset(of: Set(["r", "c", "a", "s", "e"])) && fiveLrg.allSatisfy({ $0.value >= 7 }) {
-                    Text("rcase")
+                    Text("RASEC")
+                } else if Set(fiveLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "a", "c", "e"])) && fiveLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("RIAEC")
+                } else if Set(fiveLrg.map({ $0.name })).isSubset(of: Set(["r", "c", "i", "s", "e"])) && fiveLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("RISEC")
+                } else if Set(fiveLrg.map({ $0.name })).isSubset(of: Set(["c", "i", "a", "s", "e"])) && fiveLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("IASEC")
+                } else if Set(fiveLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "a", "s", "c"])) && fiveLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("RIASC")
                     
                     // 4 letters
                 } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "a", "s"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
                     Text("rias")
                 } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "a", "e"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
                     Text("riae")
+                } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "a", "c"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("RIAC")
+                } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "s", "e"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("RISE")
+                } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "c", "s"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("RISC")
+                } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "c", "e"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("RIEC")
+                } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["r", "e", "a", "s"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("RASE")
+                } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["r", "s", "a", "c"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("RASC")
+                } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["r", "e", "a", "c"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("RAEC")
+                } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["r", "s", "c", "e"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("RSEC")
+                } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["e", "i", "a", "s"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("IASE")
+                } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["s", "i", "a", "c"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("IASC")
+                } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["e", "i", "a", "c"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("IAEC")
+                } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["s", "i", "c", "e"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("ISEC")
+                } else if Set(fourLrg.map({ $0.name })).isSubset(of: Set(["a", "s", "e", "c"])) && fourLrg.allSatisfy({ $0.value >= 7 }) {
+                    Text("ASEC")
                     
                     // 3 letters
                 } else if Set(threeLrg.map({ $0.name })).isSubset(of: Set(["r", "i", "a"])) && threeLrg.allSatisfy({ $0.value >= 7 }) {
