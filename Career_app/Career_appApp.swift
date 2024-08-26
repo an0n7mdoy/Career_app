@@ -357,6 +357,15 @@ class GlobalSettings: ObservableObject{
     
 }
 
+class soundVars: ObservableObject{
+    static let shared = soundVars()
+    
+    @Published var musicButton = false
+    @Published var soundButton = false
+    
+    private init() {}
+}
+
 struct ChecklistItem: Identifiable {
     let id = UUID()
     var text: String

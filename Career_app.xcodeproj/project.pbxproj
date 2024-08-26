@@ -32,6 +32,8 @@
 		42CD0D442C0394470004B48A /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0D432C0394470004B48A /* MainScreenView.swift */; };
 		42CD0D462C0394510004B48A /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0D452C0394510004B48A /* PersonalView.swift */; };
 		42CD0D482C0394570004B48A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0D472C0394570004B48A /* SettingsView.swift */; };
+		42DD19772C7CEC96004057F2 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DD19762C7CEC96004057F2 /* Sounds.swift */; };
+		42DD197A2C7CED55004057F2 /* bbdd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42DD19792C7CED55004057F2 /* bbdd.mp3 */; };
 		42EAE7D12C3F08FB00BD3424 /* Mina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D257B8EE2C3EC145001C5F14 /* Mina-Regular.ttf */; };
 		42EAE7D22C3F08FF00BD3424 /* Mina-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D257B8ED2C3EC143001C5F14 /* Mina-Bold.ttf */; };
 		D257B8E72C3EBB92001C5F14 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D257B8E62C3EBB92001C5F14 /* testView.swift */; };
@@ -53,6 +55,8 @@
 		42CD0D432C0394470004B48A /* MainScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		42CD0D452C0394510004B48A /* PersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
 		42CD0D472C0394570004B48A /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		42DD19762C7CEC96004057F2 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		42DD19792C7CED55004057F2 /* bbdd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bbdd.mp3; sourceTree = "<group>"; };
 		D257B8E62C3EBB92001C5F14 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 		D257B8ED2C3EC143001C5F14 /* Mina-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mina-Bold.ttf"; sourceTree = "<group>"; };
 		D257B8EE2C3EC145001C5F14 /* Mina-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mina-Regular.ttf"; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 				D257B8F02C3EC208001C5F14 /* Career-app-Info.plist */,
 				423FC32F2C0392F7008E3EBD /* Career_appApp.swift */,
 				42CD0D432C0394470004B48A /* MainScreenView.swift */,
+				42DD19762C7CEC96004057F2 /* Sounds.swift */,
+				42DD19782C7CECA7004057F2 /* Sounds */,
 				D257B8E62C3EBB92001C5F14 /* testView.swift */,
 				4209F5D32C53C7780095646E /* testview */,
 				42CD0D452C0394510004B48A /* PersonalView.swift */,
@@ -146,6 +152,14 @@
 				423FC3362C0392F9008E3EBD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		42DD19782C7CECA7004057F2 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				42DD19792C7CED55004057F2 /* bbdd.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		D257B8EC2C3EC11C001C5F14 /* Fonts */ = {
@@ -268,6 +282,7 @@
 				4240E7182C3FE58700FBAD4D /* Livvic-ExtraLight.ttf in Resources */,
 				423FC3372C0392F9008E3EBD /* Preview Assets.xcassets in Resources */,
 				423FC3342C0392F9008E3EBD /* Assets.xcassets in Resources */,
+				42DD197A2C7CED55004057F2 /* bbdd.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +304,7 @@
 				D2D5828E2C515017008D12DA /* E_testView.swift in Sources */,
 				D2D582902C515041008D12DA /* C_testView.swift in Sources */,
 				D2D582882C51157D008D12DA /* I_testView.swift in Sources */,
+				42DD19772C7CEC96004057F2 /* Sounds.swift in Sources */,
 				D2D5828A2C512478008D12DA /* A_testView.swift in Sources */,
 				423FC3302C0392F7008E3EBD /* Career_appApp.swift in Sources */,
 			);

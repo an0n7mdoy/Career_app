@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MainScreenView: View {
+ 
+    @ObservedObject var sounds = soundVars.shared
+    
     var body: some View {
         NavigationStack{
             VStack {
@@ -128,6 +131,11 @@ struct MainScreenView: View {
                     }
                 }
             }
+            .onAppear(perform: {
+                if !sounds.musicButton {
+                    playSound(sound: "bbdd", type: "mp3") //start playing when opened if not disabled
+                }
+            })
         }
     }
 }

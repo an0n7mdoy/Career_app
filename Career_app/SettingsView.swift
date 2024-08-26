@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State private var isButtonPressed1 = false
-    @State private var isButtonPressed2 = false
+ 
+    @ObservedObject var sounds = soundVars.shared
     var body: some View {
        
         VStack {
@@ -93,9 +93,14 @@ struct SettingsView: View {
                             VStack{
                                     
                                 Button(action: {
-                                    isButtonPressed1.toggle() // Toggle the button state
+                                    sounds.musicButton.toggle()
+                                    if sounds.musicButton {
+                                        stopMusic()
+                                    }else if !sounds.musicButton {
+                                        resumeMusic()
+                                    }
                                 }) {
-                                    Image(systemName: isButtonPressed1 ? "speaker.slash" : "speaker.wave.3")
+                                    Image(systemName: sounds.musicButton ? "speaker.slash" : "speaker.wave.3")
                                         .foregroundColor(.black)
                                 }
                                     
@@ -104,9 +109,9 @@ struct SettingsView: View {
                                     .foregroundColor(.clear)
                                     
                                 Button(action: {
-                                    isButtonPressed2.toggle() // Toggle the button state
+                                    sounds.soundButton.toggle() // Toggle the button state
                                 }) {
-                                    Image(systemName: isButtonPressed2 ? "speaker.slash" : "speaker.wave.3")
+                                    Image(systemName: sounds.soundButton ? "speaker.slash" : "speaker.wave.3")
                                         .foregroundColor(.black)
                                 }
                             }
