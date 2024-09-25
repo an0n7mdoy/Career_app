@@ -18,6 +18,106 @@
             endingLineNumber = "11"
             landmarkName = "R_testView"
             landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "FEA1EEBD-E264-47AB-A651-DF61563E6CF8 - c64f72392b288fd3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of Career_app.R_testView.settings : Career_app.GlobalSettings"
+                  moduleName = "Career_app.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanivanov/Desktop/CAS/Career_app/Career_app/testview/R_testView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "FEA1EEBD-E264-47AB-A651-DF61563E6CF8 - f2bcc6350d6f5d32"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Career_app.R_testView.settings.getter : Career_app.GlobalSettings"
+                  moduleName = "Career_app.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanivanov/Desktop/CAS/Career_app/Career_app/testview/R_testView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "FEA1EEBD-E264-47AB-A651-DF61563E6CF8 - d05605f4f3abb882"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Career_app.R_testView.settings.setter : Career_app.GlobalSettings"
+                  moduleName = "Career_app.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanivanov/Desktop/CAS/Career_app/Career_app/testview/R_testView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12">
+               </Location>
+               <Location
+                  uuid = "FEA1EEBD-E264-47AB-A651-DF61563E6CF8 - 4b3cf94c472f5a5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Career_app.R_testView.settings.modify : Career_app.GlobalSettings"
+                  moduleName = "Career_app.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanivanov/Desktop/CAS/Career_app/Career_app/testview/R_testView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12">
+               </Location>
+               <Location
+                  uuid = "FEA1EEBD-E264-47AB-A651-DF61563E6CF8 - ab8887b92be254ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Career_app.R_testView.settings.modify : Career_app.GlobalSettings with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Career_app.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "FEA1EEBD-E264-47AB-A651-DF61563E6CF8 - 8d1035a022a93390"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Career_app.R_testView.$settings.getter : SwiftUI.ObservedObject&lt;Career_app.GlobalSettings&gt;.Wrapper"
+                  moduleName = "Career_app.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanivanov/Desktop/CAS/Career_app/Career_app/testview/R_testView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12">
+               </Location>
+               <Location
+                  uuid = "FEA1EEBD-E264-47AB-A651-DF61563E6CF8 - dfb07749ffcefac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 0 of Career_app.R_testView.init(settings: Career_app.GlobalSettings) -&gt; Career_app.R_testView"
+                  moduleName = "Career_app.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanivanov/Desktop/CAS/Career_app/Career_app/testview/R_testView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

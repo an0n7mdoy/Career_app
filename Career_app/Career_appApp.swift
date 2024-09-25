@@ -12,6 +12,7 @@
 
 
 import SwiftUI
+import Combine
 
 @main
 struct Career_appApp: App {
@@ -360,10 +361,25 @@ class GlobalSettings: ObservableObject{
 class soundVars: ObservableObject{
     static let shared = soundVars()
     
-    @Published var musicButton = false
-    @Published var soundButton = false
+    @Published var musicButton = false {
+        didSet {
+            UserDefaults.standard.set(musicButton, forKey: "musicButton")
+        }
+    }
+    @Published var soundButton = false {
+        didSet {
+            UserDefaults.standard.set(soundButton, forKey: "soundButton")
+        }
+    }
     
-    private init() {}
+   
+    
+    init() {
+            // Load values from UserDefaults when the app starts
+        
+        self.musicButton = UserDefaults.standard.bool(forKey: "musicButton")
+        self.soundButton = UserDefaults.standard.bool(forKey: "soundButton")
+    }
 }
 
 struct ChecklistItem: Identifiable {

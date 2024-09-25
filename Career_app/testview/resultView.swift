@@ -19,6 +19,8 @@ struct resultView: View {
     @State private var e: Int = 0
     @State private var c: Int = 0
     
+    @State private var resultStr = "result"
+    
     var body: some View {
         // 􀄩 в vars поменять r на settings.R и так далее
         let vars = [r, i, a, s, e, c]

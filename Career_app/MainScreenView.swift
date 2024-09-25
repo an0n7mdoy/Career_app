@@ -70,7 +70,7 @@ struct MainScreenView: View {
                             Text("Personal Account")
                                 .font(Font.custom("Livvic-Regular", size: 25))
                                 .multilineTextAlignment(.center)
-                                .foregroundColor(Color(red: 0.15, green: 0.2, blue: 0.22).opacity(0.9))
+                                .foregroundColor(.black)
                     }
                     
                     
@@ -99,7 +99,7 @@ struct MainScreenView: View {
                         Text("Settings")
                             .font(Font.custom("Livvic-Regular", size: 25))
                             .multilineTextAlignment(.center)
-                            .foregroundColor(Color(red: 0.15, green: 0.2, blue: 0.22).opacity(0.9))
+                            .foregroundColor(.black)
                     }
                 }
             }
@@ -126,7 +126,7 @@ struct MainScreenView: View {
                         Text("About Developers")
                             .font(Font.custom("Livvic-Regular", size: 25))
                             .multilineTextAlignment(.center)
-                            .foregroundColor(Color(red: 0.15, green: 0.2, blue: 0.22).opacity(0.9))
+                            .foregroundColor(.black)
                     }
                     }
                 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,7 +27,6 @@
 		4240E7212C3FE5A200FBAD4D /* Livvic-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D582752C3F3C3A008D12DA /* Livvic-SemiBoldItalic.ttf */; };
 		4240E7222C3FE5A500FBAD4D /* Livvic-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D582822C3F3C3A008D12DA /* Livvic-Thin.ttf */; };
 		4240E7232C3FE5A900FBAD4D /* Livvic-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D582802C3F3C3A008D12DA /* Livvic-ThinItalic.ttf */; };
-		4240E7242C3FEE5E00FBAD4D /* Career-app-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D257B8F02C3EC208001C5F14 /* Career-app-Info.plist */; };
 		42CD0D422C03939C0004B48A /* DevView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0D412C03939C0004B48A /* DevView.swift */; };
 		42CD0D442C0394470004B48A /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0D432C0394470004B48A /* MainScreenView.swift */; };
 		42CD0D462C0394510004B48A /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0D452C0394510004B48A /* PersonalView.swift */; };
@@ -231,7 +230,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					423FC32B2C0392F7008E3EBD = {
 						CreatedOnToolsVersion = 15.4;
@@ -239,7 +238,6 @@
 				};
 			};
 			buildConfigurationList = 423FC3272C0392F7008E3EBD /* Build configuration list for PBXProject "Career_app" */;
-			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -247,6 +245,7 @@
 				Base,
 			);
 			mainGroup = 423FC3232C0392F7008E3EBD;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 423FC32D2C0392F7008E3EBD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,7 +260,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4240E7242C3FEE5E00FBAD4D /* Career-app-Info.plist in Resources */,
 				4240E71D2C3FE59500FBAD4D /* Livvic-Medium.ttf in Resources */,
 				4240E7142C3FE57700FBAD4D /* Livvic-Black.ttf in Resources */,
 				4240E7212C3FE5A200FBAD4D /* Livvic-SemiBoldItalic.ttf in Resources */,
