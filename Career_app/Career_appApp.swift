@@ -18,7 +18,8 @@ import Combine
 struct Career_appApp: App {
     var body: some Scene {
         WindowGroup {
-            MainScreenView()      
+            MainScreenView()
+                .environment(\.sizeCategory, .medium)
         }
     }
 }

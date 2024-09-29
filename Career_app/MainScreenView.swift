@@ -10,6 +10,9 @@ import SwiftUI
 struct MainScreenView: View {
  
     @ObservedObject var sounds = soundVars.shared
+    @State private var floatUp = false
+    
+   
     
     var body: some View {
         NavigationStack{
@@ -133,9 +136,20 @@ struct MainScreenView: View {
             }
             .onAppear(perform: {
                 if !sounds.musicButton {
-                    playSound(sound: "bbdd", type: "mp3") //start playing when opened if not disabled
+                    playSound(sound: "bbdd ", type: "mp3") //start playing when opened if not disabled
                 }
             })
+            .background(Image("back_holder")
+                .resizable()
+                .ignoresSafeArea()
+                .aspectRatio(contentMode: .fill)
+                .offset(y: floatUp ? -20 : 20)
+                .animation(.easeInOut(duration: 2).repeatForever(), value: floatUp)
+                .onAppear {
+                    
+                    floatUp.toggle()
+                     // Start the animation
+                })
         }
     }
 }
