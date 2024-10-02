@@ -10,7 +10,7 @@ import SwiftUI
 struct MainScreenView: View {
  
     @ObservedObject var sounds = soundVars.shared
-    @State private var floatUp = false
+    @State private var floatUp: Bool = false
     
    
     
@@ -136,18 +136,22 @@ struct MainScreenView: View {
             }
             .onAppear(perform: {
                 if !sounds.musicButton {
-                    playSound(sound: "bbdd ", type: "mp3") //start playing when opened if not disabled
+                    playSound(sound: "bbdd", type: "mp3") //start playing when opened if not disabled
                 }
             })
             .background(Image("back_holder")
                 .resizable()
                 .ignoresSafeArea()
                 .aspectRatio(contentMode: .fill)
-                .offset(y: floatUp ? -20 : 20)
+                .offset(y: floatUp ? -30 : 40)
                 .animation(.easeInOut(duration: 2).repeatForever(), value: floatUp)
                 .onAppear {
-                    
-                    floatUp.toggle()
+                    print("View appeared, floatUp: \(floatUp)")
+                    if !floatUp {
+                            floatUp.toggle()
+                        }
+                    print("floatUp toggled to: \(floatUp)") // Log after toggle
+
                      // Start the animation
                 })
         }
