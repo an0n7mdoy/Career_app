@@ -35,6 +35,7 @@
 		42DD197A2C7CED55004057F2 /* bbdd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42DD19792C7CED55004057F2 /* bbdd.mp3 */; };
 		42EAE7D12C3F08FB00BD3424 /* Mina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D257B8EE2C3EC145001C5F14 /* Mina-Regular.ttf */; };
 		42EAE7D22C3F08FF00BD3424 /* Mina-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D257B8ED2C3EC143001C5F14 /* Mina-Bold.ttf */; };
+		42F4AC8D2CAD97580045FD02 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F4AC8C2CAD97580045FD02 /* Launch Screen.storyboard */; };
 		D257B8E72C3EBB92001C5F14 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D257B8E62C3EBB92001C5F14 /* testView.swift */; };
 		D2D582862C3F4486008D12DA /* R_testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D582852C3F4486008D12DA /* R_testView.swift */; };
 		D2D582882C51157D008D12DA /* I_testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D582872C51157D008D12DA /* I_testView.swift */; };
@@ -56,6 +57,7 @@
 		42CD0D472C0394570004B48A /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		42DD19762C7CEC96004057F2 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		42DD19792C7CED55004057F2 /* bbdd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bbdd.mp3; sourceTree = "<group>"; };
+		42F4AC8C2CAD97580045FD02 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D257B8E62C3EBB92001C5F14 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 		D257B8ED2C3EC143001C5F14 /* Mina-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mina-Bold.ttf"; sourceTree = "<group>"; };
 		D257B8EE2C3EC145001C5F14 /* Mina-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mina-Regular.ttf"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				423FC32F2C0392F7008E3EBD /* Career_appApp.swift */,
 				42CD0D432C0394470004B48A /* MainScreenView.swift */,
 				42DD19762C7CEC96004057F2 /* Sounds.swift */,
+				42F4AC8C2CAD97580045FD02 /* Launch Screen.storyboard */,
 				42DD19782C7CECA7004057F2 /* Sounds */,
 				D257B8E62C3EBB92001C5F14 /* testView.swift */,
 				4209F5D32C53C7780095646E /* testview */,
@@ -266,6 +269,7 @@
 				4240E7202C3FE59F00FBAD4D /* Livvic-SemiBold.ttf in Resources */,
 				4240E7192C3FE58A00FBAD4D /* Livvic-ExtraLightItalic.ttf in Resources */,
 				4240E71B2C3FE59000FBAD4D /* Livvic-Light.ttf in Resources */,
+				42F4AC8D2CAD97580045FD02 /* Launch Screen.storyboard in Resources */,
 				4240E7162C3FE58100FBAD4D /* Livvic-Bold.ttf in Resources */,
 				4240E7172C3FE58400FBAD4D /* Livvic-BoldItalic.ttf in Resources */,
 				4240E7222C3FE5A500FBAD4D /* Livvic-Thin.ttf in Resources */,

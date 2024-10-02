@@ -10,7 +10,7 @@
 		<string>Mina-Bold.ttf</string>
 		<string>Mina-Regular.ttf</string>
 	</array>
-	<key>UILaunchScreen</key>
-	<dict/>
+	<key>UILaunchStoryboardName</key>
+	<string>Launch Screen.storyboard</string>
 </dict>
 </plist>
