@@ -383,6 +383,31 @@ class soundVars: ObservableObject{
     }
 }
 
+class lists: ObservableObject{
+    static let shared = lists()
+    
+    @Published var items: [String] {
+        didSet{
+            UserDefaults.standard.set(items, forKey: "items")
+        }
+    }
+    
+    @Published var items1: [String] {
+        didSet{
+            UserDefaults.standard.set(items1, forKey: "items1")
+        }
+    }
+    
+    init() {
+            // Load values from UserDefaults when the app starts
+        
+        self.items = UserDefaults.standard.stringArray(forKey: "items") ?? []
+        self.items1 = UserDefaults.standard.stringArray(forKey: "items1") ?? []
+        
+    }
+    
+}
+
 struct ChecklistItem: Identifiable {
     let id = UUID()
     var text: String

@@ -19,7 +19,7 @@ struct resultView: View {
     @State private var e: Int = 0
     @State private var c: Int = 0
     
-    @State private var resultStr = "result"
+    @State var resultStr = "result"
     
     var body: some View {
         // 􀄩 в vars поменять r на settings.R и так далее
@@ -68,7 +68,8 @@ struct resultView: View {
             /// 􀄩 вот тебе образец всей этой веселухи, каждый иф чекает что в аррее конкретные элементы и что они все больше или равны 7. Удачи)
             
                 if sortedNums.allSatisfy({ $0.value >= 7 }) {
-                Text("6 max")
+                    
+                    let resultStr = "6max"
                 } else if sortedNums.allSatisfy({ $0.value <= 2 }) {
                     Text("try again")
                     // 5 letters
