@@ -131,17 +131,23 @@ struct PersonalView: View {
                                 // Add new item section
                             HStack {
                                 TextField("Add university", text: $newItem)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                    .font(Font.custom("Livvic-Regular", size: 20))
+                                    .padding(7)
+                                    .background(Color.gray.opacity(0.2))
+                                    .cornerRadius(15)
+                                    
+                                   
                                     
                                 Button(action: {
                                     addItem()
                                 }) {
                                     Text("Add")
+                                        .font(Font.custom("Livvic-Regular", size: 18))
                                         .padding(.horizontal)
-                                        .padding(.vertical, 5)
+                                        .padding(.vertical, 8)
                                         .background(Color(red: 0.702, green: 0.718, blue: 0.725))
                                         .foregroundColor(.black)
-                                        .cornerRadius(8)
+                                        .cornerRadius(15)
                                 }
                             }
                         }
@@ -149,10 +155,7 @@ struct PersonalView: View {
                         .padding(.vertical, 10)
                         //.transition(.push(from: .bottom))
                     }
-                        
-                        
                 }
-                        
             }
                 
             
