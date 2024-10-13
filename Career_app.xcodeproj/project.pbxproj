@@ -28,6 +28,7 @@
 		4240E7222C3FE5A500FBAD4D /* Livvic-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D582822C3F3C3A008D12DA /* Livvic-Thin.ttf */; };
 		4240E7232C3FE5A900FBAD4D /* Livvic-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D582802C3F3C3A008D12DA /* Livvic-ThinItalic.ttf */; };
 		427ED7812CB039A9000AB8D2 /* testlistdrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427ED7802CB039A9000AB8D2 /* testlistdrop.swift */; };
+		42C4796D2CBC4F1D0037F431 /* AppSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42C4796C2CBC4F1D0037F431 /* AppSound.mp3 */; };
 		42CD0D422C03939C0004B48A /* DevView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0D412C03939C0004B48A /* DevView.swift */; };
 		42CD0D442C0394470004B48A /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0D432C0394470004B48A /* MainScreenView.swift */; };
 		42CD0D462C0394510004B48A /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0D452C0394510004B48A /* PersonalView.swift */; };
@@ -53,6 +54,7 @@
 		423FC3332C0392F9008E3EBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		423FC3362C0392F9008E3EBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		427ED7802CB039A9000AB8D2 /* testlistdrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testlistdrop.swift; sourceTree = "<group>"; };
+		42C4796C2CBC4F1D0037F431 /* AppSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AppSound.mp3; sourceTree = "<group>"; };
 		42CD0D412C03939C0004B48A /* DevView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevView.swift; sourceTree = "<group>"; };
 		42CD0D432C0394470004B48A /* MainScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		42CD0D452C0394510004B48A /* PersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		42DD19782C7CECA7004057F2 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				42C4796C2CBC4F1D0037F431 /* AppSound.mp3 */,
 				42DD19792C7CED55004057F2 /* bbdd.mp3 */,
 			);
 			path = Sounds;
@@ -282,6 +285,7 @@
 				4240E7232C3FE5A900FBAD4D /* Livvic-ThinItalic.ttf in Resources */,
 				42EAE7D12C3F08FB00BD3424 /* Mina-Regular.ttf in Resources */,
 				4240E71F2C3FE59B00FBAD4D /* Livvic-Regular.ttf in Resources */,
+				42C4796D2CBC4F1D0037F431 /* AppSound.mp3 in Resources */,
 				4240E71A2C3FE58D00FBAD4D /* Livvic-Italic.ttf in Resources */,
 				4240E7152C3FE57A00FBAD4D /* Livvic-BlackItalic.ttf in Resources */,
 				4240E7182C3FE58700FBAD4D /* Livvic-ExtraLight.ttf in Resources */,

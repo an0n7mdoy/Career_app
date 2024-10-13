@@ -136,7 +136,7 @@ struct MainScreenView: View {
             }
             .onAppear(perform: {
                 if !sounds.musicButton {
-                    playSound(sound: "bbdd", type: "mp3") //start playing when opened if not disabled
+                    playSound(sound: "AppSound", type: "mp3") //start playing when opened if not disabled
                 }
             })
             .background(Image("back_holder")
