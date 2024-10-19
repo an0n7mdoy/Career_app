@@ -51,7 +51,7 @@ struct CP_testView: View {
                             .cornerRadius(8)
                         
                         VStack  {
-                            Text("Do you like organizing data and managing information?")
+                            Text("Do you feel confident about your skills and abilities for future employment?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .multilineTextAlignment(.leading)
@@ -105,7 +105,7 @@ struct CP_testView: View {
                                 Spacer()
                             }
                             
-                            Text("Are you interested in working with numbers, records, or documents?")
+                            Text("Have you started planning your career path?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .multilineTextAlignment(.leading)
@@ -130,13 +130,13 @@ struct CP_testView: View {
                                 
                                 Spacer()
                                 
-                                Button("Maybe"){
+                                Button("Somewhat"){
                                     settings.cp2y = false
                                     settings.cp2m = true
                                     settings.cp2n = false
                                     settings.cp2 = 1
                                 }
-                                .frame(width: 76, height: 27)
+                                .frame(width: 100, height: 27)
                                 .background(settings.cp2m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
@@ -159,7 +159,7 @@ struct CP_testView: View {
                                 Spacer()
                             }
                             
-                            Text("Do you prefer structured tasks and clear instructions?")
+                            Text("Do you know which careers align with your interests and strengths?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .frame(width: 354.0, alignment: .topLeading)
@@ -211,7 +211,7 @@ struct CP_testView: View {
                                 Spacer()
                             }
                             
-                            Text("Do you enjoy tasks that involve attention to detail and accuracy?")
+                            Text("Are you aware of the educational requirements for your desired career?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .frame(width: 354.0, alignment: .topLeading)
@@ -234,13 +234,13 @@ struct CP_testView: View {
                                 
                                 Spacer()
                                 
-                                Button("Maybe"){
+                                Button("Somewhat"){
                                     settings.cp4y = false
                                     settings.cp4m = true
                                     settings.cp4n = false
                                     settings.cp4 = 1
                                 }
-                                .frame(width: 76, height: 27)
+                                .frame(width: 100, height: 27)
                                 .background(settings.cp4m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
@@ -263,7 +263,7 @@ struct CP_testView: View {
                                 Spacer()
                             }
                             
-                            Text("Are you interested in administrative or clerical work?")
+                            Text("Do you have a resume or portfolio ready for university applications?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .frame(width: 354.0, alignment: .topLeading)
@@ -286,13 +286,13 @@ struct CP_testView: View {
                                 
                                 Spacer()
                                 
-                                Button("Maybe"){
+                                Button("Somewhat"){
                                     settings.cp5y = false
                                     settings.cp5m = true
                                     settings.cp5n = false
                                     settings.cp5 = 1
                                 }
-                                .frame(width: 76, height: 27)
+                                .frame(width: 100, height: 27)
                                 .background(settings.cp5m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))

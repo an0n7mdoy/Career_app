@@ -51,7 +51,7 @@ struct RC_testView: View {
                             .cornerRadius(8)
                         
                         VStack  {
-                            Text("Do you like organizing data and managing information?")
+                            Text("How well do you handle changes or unexpected challenges in your career path?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .multilineTextAlignment(.leading)
@@ -63,39 +63,39 @@ struct RC_testView: View {
                                 Spacer()
                                 Text("\(settings.RC)")
                                 
-                                Button("Yes") {
+                                Button("Very") {
                                     settings.rc1y = true
                                     settings.rc1m = false
                                     settings.rc1n = false
                                     settings.rc1 = 2
                                 }
-                                .frame(width: 46, height: 27)
+                                .frame(width: 50, height: 27)
                                 .background(settings.rc1y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
-                                Button("Maybe"){
+                                Button("Somewhat"){
                                     settings.rc1y = false
                                     settings.rc1m = true
                                     settings.rc1n = false
                                     settings.rc1 = 1
                                 }
-                                .frame(width: 76, height: 27)
+                                .frame(width: 100, height: 27)
                                 .background(settings.rc1m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
-                                Button("No"){
+                                Button("Badly"){
                                     settings.rc1y = false
                                     settings.rc1m = false
                                     settings.rc1n = true
                                     settings.rc1 = 0
                                 }
-                                .frame(width: 46, height: 27)
+                                .frame(width: 60, height: 27)
                                 .background(settings.rc1n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 
                                 .font(Font.custom("Livvic", size: 18))
@@ -105,7 +105,7 @@ struct RC_testView: View {
                                 Spacer()
                             }
                             
-                            Text("Are you interested in working with numbers, records, or documents?")
+                            Text("Do you have clear career goals and a plan to achieve them?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .multilineTextAlignment(.leading)
@@ -130,13 +130,13 @@ struct RC_testView: View {
                                 
                                 Spacer()
                                 
-                                Button("Maybe"){
+                                Button("Somewhat"){
                                     settings.rc2y = false
                                     settings.rc2m = true
                                     settings.rc2n = false
                                     settings.rc2 = 1
                                 }
-                                .frame(width: 76, height: 27)
+                                .frame(width: 100, height: 27)
                                 .background(settings.rc2m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
@@ -159,7 +159,7 @@ struct RC_testView: View {
                                 Spacer()
                             }
                             
-                            Text("Do you prefer structured tasks and clear instructions?")
+                            Text("How often do you seek advice or mentorship regarding your career?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .frame(width: 354.0, alignment: .topLeading)
@@ -169,39 +169,39 @@ struct RC_testView: View {
                                 Spacer()
                                 Spacer()
                                 
-                                Button("Yes") {
+                                Button("Often") {
                                     settings.rc3y = true
                                     settings.rc3m = false
                                     settings.rc3n = false
                                     settings.rc3 = 2
                                 }
-                                .frame(width: 46, height: 27)
+                                .frame(width: 60, height: 27)
                                 .background(settings.rc3y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
-                                Button("Maybe"){
+                                Button("Rarely"){
                                     settings.rc3y = false
                                     settings.rc3m = true
                                     settings.rc3n = false
                                     settings.rc3 = 1
                                 }
-                                .frame(width: 76, height: 27)
+                                .frame(width: 70, height: 27)
                                 .background(settings.rc3m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
-                                Button("No"){
+                                Button("Never"){
                                     settings.rc3y = false
                                     settings.rc3m = false
                                     settings.rc3n = true
                                     settings.rc3 = 0
                                 }
-                                .frame(width: 46, height: 27)
+                                .frame(width: 60, height: 27)
                                 .background(settings.rc3n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 
                                 .font(Font.custom("Livvic", size: 18))
@@ -211,7 +211,7 @@ struct RC_testView: View {
                                 Spacer()
                             }
                             
-                            Text("Do you enjoy tasks that involve attention to detail and accuracy?")
+                            Text("Are you proactive in seeking opportunities to develop new skills?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .frame(width: 354.0, alignment: .topLeading)
@@ -234,13 +234,13 @@ struct RC_testView: View {
                                 
                                 Spacer()
                                 
-                                Button("Maybe"){
+                                Button("Somewhat"){
                                     settings.rc4y = false
                                     settings.rc4m = true
                                     settings.rc4n = false
                                     settings.rc4 = 1
                                 }
-                                .frame(width: 76, height: 27)
+                                .frame(width: 100, height: 27)
                                 .background(settings.rc4m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
@@ -263,7 +263,7 @@ struct RC_testView: View {
                                 Spacer()
                             }
                             
-                            Text("Are you interested in administrative or clerical work?")
+                            Text("Do you reflect on your career decisions and make adjustments as needed?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .frame(width: 354.0, alignment: .topLeading)
@@ -286,13 +286,13 @@ struct RC_testView: View {
                                 
                                 Spacer()
                                 
-                                Button("Maybe"){
+                                Button("Somewhat"){
                                     settings.rc5y = false
                                     settings.rc5m = true
                                     settings.rc5n = false
                                     settings.rc5 = 1
                                 }
-                                .frame(width: 76, height: 27)
+                                .frame(width: 100, height: 27)
                                 .background(settings.rc5m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
