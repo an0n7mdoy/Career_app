@@ -41,6 +41,7 @@
 		42EAE7D22C3F08FF00BD3424 /* Mina-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D257B8ED2C3EC143001C5F14 /* Mina-Bold.ttf */; };
 		42F4AC8D2CAD97580045FD02 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F4AC8C2CAD97580045FD02 /* Launch Screen.storyboard */; };
 		D257B8E72C3EBB92001C5F14 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D257B8E62C3EBB92001C5F14 /* testView.swift */; };
+		D2B832552CC47C6200EAB986 /* photo кретики кружочки.png in Resources */ = {isa = PBXBuildFile; fileRef = D2B832542CC47C6200EAB986 /* photo кретики кружочки.png */; };
 		D2D582862C3F4486008D12DA /* R_testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D582852C3F4486008D12DA /* R_testView.swift */; };
 		D2D582882C51157D008D12DA /* I_testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D582872C51157D008D12DA /* I_testView.swift */; };
 		D2D5828A2C512478008D12DA /* A_testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D582892C512478008D12DA /* A_testView.swift */; };
@@ -70,6 +71,7 @@
 		D257B8ED2C3EC143001C5F14 /* Mina-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mina-Bold.ttf"; sourceTree = "<group>"; };
 		D257B8EE2C3EC145001C5F14 /* Mina-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mina-Regular.ttf"; sourceTree = "<group>"; };
 		D257B8F02C3EC208001C5F14 /* Career-app-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Career-app-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D2B832542CC47C6200EAB986 /* photo кретики кружочки.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo кретики кружочки.png"; sourceTree = "<group>"; };
 		D2D582752C3F3C3A008D12DA /* Livvic-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Livvic-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		D2D582762C3F3C3A008D12DA /* Livvic-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Livvic-Black.ttf"; sourceTree = "<group>"; };
 		D2D582772C3F3C3A008D12DA /* Livvic-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Livvic-MediumItalic.ttf"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		D257B8EC2C3EC11C001C5F14 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				D2B832542CC47C6200EAB986 /* photo кретики кружочки.png */,
 				D2D582742C3F3C3A008D12DA /* livic */,
 				D2D582732C3F3C0C008D12DA /* New Group */,
 			);
@@ -287,6 +290,7 @@
 				4240E7222C3FE5A500FBAD4D /* Livvic-Thin.ttf in Resources */,
 				4240E71E2C3FE59800FBAD4D /* Livvic-MediumItalic.ttf in Resources */,
 				4240E71C2C3FE59200FBAD4D /* Livvic-LightItalic.ttf in Resources */,
+				D2B832552CC47C6200EAB986 /* photo кретики кружочки.png in Resources */,
 				42EAE7D22C3F08FF00BD3424 /* Mina-Bold.ttf in Resources */,
 				4240E7232C3FE5A900FBAD4D /* Livvic-ThinItalic.ttf in Resources */,
 				42EAE7D12C3F08FB00BD3424 /* Mina-Regular.ttf in Resources */,

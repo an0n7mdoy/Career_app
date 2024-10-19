@@ -139,11 +139,11 @@ struct MainScreenView: View {
                     playSound(sound: "AppSound", type: "mp3") //start playing when opened if not disabled
                 }
             })
-            .background(Image("back_holder")
+            .background(Image("anima")
                 .resizable()
                 .ignoresSafeArea()
-                .aspectRatio(contentMode: .fill)
-                .offset(y: floatUp ? -30 : 40)
+                .aspectRatio(contentMode: .fit)
+                .offset(x: 33 , y: floatUp ? -270 : -240)
                 .animation(.easeInOut(duration: 2).repeatForever(), value: floatUp)
                 .onAppear {
                     print("View appeared, floatUp: \(floatUp)")
