@@ -18,6 +18,8 @@ struct resultView: View {
     @State private var s: Int = 9
     @State private var e: Int = 9
     @State private var c: Int = 9
+    @State private var rc: Int = 9
+    @State private var cp: Int = 9
     
     @State var resultStr = "result"
     
@@ -40,15 +42,15 @@ struct resultView: View {
         Spacer()
         
         HStack(spacing: 20) {
-            
-            
+               
             Text("r \(settings.R)")
             Text("i \(settings.I)")
             Text("a \(settings.A)")
             Text("s \(settings.S)")
             Text("e \(settings.E)")
             Text("c \(settings.C)")
-            
+            Text("cp \(settings.CP)")
+            Text("rc \(settings.RC)")
             
         }
         

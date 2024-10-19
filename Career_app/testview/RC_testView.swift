@@ -1,13 +1,13 @@
 //
-//  C_testView.swift
+//  RC_testView.swift
 //  Career_app
 //
-//  Created by настя п. on 24/07/2024.
+//  Created by Simonchik on 19.10.2024.
 //
 
 import SwiftUI
 
-struct C_testView: View {
+struct RC_testView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -61,42 +61,42 @@ struct C_testView: View {
                                 
                                 Spacer()
                                 Spacer()
-                                Text("\(settings.C)")
+                                Text("\(settings.RC)")
                                 
                                 Button("Yes") {
-                                    settings.c1y = true
-                                    settings.c1m = false
-                                    settings.c1n = false
-                                    settings.c1 = 2
+                                    settings.rc1y = true
+                                    settings.rc1m = false
+                                    settings.rc1n = false
+                                    settings.rc1 = 2
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(settings.c1y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .background(settings.rc1y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("Maybe"){
-                                    settings.c1y = false
-                                    settings.c1m = true
-                                    settings.c1n = false
-                                    settings.c1 = 1
+                                    settings.rc1y = false
+                                    settings.rc1m = true
+                                    settings.rc1n = false
+                                    settings.rc1 = 1
                                 }
                                 .frame(width: 76, height: 27)
-                                .background(settings.c1m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .background(settings.rc1m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("No"){
-                                    settings.c1y = false
-                                    settings.c1m = false
-                                    settings.c1n = true
-                                    settings.c1 = 0
+                                    settings.rc1y = false
+                                    settings.rc1m = false
+                                    settings.rc1n = true
+                                    settings.rc1 = 0
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(settings.c1n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .background(settings.rc1n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
@@ -118,39 +118,39 @@ struct C_testView: View {
                                 
                                 
                                 Button("Yes") {
-                                    settings.c2y = true
-                                    settings.c2m = false
-                                    settings.c2n = false
-                                    settings.c2 = 2
+                                    settings.rc2y = true
+                                    settings.rc2m = false
+                                    settings.rc2n = false
+                                    settings.rc2 = 2
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(settings.c2y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .background(settings.rc2y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("Maybe"){
-                                    settings.c2y = false
-                                    settings.c2m = true
-                                    settings.c2n = false
-                                    settings.c2 = 1
+                                    settings.rc2y = false
+                                    settings.rc2m = true
+                                    settings.rc2n = false
+                                    settings.rc2 = 1
                                 }
                                 .frame(width: 76, height: 27)
-                                .background(settings.c2m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .background(settings.rc2m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("No"){
-                                    settings.c2y = false
-                                    settings.c2m = false
-                                    settings.c2n = true
-                                    settings.c2 = 0
+                                    settings.rc2y = false
+                                    settings.rc2m = false
+                                    settings.rc2n = true
+                                    settings.rc2 = 0
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(settings.c2n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .background(settings.rc2n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
@@ -170,39 +170,39 @@ struct C_testView: View {
                                 Spacer()
                                 
                                 Button("Yes") {
-                                    settings.c3y = true
-                                    settings.c3m = false
-                                    settings.c3n = false
-                                    settings.c3 = 2
+                                    settings.rc3y = true
+                                    settings.rc3m = false
+                                    settings.rc3n = false
+                                    settings.rc3 = 2
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(settings.c3y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .background(settings.rc3y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("Maybe"){
-                                    settings.c3y = false
-                                    settings.c3m = true
-                                    settings.c3n = false
-                                    settings.c3 = 1
+                                    settings.rc3y = false
+                                    settings.rc3m = true
+                                    settings.rc3n = false
+                                    settings.rc3 = 1
                                 }
                                 .frame(width: 76, height: 27)
-                                .background(settings.c3m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .background(settings.rc3m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("No"){
-                                    settings.c3y = false
-                                    settings.c3m = false
-                                    settings.c3n = true
-                                    settings.c3 = 0
+                                    settings.rc3y = false
+                                    settings.rc3m = false
+                                    settings.rc3n = true
+                                    settings.rc3 = 0
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(settings.c3n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .background(settings.rc3n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
@@ -222,39 +222,39 @@ struct C_testView: View {
                                 Spacer()
                                 
                                 Button("Yes") {
-                                    settings.c4y = true
-                                    settings.c4m = false
-                                    settings.c4n = false
-                                    settings.c4 = 2
+                                    settings.rc4y = true
+                                    settings.rc4m = false
+                                    settings.rc4n = false
+                                    settings.rc4 = 2
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(settings.c4y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .background(settings.rc4y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("Maybe"){
-                                    settings.c4y = false
-                                    settings.c4m = true
-                                    settings.c4n = false
-                                    settings.c4 = 1
+                                    settings.rc4y = false
+                                    settings.rc4m = true
+                                    settings.rc4n = false
+                                    settings.rc4 = 1
                                 }
                                 .frame(width: 76, height: 27)
-                                .background(settings.c4m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .background(settings.rc4m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("No"){
-                                    settings.c4y = false
-                                    settings.c4m = false
-                                    settings.c4n = true
-                                    settings.c4 = 0
+                                    settings.rc4y = false
+                                    settings.rc4m = false
+                                    settings.rc4n = true
+                                    settings.rc4 = 0
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(settings.c4n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .background(settings.rc4n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
@@ -274,39 +274,39 @@ struct C_testView: View {
                                 Spacer()
                                 
                                 Button("Yes") {
-                                    settings.c5y = true
-                                    settings.c5m = false
-                                    settings.c5n = false
-                                    settings.c5 = 2
+                                    settings.rc5y = true
+                                    settings.rc5m = false
+                                    settings.rc5n = false
+                                    settings.rc5 = 2
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(settings.c5y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .background(settings.rc5y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("Maybe"){
-                                    settings.c5y = false
-                                    settings.c5m = true
-                                    settings.c5n = false
-                                    settings.c5 = 1
+                                    settings.rc5y = false
+                                    settings.rc5m = true
+                                    settings.rc5n = false
+                                    settings.rc5 = 1
                                 }
                                 .frame(width: 76, height: 27)
-                                .background(settings.c5m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .background(settings.rc5m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                                 Spacer()
                                 
                                 Button("No"){
-                                    settings.c5y = false
-                                    settings.c5m = false
-                                    settings.c5n = true
-                                    settings.c5 = 0
+                                    settings.rc5y = false
+                                    settings.rc5m = false
+                                    settings.rc5n = true
+                                    settings.rc5 = 0
                                 }
                                 .frame(width: 46, height: 27)
-                                .background(settings.c5n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .background(settings.rc5n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                                 
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
@@ -346,7 +346,7 @@ struct C_testView: View {
                                 .frame(width: 64, height: 37)
                                 .cornerRadius(15)
                             
-                            Text("6/8")
+                            Text("8/8")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                         }
@@ -358,7 +358,7 @@ struct C_testView: View {
                                 .frame(width: 64, height: 37)
                                 .cornerRadius(15)
                             
-                            NavigationLink(destination: CP_testView()){
+                            NavigationLink(destination: resultView()){
                                 Image(systemName: "arrow.right")
                                     .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
                                     .font(.system(size: 30))
@@ -372,6 +372,7 @@ struct C_testView: View {
         }
     }
 }
+
 #Preview {
-    C_testView()
+    RC_testView()
 }

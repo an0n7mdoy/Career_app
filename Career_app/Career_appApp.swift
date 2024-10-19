@@ -33,6 +33,8 @@ class GlobalSettings: ObservableObject{
     @Published var S: Int = 0
     @Published var E: Int = 0
     @Published var C: Int = 0
+    @Published var CP: Int = 0
+    @Published var RC: Int = 0
     
     //one buttton is on abd other are off
     
@@ -354,6 +356,112 @@ class GlobalSettings: ObservableObject{
     @Published var c5y = false
     @Published var c5m = false
     @Published var c5n = false
+    
+    @Published var cp1 = 0 {
+        didSet{
+            SumCP()
+        }
+    }
+    @Published var cp2 = 0 {
+        didSet{
+            SumCP()
+        }
+    }
+    @Published var cp3 = 0 {
+        didSet{
+            SumCP()
+        }
+    }
+    @Published var cp4 = 0 {
+        didSet{
+            SumCP()
+        }
+    }
+    @Published var cp5 = 0 {
+        didSet{
+            SumCP()
+        }
+    }
+    
+    private func SumCP() {
+            // Calculate the sum and update the @Published sum variable
+            CP = cp1 +
+                cp2 +
+                cp3 +
+                cp4 +
+                cp5
+        }
+    
+    @Published var cp1y = false
+    @Published var cp1m = false
+    @Published var cp1n = false
+    @Published var cp2y = false
+    @Published var cp2m = false
+    @Published var cp2n = false
+    @Published var cp3y = false
+    @Published var cp3m = false
+    @Published var cp3n = false
+    @Published var cp4y = false
+    @Published var cp4m = false
+    @Published var cp4n = false
+    @Published var cp5y = false
+    @Published var cp5m = false
+    @Published var cp5n = false
+    
+    @Published var rc1 = 0 {
+        didSet{
+            SumRC()
+        }
+    }
+    @Published var rc2 = 0 {
+        didSet{
+            SumRC()
+        }
+    }
+    @Published var rc3 = 0 {
+        didSet{
+            SumRC()
+        }
+    }
+    @Published var rc4 = 0 {
+        didSet{
+            SumRC()
+        }
+    }
+    @Published var rc5 = 0 {
+        didSet{
+            SumRC()
+        }
+    }
+    
+    private func SumRC() {
+            // Calculate the sum and update the @Published sum variable
+            RC = rc1 +
+                rc2 +
+                rc3 +
+                rc4 +
+                rc5
+        }
+
+
+    
+    // yes/maybe/no a button become different
+    @Published var rc1y = false
+    @Published var rc1m = false
+    @Published var rc1n = false
+    @Published var rc2y = false
+    @Published var rc2m = false
+    @Published var rc2n = false
+    @Published var rc3y = false
+    @Published var rc3m = false
+    @Published var rc3n = false
+    @Published var rc4y = false
+    @Published var rc4m = false
+    @Published var rc4n = false
+    @Published var rc5y = false
+    @Published var rc5m = false
+    @Published var rc5n = false
+    
     
     private init() {}
     
