@@ -15,25 +15,12 @@ struct testView: View {
     var body: some View {
         NavigationStack{
             VStack {
-                
-               
-                 Spacer()
-                 Spacer()
-                 Spacer()
-              
-                
-                Rectangle()
-                .foregroundColor(.clear)
-                .frame(width: 450, height: 305)
-                .background(
-                Image("1 экран")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 450, height: 305)
-                .clipped()
-                )
             
-               
+                Image("anima")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .frame(width: 400, height: 250)
+                    .offset(x: 20, y: 10)
                 
 //NAME
                 ZStack {
@@ -58,7 +45,7 @@ struct testView: View {
                     Rectangle()
                         
                         .foregroundColor(.clear)
-                        .frame(width: 364, height: 120)
+                        .frame(width: 364, height: 100)
                         .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
                         .cornerRadius(8)
                         .padding(.bottom, 7.0)
@@ -92,12 +79,13 @@ struct testView: View {
                    
                     }
                 Spacer()
-                Spacer()
-                Spacer()
-              
-    
-
             }
+            .background(Image("1 экран")
+                .resizable()
+                .ignoresSafeArea()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 400, height: 250)
+                .offset(y: 200))
         }
     }
 }

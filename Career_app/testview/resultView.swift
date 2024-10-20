@@ -22,6 +22,7 @@ struct resultView: View {
     @State private var cp: Int = 0
     
     @State var resultStr = "result"
+    @State var result1Str = "result1"
     
     var body: some View {
         // 􀄩 в vars поменять r на settings.R и так далее
@@ -58,18 +59,8 @@ struct resultView: View {
         
         VStack{
             Text("\(resultStr)")
-            /// весь подсчет результатов будет одним if statement (то есть if и много много else if)
-            /// 􀁞 все должо чекаться от большего к меньшему (сначала вариант где 6 максимальных(sortedNums), потом все варианты где 5, потом все варианты где 4, и тд) 􀁞
-            
-            // if Set(fourLargest.map({ $0.name })).isSubset(of: Set(["r", "i", "a", "s"]))
-            /// это 􀄨 чекает что аррей состоит из конкретных елементов (типа 4 максимальных это [r, i, a, s] а не [e, s, c, i])
-            
-            // fourLargest.allSatisfy({ $0.value >= 7 })
-            /// это 􀄨 чекает что все элементы в аррее больше или равны чему то (в этом случае семи)
-            
-            /// 􀄩 вот тебе образец всей этой веселухи, каждый иф чекает что в аррее конкретные элементы и что они все больше или равны 7. Удачи)
-            
-                
+           
+            Text("\(result1Str)")
                 
         }.onAppear(perform: {
             
@@ -210,6 +201,16 @@ struct resultView: View {
                 resultStr = "Leadership, management, entrepreneurial roles.\nCEO, Entrepreneur, Project Manager.\nYou are a natural leader and have a strong sense of direction. Explore careers that allow you to make a positive impact on people's lives."
             } else if Set(oneLrg.map({ $0.name })).isSubset(of: Set(["c"])) && oneLrg.allSatisfy({ $0.value >= 7 }) {
                 resultStr = "Organization, detail-oriented work, precision.\n Compliance Officer, Healthcare Administrator, Logistics Coordinator.\n You thrive in structured environments where attention to detail and organization are key. Explore careers that require methodical thinking and a focus on accuracy and efficiency."
+            }
+            
+            if settings.CP >= 7 && settings.RC >= 7 {
+                result1Str = "two max"
+            } else if settings.CP >= 7 {
+                result1Str = "CP max"
+            } else if settings.RC >= 7 {
+                result1Str = "RC max"
+            } else {
+                result1Str = "no max"
             }
         })
             

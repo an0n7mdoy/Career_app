@@ -27,6 +27,26 @@ struct Career_appApp: App {
 class GlobalSettings: ObservableObject{
     static let shared = GlobalSettings()
     
+    @Published var checkR: Bool = true
+    @Published var checkI: Bool = true
+    @Published var checkA: Bool = true
+    @Published var checkS: Bool = true
+    @Published var checkE: Bool = true
+    @Published var checkC: Bool = true
+    @Published var checkCP: Bool = true
+    @Published var checkRC: Bool = true
+    
+    @Published var checkR1: Bool = false
+    @Published var checkI1: Bool = false
+    @Published var checkA1: Bool = false
+    @Published var checkS1: Bool = false
+    @Published var checkE1: Bool = false
+    @Published var checkC1: Bool = false
+    @Published var checkCP1: Bool = false
+    @Published var checkRC1: Bool = false
+    
+      
+    
     @Published var R: Int = 0
     @Published var I: Int = 0
     @Published var A: Int = 0

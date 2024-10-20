@@ -154,7 +154,7 @@ struct MainScreenView: View {
 
                      // Start the animation
                 })
-        }
+        }.navigationBarHidden(true)
     }
 }
 

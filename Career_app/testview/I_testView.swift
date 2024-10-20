@@ -12,21 +12,35 @@ struct I_testView: View {
     @Environment(\.presentationMode) var presentationMode
     //take data from file with varaibles
     @ObservedObject var settings = GlobalSettings.shared
+    
+    @State private var warn = false
+    @State private var exit = false
+    
+    @State private var check1 = false
+    @State private var check2 = false
+    @State private var check3 = false
+    @State private var check4 = false
+    @State private var check5 = false
+    
+    private func checkall() -> Bool {
+        if check1 && check2 && check3 && check4 && check5 {
+            return false
+        } else{
+            return true
+        }
+    }
+    
     var body: some View {
         
         NavigationStack{
             ScrollView {
                 VStack {
-                    Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(width: 450, height: 305)
-                        .background(
-                            Image("1 экран")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 450, height: 305)
-                                .clipped()
-                                    )
+                    Image("anima")
+                        .resizable()
+                        .ignoresSafeArea()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 400, height: 240)
+                        .offset(x: 20, y: 10)
                     ZStack {
                         Rectangle()
                             .frame(width: 300.0, height: 70.0)
@@ -62,13 +76,14 @@ struct I_testView: View {
                                 
                                 Spacer()
                                 Spacer()
-                                Text("\(settings.I)")
+                                Text("\(settings.checkI)")
                                 
                                 Button("Yes"){
                                     settings.i1y = true
                                     settings.i1m = false
                                     settings.i1n = false
                                     settings.i1 = 2
+                                    check1 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i1y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -82,6 +97,7 @@ struct I_testView: View {
                                     settings.i1m = true
                                     settings.i1n = false
                                     settings.i1 = 1
+                                    check1 = true
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.i1m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -96,6 +112,7 @@ struct I_testView: View {
                                     settings.i1m = false
                                     settings.i1n = true
                                     settings.i1 = 0
+                                    check1 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i1n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -125,6 +142,7 @@ struct I_testView: View {
                                     settings.i2m = false
                                     settings.i2n = false
                                     settings.i2 = 2
+                                    check2 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i2y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -138,6 +156,7 @@ struct I_testView: View {
                                     settings.i2m = true
                                     settings.i2n = false
                                     settings.i2 = 1
+                                    check2 = true
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.i2m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -152,6 +171,7 @@ struct I_testView: View {
                                     settings.i2m = false
                                     settings.i2n = true
                                     settings.i2 = 0
+                                    check2 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i2n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -180,6 +200,7 @@ struct I_testView: View {
                                     settings.i3m = false
                                     settings.i3n = false
                                     settings.i3 = 2
+                                    check3 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i3y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -193,6 +214,7 @@ struct I_testView: View {
                                     settings.i3m = true
                                     settings.i3n = false
                                     settings.i3 = 1
+                                    check3 = true
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.i3m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -207,6 +229,7 @@ struct I_testView: View {
                                     settings.i3m = false
                                     settings.i3n = true
                                     settings.i3 = 0
+                                    check3 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i3n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -235,6 +258,7 @@ struct I_testView: View {
                                     settings.i4m = false
                                     settings.i4n = false
                                     settings.i4 = 2
+                                    check4 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i4y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -248,6 +272,7 @@ struct I_testView: View {
                                     settings.i4m = true
                                     settings.i4n = false
                                     settings.i4 = 1
+                                    check4 = true
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.i4m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -262,6 +287,7 @@ struct I_testView: View {
                                     settings.i4m = false
                                     settings.i4n = true
                                     settings.i4 = 0
+                                    check4 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i4n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -290,6 +316,7 @@ struct I_testView: View {
                                     settings.i5m = false
                                     settings.i5n = false
                                     settings.i5 = 2
+                                    check5 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i5y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -303,6 +330,7 @@ struct I_testView: View {
                                     settings.i5m = true
                                     settings.i5n = false
                                     settings.i5 = 1
+                                    check5 = true
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.i5m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -317,6 +345,7 @@ struct I_testView: View {
                                     settings.i5m = false
                                     settings.i5n = true
                                     settings.i5 = 0
+                                    check5 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.i5n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -348,39 +377,66 @@ struct I_testView: View {
                             .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
                             .font(.system(size: 30))
                         
-                    }
-                            Spacer()
+                        }
+                        
+                        Spacer()
                             
-                            ZStack{
-                                
-                                Rectangle()
-                                  .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                  .frame(width: 64, height: 37)
-                                  .cornerRadius(15)
-                                
-                                Text("2/8")
-                                  .font(Font.custom("Livvic", size: 18))
-                                  .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                        Button("Exit Test"){
+                            warn.toggle()
+                        }
+                        .frame(width: 90, height: 37)
+                        .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 15, style: .continuous))
+                        .font(Font.custom("Livvic", size: 21))
+                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                        .alert("Are you sure?", isPresented: $warn) {
+                            
+                            Button("Exit" ,role: .destructive){
+                                exit.toggle()
                             }
                             
-                            ZStack{
-                               
-                                Rectangle()
-                                    .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
-                                    .frame(width: 64, height: 37)
-                                    .cornerRadius(15)
-                                
-                                NavigationLink(destination: A_testView()){
-                                    Image(systemName: "arrow.right")
-                                        .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
-                                        .font(.system(size: 30))
-                                }
-                                         
+                        } message: {
+                            Text("If you exit the test now your answers will be lost when you close the app. To save your results please finish the test.")
+                        }
+                        
+                        Spacer()
+                    
+                        ZStack{
                             
+                            Rectangle()
+                                .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                .frame(width: 64, height: 37)
+                                .cornerRadius(15)
+                                
+                            Text("2/8")
+                                .font(Font.custom("Livvic", size: 21))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                        }
+                            
+                        ZStack{
+                            
+                            Rectangle()
+                                .foregroundColor(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
+                                .frame(width: 64, height: 37)
+                                .cornerRadius(15)
+                                
+                            NavigationLink(destination: A_testView()){
+                                Image(systemName: "arrow.right")
+                                    .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
+                                    .font(.system(size: 30))
+                            }.simultaneousGesture(TapGesture().onEnded{
+                                if !settings.checkI1 {
+                                    settings.checkI = checkall()
+                                    settings.checkI1 = true
+                                } else {
+                                        
+                                }
+                            })
                         }
                     }
                     .frame(width: 364)
                     
+                }.navigationDestination(isPresented: $exit) {
+                    MainScreenView()  // Your destination view
                 }
             }
         }

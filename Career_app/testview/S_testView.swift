@@ -12,20 +12,34 @@ struct S_testView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @ObservedObject var settings = GlobalSettings.shared
+    
+    @State private var warn = false
+    @State private var exit = false
+    
+    @State private var check1 = false
+    @State private var check2 = false
+    @State private var check3 = false
+    @State private var check4 = false
+    @State private var check5 = false
+    
+    private func checkall() -> Bool {
+        if check1 && check2 && check3 && check4 && check5 {
+            return false
+        } else{
+            return true
+        }
+    }
+    
     var body: some View {
         NavigationStack{
             ScrollView {
                 VStack {
-                    Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(width: 450, height: 305)
-                        .background(
-                            Image("1 экран")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 450, height: 305)
-                                .clipped()
-                                    )
+                    Image("anima")
+                        .resizable()
+                        .ignoresSafeArea()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 400, height: 240)
+                        .offset(x: 20, y: 10)
                     ZStack {
                         Rectangle()
                             .frame(width: 300.0, height: 70.0)
@@ -62,13 +76,14 @@ struct S_testView: View {
                             
                                 Spacer()
                                 Spacer()
-                                Text("\(settings.S)")
+                                Text("\(settings.checkS)")
                                 
                                 Button("Yes") {
                                     settings.s1y = true
                                     settings.s1m = false
                                     settings.s1n = false
                                     settings.s1 = 2
+                                    check1 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.s1y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -82,6 +97,7 @@ struct S_testView: View {
                                     settings.s1m = true
                                     settings.s1n = false
                                     settings.s1 = 1
+                                    check1 = true
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.s1m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -95,6 +111,7 @@ struct S_testView: View {
                                     settings.s1m = false
                                     settings.s1n = true
                                     settings.s1 = 0
+                                    check1 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.s1n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -124,6 +141,7 @@ struct S_testView: View {
                                     settings.s2m = false
                                     settings.s2n = false
                                     settings.s2 = 2
+                                    check2 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.s2y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -137,6 +155,7 @@ struct S_testView: View {
                                     settings.s2m = true
                                     settings.s2n = false
                                     settings.s2 = 1
+                                    check2 = true
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.s2m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -150,6 +169,7 @@ struct S_testView: View {
                                     settings.s2m = false
                                     settings.s2n = true
                                     settings.s2 = 0
+                                    check2 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.s2n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -169,50 +189,53 @@ struct S_testView: View {
                                
                             
                             HStack {
-                            Spacer()
-                            Spacer()
-                   
-                            
-                            Button("Yes") {
-                                settings.s3y = true
-                                settings.s3m = false
-                                settings.s3n = false
-                                settings.s3 = 2
-                            }
-                            .frame(width: 46, height: 27)
-                            .background(settings.s3y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                            .font(Font.custom("Livvic", size: 18))
-                            .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                            
-                            Spacer()
-                            
-                            Button("Maybe"){
-                                settings.s3y = false
-                                settings.s3m = true
-                                settings.s3n = false
-                                settings.s3 = 1
-                            }
-                            .frame(width: 76, height: 27)
-                            .background(settings.s3m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                            .font(Font.custom("Livvic", size: 18))
-                            .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                            
-                            Spacer()
-                            
-                            Button("No"){
-                                settings.s3y = false
-                                settings.s3m = false
-                                settings.s3n = true
-                                settings.s3 = 0
-                            }
-                            .frame(width: 46, height: 27)
-                            .background(settings.s3n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                            
-                            .font(Font.custom("Livvic", size: 18))
-                            .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                            
-                            Spacer()
-                            Spacer()
+                                Spacer()
+                                Spacer()
+                       
+                                
+                                Button("Yes") {
+                                    settings.s3y = true
+                                    settings.s3m = false
+                                    settings.s3n = false
+                                    settings.s3 = 2
+                                    check3 = true
+                                }
+                                .frame(width: 46, height: 27)
+                                .background(settings.s3y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
+                                Spacer()
+                                
+                                Button("Maybe"){
+                                    settings.s3y = false
+                                    settings.s3m = true
+                                    settings.s3n = false
+                                    settings.s3 = 1
+                                    check3 = true
+                                }
+                                .frame(width: 76, height: 27)
+                                .background(settings.s3m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
+                                Spacer()
+                                
+                                Button("No"){
+                                    settings.s3y = false
+                                    settings.s3m = false
+                                    settings.s3n = true
+                                    settings.s3 = 0
+                                    check3 = true
+                                }
+                                .frame(width: 46, height: 27)
+                                .background(settings.s3n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                
+                                .font(Font.custom("Livvic", size: 18))
+                                .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                                
+                                Spacer()
+                                Spacer()
                         }
                         
                             Text("Are you empathetic and enjoy listening to others' problems and offering advice?")
@@ -231,6 +254,7 @@ struct S_testView: View {
                                     settings.s4m = false
                                     settings.s4n = false
                                     settings.s4 = 2
+                                    check4 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.s4y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -244,6 +268,7 @@ struct S_testView: View {
                                     settings.s4m = true
                                     settings.s4n = false
                                     settings.s4 = 1
+                                    check4 = true
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.s4m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -257,6 +282,7 @@ struct S_testView: View {
                                     settings.s4m = false
                                     settings.s4n = true
                                     settings.s4 = 0
+                                    check4 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.s4n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -286,6 +312,7 @@ struct S_testView: View {
                                     settings.s5m = false
                                     settings.s5n = false
                                     settings.s5 = 2
+                                    check5 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.s5y ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -299,6 +326,7 @@ struct S_testView: View {
                                     settings.s5m = true
                                     settings.s5n = false
                                     settings.s5 = 1
+                                    check5 = true
                                 }
                                 .frame(width: 76, height: 27)
                                 .background(settings.s5m ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -312,6 +340,7 @@ struct S_testView: View {
                                     settings.s5m = false
                                     settings.s5n = true
                                     settings.s5 = 0
+                                    check5 = true
                                 }
                                 .frame(width: 46, height: 27)
                                 .background(settings.s5n ? Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.65) : Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -343,8 +372,30 @@ struct S_testView: View {
                             .font(.system(size: 30))
                                      
                         
+                    }.navigationDestination(isPresented: $exit) {
+                        MainScreenView()  // Your destination view
                     }
-                            Spacer()
+
+                        Spacer()
+                            
+                        Button("Exit Test"){
+                            warn.toggle()
+                        }
+                        .frame(width: 90, height: 37)
+                        .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 15, style: .continuous))
+                        .font(Font.custom("Livvic", size: 21))
+                        .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
+                        .alert("Are you sure?", isPresented: $warn) {
+                            
+                            Button("Exit" ,role: .destructive){
+                                exit.toggle()
+                            }
+                            
+                        } message: {
+                            Text("If you exit the test now your answers will be lost when you close the app. To save your results please finish the test.")
+                        }
+                        
+                        Spacer()
                             
                             ZStack{
                                 
@@ -354,7 +405,7 @@ struct S_testView: View {
                                   .cornerRadius(15)
                                 
                                 Text("4/8")
-                                  .font(Font.custom("Livvic", size: 18))
+                                  .font(Font.custom("Livvic", size: 21))
                                   .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                             }
                             
@@ -369,7 +420,14 @@ struct S_testView: View {
                                     Image(systemName: "arrow.right")
                                         .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
                                         .font(.system(size: 30))
-                                }
+                                }.simultaneousGesture(TapGesture().onEnded{
+                                    if !settings.checkS1 {
+                                        settings.checkS = checkall()
+                                        settings.checkS1 = true
+                                    } else {
+                                        
+                                    }
+                                })
                                          
                             
                         }
