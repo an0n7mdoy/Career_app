@@ -40,6 +40,7 @@
 		42EAE7D12C3F08FB00BD3424 /* Mina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D257B8EE2C3EC145001C5F14 /* Mina-Regular.ttf */; };
 		42EAE7D22C3F08FF00BD3424 /* Mina-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D257B8ED2C3EC143001C5F14 /* Mina-Bold.ttf */; };
 		42F4AC8D2CAD97580045FD02 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F4AC8C2CAD97580045FD02 /* Launch Screen.storyboard */; };
+		42F7555A2CC67A6F00B03D1E /* checkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F755592CC67A6F00B03D1E /* checkView.swift */; };
 		D257B8E72C3EBB92001C5F14 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D257B8E62C3EBB92001C5F14 /* testView.swift */; };
 		D2B832552CC47C6200EAB986 /* photo кретики кружочки.png in Resources */ = {isa = PBXBuildFile; fileRef = D2B832542CC47C6200EAB986 /* photo кретики кружочки.png */; };
 		D2D582862C3F4486008D12DA /* R_testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D582852C3F4486008D12DA /* R_testView.swift */; };
@@ -67,6 +68,7 @@
 		42DD19762C7CEC96004057F2 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		42DD19792C7CED55004057F2 /* bbdd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bbdd.mp3; sourceTree = "<group>"; };
 		42F4AC8C2CAD97580045FD02 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		42F755592CC67A6F00B03D1E /* checkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkView.swift; sourceTree = "<group>"; };
 		D257B8E62C3EBB92001C5F14 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 		D257B8ED2C3EC143001C5F14 /* Mina-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mina-Bold.ttf"; sourceTree = "<group>"; };
 		D257B8EE2C3EC145001C5F14 /* Mina-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mina-Regular.ttf"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				423DFAB22CC3F1FF000CBF71 /* CP_testView.swift */,
 				423DFAB42CC3F213000CBF71 /* RC_testView.swift */,
 				4200C3FA2C55263A00070880 /* resultView.swift */,
+				42F755592CC67A6F00B03D1E /* checkView.swift */,
 			);
 			path = testview;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				42DD19772C7CEC96004057F2 /* Sounds.swift in Sources */,
 				D2D5828A2C512478008D12DA /* A_testView.swift in Sources */,
 				423FC3302C0392F7008E3EBD /* Career_appApp.swift in Sources */,
+				42F7555A2CC67A6F00B03D1E /* checkView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

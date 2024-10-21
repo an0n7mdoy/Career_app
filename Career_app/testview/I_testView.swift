@@ -31,15 +31,14 @@ struct I_testView: View {
     }
     
     var body: some View {
-        
         NavigationStack{
-            ScrollView {
+            ScrollView(showsIndicators: false){
                 VStack {
                     Image("anima")
                         .resizable()
-                        .ignoresSafeArea()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 400, height: 240)
+                        .ignoresSafeArea()
+                        .frame(width: 420, height: 200)
                         .offset(x: 20, y: 10)
                     ZStack {
                         Rectangle()
@@ -424,7 +423,7 @@ struct I_testView: View {
                                     .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
                                     .font(.system(size: 30))
                             }.simultaneousGesture(TapGesture().onEnded{
-                                if !settings.checkI1 {
+                                if !settings.checkI1 && !checkall() {
                                     settings.checkI = checkall()
                                     settings.checkI1 = true
                                 } else {

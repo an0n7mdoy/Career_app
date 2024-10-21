@@ -25,23 +25,32 @@ struct RC_testView: View {
     @State private var check5 = false
     
     private func checkall() -> Bool {
-        if check1 && check2 && check3 && check4 && check5 && !settings.checkRC1 {
-            settings.checkRC1 = true
+        if check1 && check2 && check3 && check4 && check5  {
+            //settings.checkRC1 = true
             return false
         } else{
             return true
         }
     }
     
+    private func checkall1() -> Bool {
+        if settings.checkR || settings.checkI || settings.checkA || settings.checkS || settings.checkE || settings.checkC || settings.checkCP {
+            //settings.checkRC1 = true
+            return true
+        } else{
+            return false
+        }
+    }
+    
     var body: some View {
         NavigationStack{
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 VStack {
                     Image("anima")
                         .resizable()
-                        .ignoresSafeArea()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 400, height: 240)
+                        .ignoresSafeArea()
+                        .frame(width: 420, height: 200)
                         .offset(x: 20, y: 10)
                     ZStack {
                         Rectangle()
@@ -402,9 +411,11 @@ struct RC_testView: View {
                                 .frame(width: 150, height: 37)
                                 .cornerRadius(15)
                             
-                           
+                            //|| settings.checkR || settings.checkI || settings.checkA || settings.checkS || settings.checkE || settings.checkC || settings.checkCP
                             
-                            if checkall() || settings.checkR || settings.checkI || settings.checkA || settings.checkS || settings.checkE || settings.checkC || settings.checkCP{
+                            if checkall() || checkall1() {
+                                
+                                
                                 
                                 Button(action: {ff.toggle()} ){
                                     Text("Finish the Test")
@@ -418,6 +429,9 @@ struct RC_testView: View {
                                     
 
                                 }
+                                .onAppear(perform: {
+                                    print("not passed")
+                                })
                                 
                             } else {
                                 
@@ -425,7 +439,9 @@ struct RC_testView: View {
                                     Text("Finish the Test")
                                         .font(Font.custom("Livvic", size: 21))
                                         .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                }
+                                } .onAppear(perform: {
+                                    print("passed")
+                                })
                                 
                             }
                         }

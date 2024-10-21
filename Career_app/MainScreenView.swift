@@ -12,7 +12,7 @@ struct MainScreenView: View {
     @ObservedObject var sounds = soundVars.shared
     @State private var floatUp: Bool = false
     
-   
+    @ObservedObject var took = testPassed.shared
     
     var body: some View {
         NavigationStack{
@@ -36,6 +36,9 @@ struct MainScreenView: View {
             .clipped()
             )
 //NAME
+                
+            Text("\(took.taken)")
+                
             ZStack {
                 Rectangle()
                     .frame(width: 300.0, height: 70.0)
@@ -43,11 +46,20 @@ struct MainScreenView: View {
                     .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
                 
                 
-                NavigationLink(destination: testView()){
-                    Text("Career Guidance Test")
-                        .font(Font.custom("Livvic-Regular", size: 29))
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color(red: 0.54, green: 0.57, blue: 0.58))
+                if !took.taken{
+                    NavigationLink(destination: testView()){
+                        Text("Career Guidance Test")
+                            .font(Font.custom("Livvic-Regular", size: 29))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(Color(red: 0.54, green: 0.57, blue: 0.58))
+                    }
+                } else {
+                    NavigationLink(destination: checkView()){
+                        Text("Your Results")
+                            .font(Font.custom("Livvic-Regular", size: 35))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(Color(red: 0.54, green: 0.57, blue: 0.58))
+                    }
                 }
             }
             

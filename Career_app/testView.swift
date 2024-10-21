@@ -45,15 +45,15 @@ struct testView: View {
                     Rectangle()
                         
                         .foregroundColor(.clear)
-                        .frame(width: 364, height: 100)
+                        .frame(width: 364, height: 140)
                         .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25))
                         .cornerRadius(8)
                         .padding(.bottom, 7.0)
                     
-                    Text("You need to answer following questions carefully. Think about your answers. For this test you need about 10-20 minutes.")
+                    Text("You need to answer following questions carefully. Think about your answers. For this test you need about 10-20 minutes. ***Please, do not close the app during the test, or your progress will be lost.***")
                         .font(Font.custom("Livvic-Regular", size: 19))
                         .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                        .frame(width: 352, height: 100, alignment: .topLeading)
+                        .frame(width: 352, alignment: .topLeading)
                 }
                 
               
@@ -85,7 +85,7 @@ struct testView: View {
                 .ignoresSafeArea()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 400, height: 250)
-                .offset(y: 200))
+                .offset(y: 230))
         }
     }
 }

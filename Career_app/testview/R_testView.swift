@@ -9,6 +9,8 @@ import SwiftUI
 
 struct R_testView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    
     @ObservedObject var settings = GlobalSettings.shared
     
     @State private var warn = false
@@ -30,13 +32,13 @@ struct R_testView: View {
     
     var body: some View {
         NavigationStack{
-            ScrollView {
+            ScrollView(showsIndicators: false){
                 VStack {
                     Image("anima")
                         .resizable()
-                        .ignoresSafeArea()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 400, height: 240)
+                        .ignoresSafeArea()
+                        .frame(width: 420, height: 200)
                         .offset(x: 20, y: 10)
                     
                     ZStack {
@@ -408,7 +410,7 @@ struct R_testView: View {
                                         .foregroundColor(.init(red: 0.236, green: 0.266, blue: 0.286))
                                         .font(.system(size: 30))
                                 }.simultaneousGesture(TapGesture().onEnded{
-                                    if !settings.checkR1 {
+                                    if !settings.checkR1 && !checkall() {
                                         settings.checkR = checkall()
                                         settings.checkR1 = true
                                     } else {
@@ -427,12 +429,9 @@ struct R_testView: View {
                     
                 }
             }
-        }
-        
+        .navigationBarHidden(true)
     }
-    
-    
-
+}
 
 #Preview {
     R_testView()

@@ -511,6 +511,37 @@ class soundVars: ObservableObject{
     }
 }
 
+class testPassed: ObservableObject{
+    static let shared = testPassed()
+    
+    @Published var taken = false {
+        didSet {
+            UserDefaults.standard.set(taken, forKey: "taken")
+        }
+    }
+    
+    @Published var resultOne: String{
+        didSet {
+            UserDefaults.standard.set(resultOne, forKey: "resultOne")
+        }
+    }
+    
+    @Published var resultTwo: String{
+        didSet {
+            UserDefaults.standard.set(resultTwo, forKey: "resultTwo")
+        }
+    }
+    
+    init() {
+            // Load values from UserDefaults when the app starts
+        
+        self.taken = UserDefaults.standard.bool(forKey: "taken")
+        self.resultOne = UserDefaults.standard.string(forKey: "resultOne") ?? "nil"
+        self.resultTwo = UserDefaults.standard.string(forKey: "resultTwo") ?? "nil"
+        
+    }
+}
+
 class lists: ObservableObject{
     static let shared = lists()
     
