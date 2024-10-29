@@ -37,7 +37,7 @@ struct MainScreenView: View {
             )
 //NAME
                 
-            Text("\(took.taken)")
+            //Text("\(took.taken)")
                 
             ZStack {
                 Rectangle()
@@ -92,32 +92,7 @@ struct MainScreenView: View {
                 }
             }
             
-            Spacer()
-//settings
-            HStack{
-                ZStack {
-                    Rectangle()
-                        .frame(width: 70.0, height: 70.0)
-                        .cornerRadius(15)
-                        .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
-                    
-                    Image("Group")
-                }
-                
-                ZStack {
-                    Rectangle()
-                        .frame(width: 220.0, height: 70.0)
-                        .cornerRadius(15)
-                        .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
-                    
-                    NavigationLink(destination: SettingsView()){
-                        Text("Settings")
-                            .font(Font.custom("Livvic-Regular", size: 25))
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(.black)
-                    }
-                }
-            }
+            
             
             Spacer()
 //about devs
@@ -145,6 +120,51 @@ struct MainScreenView: View {
                     }
                     }
                 }
+                
+            Spacer()
+    //settings
+            HStack{
+                
+                ZStack {
+                    Rectangle()
+                        .frame(width: 70.0, height: 70.0)
+                        .cornerRadius(15)
+                        .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
+                    
+                    Image(systemName: "music.quarternote.3")
+                        .font(.largeTitle)
+                }
+                
+                ZStack {
+                    Rectangle()
+                        .frame(width: 220.0, height: 70.0)
+                        .cornerRadius(15)
+                        .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
+                        
+                    
+                    HStack (spacing: 20){
+                        
+                        Text("Music")
+                            .font(Font.custom("Livvic-Regular", size: 35))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.black)
+                        
+                        Button(action: {
+                            sounds.musicButton.toggle()
+                            if sounds.musicButton {
+                                stopMusic()
+                            }else if !sounds.musicButton {
+                                resumeMusic()
+                            }
+                        }) {
+                            Image(systemName: sounds.musicButton ? "speaker.slash" : "speaker.wave.3")
+                                .foregroundColor(.black)
+                                .font(.largeTitle)
+                        }
+                    }
+                }
+            }
+                
             }
             .onAppear(perform: {
                 if !sounds.musicButton {

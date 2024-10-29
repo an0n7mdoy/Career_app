@@ -75,7 +75,7 @@ struct I_testView: View {
                                 
                                 Spacer()
                                 Spacer()
-                                Text("\(settings.checkI)")
+                                //Text("\(settings.checkI)")
                                 
                                 Button("Yes"){
                                     settings.i1y = true

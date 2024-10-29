@@ -28,7 +28,7 @@ struct resultView: View {
     
     var body: some View {
         // 􀄩 в vars поменять r на settings.R и так далее
-        let vars = [r, i, a, s, e, c]
+        let vars = [settings.R, settings.I, settings.A, settings.S, settings.E, settings.C]
         let varNames = ["r", "i", "a", "s", "e", "c"]
         // 􀄩 результаты становятся арреем типа [r 5, i 4, ...] чтобы после сортировки можно было понять какие баллы у какой категории
         let numberArray: [(value: Int, name: String)] = zip(vars, varNames).map { ($0.0, $0.1) }

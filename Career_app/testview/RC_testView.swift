@@ -87,7 +87,7 @@ struct RC_testView: View {
                                 
                                 Spacer()
                                 Spacer()
-                                Text("\(settings.checkRC)")
+                                //Text("\(settings.checkRC)")
                                 
                                 Button("Very") {
                                     settings.rc1y = true

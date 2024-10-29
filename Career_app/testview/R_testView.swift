@@ -77,7 +77,7 @@ struct R_testView: View {
                                 
                                 Spacer()
                                 Spacer()
-                                Text("\(settings.checkR)")
+                                //Text("\(settings.checkR)")
                                 
                                 Button("Yes"){
                                     settings.r1y = true

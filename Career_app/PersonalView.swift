@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PersonalView: View {
-    
+    @Environment(\.presentationMode) var presentationMode
     @State private var isExpanded = false
     //@State private var items: [String] = ["Item 1", "Item 2", "Item 3"]
     @State private var newItem = ""
@@ -166,32 +166,33 @@ struct PersonalView: View {
         
         VStack{
             HStack{
+                
+                ZStack{
+                    Rectangle()
+                        .frame(width: 90.0, height: 45.0)
+                        .cornerRadius(15)
+                        .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
+                    
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "arrow.left")
+                    }
+                    .foregroundColor(.black)
+                    .font(.system(size: 30))
+                }
+                
                 //"goals"
                 ZStack{
                     Rectangle()
-                        .frame(width: 100.0, height: 45.0)
+                        .frame(width: 200.0, height: 45.0)
                         .cornerRadius(15)
                         .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
                     
-                    Text("Goals")
+                    Text("Your Goals")
                         .font(Font.custom("Livvic-Regular", size: 25))
                 }
                 //prog
-                ZStack{
-                    Rectangle()
-                        .frame(width: 190.0, height: 45.0)
-                        .cornerRadius(15)
-                        .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
-                    
-                    HStack{
-                        Rectangle()
-                            .padding(.trailing, 65.0)
-                            .frame(width: 180.0, height: 35.0)
-                            .cornerRadius(13)
-                            .foregroundColor(.init(red: 0.831, green: 0.839, blue: 0.843))
-                        
-                    }
-                }
                 
                 
             }
@@ -207,6 +208,7 @@ struct PersonalView: View {
                         .frame(width: 250, height: 40)
                         .background(Color(.init(red: 0.831, green: 0.839, blue: 0.843)))
                         .cornerRadius(15)
+                        .font(Font.custom("Livvic-Regular", size: 20))
                     Button(action: {
                         addItem1()
                     }) {
@@ -221,7 +223,7 @@ struct PersonalView: View {
                 List {
                     ForEach(list.items1.indices, id: \.self) { index in
                         HStack {
-                            Image(systemName: list.items1[index].contains("[DONE]") ? "checkmark.circle.fill" : "circle")
+                            Image(systemName: list.items1[index].contains("Done!") ? "checkmark.circle.fill" : "circle")
                                 .onTapGesture {
                                     toggleItem(at: index)
                                 }
@@ -231,6 +233,7 @@ struct PersonalView: View {
                     .onDelete(perform: deleteItem)
                     .scrollContentBackground(.hidden)
                     .ignoresSafeArea()
+                    .font(Font.custom("Livvic-Regular", size: 20))
                 }
                 .frame(width: 360)
                 .ignoresSafeArea()
@@ -239,26 +242,28 @@ struct PersonalView: View {
                 .scrollContentBackground(.hidden)
                 
             }
-        }
+        }.navigationBarHidden(true)
     }
     
-    func addItem1() {
-            if !newItem.isEmpty {
-                list.items.append(newItem)
-                newItem = ""
+    private func addItem1() {
+            if !newItem1.isEmpty {
+                list.items1.append(newItem1)
+                newItem1 = ""
             }
-        }
+    }
+    
+    
     func toggleItem(at index: Int) {
-        if list.items[index].contains("[DONE]") {
-                list.items[index] = list.items[index].replacingOccurrences(of: "[DONE]", with: "")
+        if list.items1[index].contains("Done!") {
+                list.items1[index] = list.items1[index].replacingOccurrences(of: "Done!", with: "")
             } else {
-                list.items[index] = "[DONE] " + list.items[index]
+                list.items1[index] = list.items1[index] + " Done!"
             }
         }
 
         // Function to Delete an Item
     func deleteItem(at offsets: IndexSet) {
-            list.items.remove(atOffsets: offsets)
+            list.items1.remove(atOffsets: offsets)
         }
     
     

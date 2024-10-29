@@ -90,6 +90,7 @@ struct checkView: View {
                             
                             Button("Retake" ,role: .destructive){
                                 retake.toggle()
+                                took.taken = false
                             }
                             
                         } message: {

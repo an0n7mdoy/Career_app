@@ -75,7 +75,7 @@ struct CP_testView: View {
                                 
                                 Spacer()
                                 Spacer()
-                                Text("\(settings.checkCP)")
+                                //Text("\(settings.checkCP)")
                                 
                                 Button("Yes") {
                                     settings.cp1y = true
