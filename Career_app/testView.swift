@@ -80,12 +80,14 @@ struct testView: View {
                     }
                 Spacer()
             }
-            .background(Image("1 экран")
+            .background(Image("catmain")
                 .resizable()
                 .ignoresSafeArea()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 400, height: 250)
-                .offset(y: 230))
+                .aspectRatio(1.5, contentMode: .fit)
+                .frame(width: 380, height: 330)
+                .ignoresSafeArea()
+                .offset(x: -20, y: 300))
+                
         }
     }
 }

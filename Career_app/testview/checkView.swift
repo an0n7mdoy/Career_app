@@ -63,9 +63,9 @@ struct checkView: View {
                         .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                         .frame(width: 380)
                     
-                    Spacer(minLength: 180)
                     
-                    HStack{
+                    
+                    HStack(alignment: .bottom){
                         
                         Button {
                             presentationMode.wrappedValue.dismiss()
@@ -100,13 +100,7 @@ struct checkView: View {
      
                     }
                     .frame(width: 375)
-                    .background(Image("1 экран")
-                        .resizable()
-                        .ignoresSafeArea()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 400, height: 100)
-                        .padding(.bottom, 80)
-                        .offset(y: -120))
+                    
                 }
             }
         }.navigationBarHidden(true)

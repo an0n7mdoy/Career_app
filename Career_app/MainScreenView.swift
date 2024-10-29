@@ -16,7 +16,7 @@ struct MainScreenView: View {
     
     var body: some View {
         NavigationStack{
-            VStack {
+            VStack (spacing: 10) {
            
             Spacer()
             Spacer()
@@ -29,11 +29,12 @@ struct MainScreenView: View {
             .foregroundColor(.clear)
             .frame(width: 450, height: 305)
             .background(
-            Image("1 экран")
+            Image("catmain")
             .resizable()
-            .aspectRatio(contentMode: .fill)
-            .frame(width: 450, height: 305)
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 350, height: 250)
             .clipped()
+            .offset(x: -20,y: 40)
             )
 //NAME
                 
@@ -63,7 +64,7 @@ struct MainScreenView: View {
                 }
             }
             
-            Spacer()
+            //Spacer()
 //pers
             HStack{
                 ZStack {
@@ -94,7 +95,7 @@ struct MainScreenView: View {
             
             
             
-            Spacer()
+            //Spacer()
 //about devs
             HStack{
                 ZStack {
@@ -121,31 +122,15 @@ struct MainScreenView: View {
                     }
                 }
                 
-            Spacer()
+                //Spacer(minLength: 10)
     //settings
             HStack{
-                
-                ZStack {
-                    Rectangle()
-                        .frame(width: 70.0, height: 70.0)
-                        .cornerRadius(15)
-                        .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
+    
                     
-                    Image(systemName: "music.quarternote.3")
-                        .font(.largeTitle)
-                }
-                
-                ZStack {
-                    Rectangle()
-                        .frame(width: 220.0, height: 70.0)
-                        .cornerRadius(15)
-                        .foregroundColor(.init(red: 0.534, green: 0.553, blue: 0.565))
-                        
-                    
-                    HStack (spacing: 20){
+                    HStack{
                         
                         Text("Music")
-                            .font(Font.custom("Livvic-Regular", size: 35))
+                            .font(Font.custom("Livvic-Regular", size: 17))
                             .multilineTextAlignment(.center)
                             .foregroundColor(.black)
                         
@@ -159,10 +144,10 @@ struct MainScreenView: View {
                         }) {
                             Image(systemName: sounds.musicButton ? "speaker.slash" : "speaker.wave.3")
                                 .foregroundColor(.black)
-                                .font(.largeTitle)
+                                
                         }
                     }
-                }
+                
             }
                 
             }
@@ -175,7 +160,7 @@ struct MainScreenView: View {
                 .resizable()
                 .ignoresSafeArea()
                 .aspectRatio(contentMode: .fit)
-                .offset(x: 33 , y: floatUp ? -270 : -240)
+                .offset(x: 33 , y: floatUp ? -270 : -190)
                 .animation(.easeInOut(duration: 2).repeatForever(), value: floatUp)
                 .onAppear {
                     print("View appeared, floatUp: \(floatUp)")
