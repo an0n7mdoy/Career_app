@@ -100,9 +100,9 @@ struct resultView: View {
                             
                         NavigationLink(destination: MainScreenView()){
                             Text("Main Menu")
-                                .frame(width: 150,height: 40)
+                                .frame(width: 120,height: 40)
                                 .background(Color(red: 0.32, green: 0.36, blue: 0.38).opacity(0.25), in: RoundedRectangle(cornerRadius: 15, style: .continuous))
-                                .font(Font.custom("Livvic", size: 21))
+                                .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 
                         }.simultaneousGesture(TapGesture().onEnded{
@@ -257,13 +257,13 @@ struct resultView: View {
                             }
                 
                             if settings.CP >= 7 && settings.RC >= 7 {
-                                result1Str = "two max"
+                                result1Str = "You are highly prepared for your career path and adaptable to changes. Your confidence in your skills and the proactive steps you've taken show that you're ready to pursue your goals effectively. Continue seeking growth opportunities and maintaining flexibility as you move forward."
                             } else if settings.CP >= 7 {
-                                result1Str = "CP max"
+                                result1Str = "You demonstrate strong readiness for your career path with clear goals and skills suited for your desired profession. However, you may need to develop greater adaptability and resilience in facing changes or challenges. Consider focusing on building flexibility, seeking mentorship, and reflecting on career choices to adapt as your career progresses."
                             } else if settings.RC >= 7 {
-                                result1Str = "RC max"
+                                result1Str = "You’re well-prepared to handle changes and challenges in your career path, showing resilience and adaptability. However, it may be beneficial to solidify your career readiness by enhancing your confidence, creating a detailed career plan, and ensuring you have a portfolio or resume ready. Strengthening these areas can create a stronger foundation for your goals."
                             } else {
-                                result1Str = "no max"
+                                result1Str = "You may need to work on both your career readiness and adaptability. Building clarity in your career goals, understanding the requirements of your chosen path, and preparing a resume or portfolio can improve your preparedness. Additionally, developing strategies for handling change and seeking mentorship may help you become more resilient and proactive. Consider focusing on both areas to strengthen your readiness for future opportunities."
                             }
                 
                         took.resultOne = resultStr
