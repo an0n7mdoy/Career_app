@@ -155,22 +155,25 @@ struct MainScreenView: View {
                 if !sounds.musicButton {
                     playSound(sound: "AppSound", type: "mp3") //start playing when opened if not disabled
                 }
+            
+                print("View appeared, floatUp: \(floatUp)")
+                if !floatUp {
+                        floatUp.toggle()
+                    }
+                print("floatUp toggled to: \(floatUp)") // Log after toggle
+
+                         // Start the animation
+                    
             })
             .background(Image("anima")
                 .resizable()
                 .ignoresSafeArea()
-                .aspectRatio(contentMode: .fit)
-                .offset(x: 33 , y: floatUp ? -270 : -190)
+                .frame(width: 400, height: 290)
+                .aspectRatio(contentMode: .fill)
+                .offset(x: 33)
+                .offset(y: floatUp ? -240 : -190)
                 .animation(.easeInOut(duration: 2).repeatForever(), value: floatUp)
-                .onAppear {
-                    print("View appeared, floatUp: \(floatUp)")
-                    if !floatUp {
-                            floatUp.toggle()
-                        }
-                    print("floatUp toggled to: \(floatUp)") // Log after toggle
-
-                     // Start the animation
-                })
+               )
         }.navigationBarHidden(true)
     }
 }

@@ -10,7 +10,7 @@
 		<string>Mina-Bold.ttf</string>
 		<string>Mina-Regular.ttf</string>
 	</array>
-	<key>UILaunchStoryboardName</key>
-	<string>Launch Screen.storyboard</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>
