@@ -31,15 +31,16 @@ struct PersonalView: View {
             
             
             Rectangle()
-                .foregroundColor(.clear)
-                .frame(width: 450, height: 305)
-                .background(
-                    Image("1 экран")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 450, height: 305)
-                        .clipped()
-                )
+            .foregroundColor(.clear)
+            .frame(width: 450, height: 305)
+            .background(
+            Image("catmain")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 350, height: 250)
+            .clipped()
+            .offset(x: -20,y: 40)
+            )
             
             
             

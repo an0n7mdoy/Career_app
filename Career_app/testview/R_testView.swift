@@ -70,8 +70,7 @@ struct R_testView: View {
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .multilineTextAlignment(.leading)
-                                .padding(.trailing, 80.0)
-                                .frame(width: 394)
+                                .frame(width: 354.0, alignment: .topLeading)
                             
                             HStack{
                                 
@@ -131,8 +130,7 @@ struct R_testView: View {
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
                                 .multilineTextAlignment(.leading)
-                                .padding(.trailing, 74.0)
-                                .frame(width: 394.0)
+                                .frame(width: 354.0, alignment: .topLeading)
                             
                             HStack{
                                 
@@ -188,8 +186,8 @@ struct R_testView: View {
                             Text("Are you interested in fixing or repairing things?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                .padding(.trailing, 105.0)
-                                .frame(width: 394.0)
+                                .multilineTextAlignment(.leading)
+                                .frame(width: 354.0, alignment: .topLeading)
                             
                             HStack{
                                 
@@ -245,8 +243,8 @@ struct R_testView: View {
                             Text("Do you enjoy physical activities and \nsports?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                .padding(.trailing, 50.0)
-                                .frame(width: 394.0)
+                                .multilineTextAlignment(.leading)
+                                .frame(width: 354.0, alignment: .topLeading)
                             
                             HStack{
                                 
@@ -302,8 +300,8 @@ struct R_testView: View {
                             Text("Do you prefer practical tasks over theoretical ones?")
                                 .font(Font.custom("Livvic", size: 18))
                                 .foregroundColor(Color(red: 0.19, green: 0.24, blue: 0.25))
-                                .padding(.trailing, 67.0)
-                                .frame(width: 394)
+                                .multilineTextAlignment(.leading)
+                                .frame(width: 354.0, alignment: .topLeading)
                             
                             HStack{
                                 

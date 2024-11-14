@@ -16,13 +16,10 @@ struct testView: View {
         NavigationStack{
             VStack {
             
-                Image("anima")
-                    .resizable()
-                    .ignoresSafeArea()
-                    .frame(width: 400, height: 250)
-                    .offset(x: 20, y: 10)
                 
+//                
 //NAME
+                Spacer()
                 ZStack {
                     Rectangle()
                         .frame(width: 300.0, height: 70.0)
@@ -80,13 +77,20 @@ struct testView: View {
                     }
                 Spacer()
             }
-            .background(Image("catmain")
-                .resizable()
-                .ignoresSafeArea()
-                .aspectRatio(1.5, contentMode: .fit)
-                .frame(width: 380, height: 330)
-                .ignoresSafeArea()
-                .offset(x: -20, y: 300))
+            .background(
+                Image("catmain")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .scaledToFit()
+                    .frame(width: 400, height: 230)
+                    .offset(x: -20, y: 275))
+            .background(
+                Image("anima")
+                    .resizable()
+                    //.ignoresSafeArea()
+                    .scaledToFit()
+                    .frame(width: 400, height: 350)
+                    .offset(x: 20, y: -250))
                 
         }
     }

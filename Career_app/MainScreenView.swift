@@ -158,22 +158,23 @@ struct MainScreenView: View {
             
                 print("View appeared, floatUp: \(floatUp)")
                 if !floatUp {
-                        floatUp.toggle()
+                        withAnimation(.easeInOut(duration: 2).repeatForever(autoreverses: true)) {
+                            floatUp.toggle()
+                        }
                     }
                 print("floatUp toggled to: \(floatUp)") // Log after toggle
 
                          // Start the animation
                     
             })
-            .background(Image("anima")
-                .resizable()
-                .ignoresSafeArea()
-                .frame(width: 400, height: 290)
-                .aspectRatio(contentMode: .fill)
-                .offset(x: 33)
-                .offset(y: floatUp ? -240 : -190)
-                .animation(.easeInOut(duration: 2).repeatForever(), value: floatUp)
-               )
+            .background(
+                Image("anima")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 400, height: 300)
+                    .offset(x: 33, y: floatUp ? -240 : -200)
+                    .ignoresSafeArea()
+            )
         }.navigationBarHidden(true)
     }
 }
